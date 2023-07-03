@@ -1,5 +1,5 @@
 import "./globals.css";
-import { ChakraProviderWrapper } from "./provider";
+import { ChakraWrapper } from "../provider/provider";
 
 export const metadata = {
     title: "Create Next App",
@@ -14,7 +14,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <ChakraProviderWrapper>{children}</ChakraProviderWrapper>
+                <ChakraWrapper>{children}</ChakraWrapper>
             </body>
         </html>
     );
