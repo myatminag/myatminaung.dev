@@ -8,6 +8,8 @@ const theme = extendTheme({
             700: "#2a69ac",
         },
     },
+    initialColorMode: "dark",
+    useSystemColorMode: false,
 });
 
 export default theme;
