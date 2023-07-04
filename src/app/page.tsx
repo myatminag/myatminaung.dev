@@ -1,25 +1,26 @@
 "use client";
 
-import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 
 import ThemeSwitch from "@/components/ThemeSwitch";
+import Description from "@/components/Description";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
     return (
-        <Container maxW="2xl">
+        <Container maxW="2xl" pt={8}>
             <Flex alignItems="center" justifyContent="space-between" py={6}>
-                <HStack>
+                <HStack gap={6}>
                     <Text fontSize="lg">Home</Text>
                     <Text fontSize="lg">Experience</Text>
                 </HStack>
                 <ThemeSwitch />
             </Flex>
 
-            <Box>
-                <Text fontSize="2xl" fontWeight="bold">
-                    Hi, I&apos;m Myatmin Aung
-                </Text>
-            </Box>
+            <VStack mt={3} spacing={5}>
+                <Description />
+                <TechStack />
+            </VStack>
         </Container>
     );
 }
