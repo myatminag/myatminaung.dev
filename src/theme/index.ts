@@ -18,6 +18,14 @@ const theme = extendTheme({
             },
         }),
     },
+    textStyles: {
+        h2: {
+            fontSize: ["36px", "48px"],
+            fontWeight: "semibold",
+            lineHeight: "110%",
+            letterSpacing: "-1%",
+        },
+    },
     // fonts: {
     //     body: nextFont.style.fontFamily,
     // },
