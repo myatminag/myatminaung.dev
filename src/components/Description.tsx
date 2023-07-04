@@ -14,13 +14,6 @@ const Description = () => {
                 delivering high quality solutions that meet the needs of modern
                 digital environments.
             </Text>
-            {/* <Text fontSize={{ lg: "lg" }} mb="3" lineHeight={7}>
-                Interested in Javascript & Typescript, I have experience in
-                implementing front-end frameworks like React.js, and Next.js. In
-                backend development, I have hands-on experience in Node.js,
-                Express.js, and MongoDB to build robust and scalable web
-                applications
-            </Text> */}
             <Text fontSize={{ lg: "lg" }} mb="3" lineHeight={7}>
                 I am currently working as a frontend developer at @Shopdoora
                 eCommerce. I am dedicated to continuously learning and growth in
