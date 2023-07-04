@@ -13,7 +13,8 @@ import {
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Description from "@/components/Description";
 import TechStack from "@/components/TechStack";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/projects/ProjectCard";
+import ProjectLists from "@/components/projects/ProjectLists";
 
 export default function Home() {
     return (
@@ -29,11 +30,8 @@ export default function Home() {
             <VStack mt={3} spacing={5}>
                 <Description />
                 <TechStack />
+                <ProjectLists />
             </VStack>
-            <SimpleGrid minChildWidth="300px" spacing="40px">
-                <ProjectCard />
-                <ProjectCard />
-            </SimpleGrid>
         </Container>
     );
 }
