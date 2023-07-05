@@ -26,7 +26,7 @@ export default function Home() {
                 <ThemeSwitch />
             </Flex>
 
-            <VStack mt={10} spacing={5}>
+            <VStack mt={10} spacing={10}>
                 <Description />
                 {/* <TechStack /> */}
                 <ProjectLists />

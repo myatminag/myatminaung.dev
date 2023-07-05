@@ -21,8 +21,6 @@ const Description = () => {
                 collaborate on exciting projects, and contribute to the creation
                 of innovative digital solutions.
             </Text>
-            {/* I have a serious passion for developing dynamic user experiences and
-            creating innovative web applications. */}
             {/* <Text fontSize={{ lg: "sm" }} mb="3" lineHeight={7}>
                 I am currently working as a frontend developer at @Shopdoora
                 eCommerce. I am dedicated to continuously learning and growth in
