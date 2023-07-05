@@ -10,6 +10,8 @@ const ProjectLists = () => {
             <SimpleGrid minChildWidth="300px" spacing="30px">
                 <ProjectCard />
                 <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
             </SimpleGrid>
         </Box>
     );

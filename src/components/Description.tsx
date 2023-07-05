@@ -17,9 +17,10 @@ const Description = () => {
                 applications.
             </Text>
             <Text fontSize={{ lg: "sm" }} mb="3" lineHeight={7}>
-                Always eager to contribute my skills to a dynamic team,
-                collaborate on exciting projects, and contribute to the creation
-                of innovative digital solutions.
+                I am dedicated to continuously learning and growth in the field
+                of web development. Always eager to contribute my skills to a
+                dynamic team, collaborate on exciting projects, and contribute
+                to the creation of innovative digital solutions.
             </Text>
             {/* <Text fontSize={{ lg: "sm" }} mb="3" lineHeight={7}>
                 I am currently working as a frontend developer at @Shopdoora

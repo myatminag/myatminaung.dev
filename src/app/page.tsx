@@ -4,16 +4,17 @@ import {
     Box,
     Container,
     Flex,
-    SimpleGrid,
     HStack,
     Text,
     VStack,
+    Divider,
 } from "@chakra-ui/react";
 
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Description from "@/components/Description";
 import TechStack from "@/components/TechStack";
 import ProjectLists from "@/components/projects/ProjectLists";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -26,10 +27,14 @@ export default function Home() {
                 <ThemeSwitch />
             </Flex>
 
+            <Divider />
+
             <VStack mt={10} spacing={10}>
                 <Description />
-                {/* <TechStack /> */}
+                <Divider />
                 <ProjectLists />
+                <Divider />
+                <Footer />
             </VStack>
         </Container>
     );
