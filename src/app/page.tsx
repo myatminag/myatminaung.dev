@@ -13,7 +13,6 @@ import {
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Description from "@/components/Description";
 import TechStack from "@/components/TechStack";
-import ProjectCard from "@/components/projects/ProjectCard";
 import ProjectLists from "@/components/projects/ProjectLists";
 
 export default function Home() {
@@ -21,15 +20,15 @@ export default function Home() {
         <Container maxW="2xl" py={8}>
             <Flex alignItems="center" justifyContent="space-between" mb={6}>
                 <HStack gap={6}>
-                    <Text fontSize="lg">Home</Text>
-                    <Text fontSize="lg">Experience</Text>
+                    <Text fontSize="sm">Home</Text>
+                    <Text fontSize="sm">Experience</Text>
                 </HStack>
                 <ThemeSwitch />
             </Flex>
 
-            <VStack mt={3} spacing={5}>
+            <VStack mt={10} spacing={5}>
                 <Description />
-                <TechStack />
+                {/* <TechStack /> */}
                 <ProjectLists />
             </VStack>
         </Container>

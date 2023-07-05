@@ -1,26 +1,35 @@
-import { Text, Box } from "@chakra-ui/react";
+import { Text, Box, Heading } from "@chakra-ui/react";
 
 const Description = () => {
     return (
         <Box>
-            <Text fontSize="2xl" fontWeight="bold" mb={5}>
+            <Heading fontSize="lg" fontWeight="bold" mb={8}>
                 Hi, I&apos;m Myatmin Aung 👋
+            </Heading>
+            <Text fontSize={{ lg: "sm" }} mb={5} lineHeight={7}>
+                I&apos;m a fullstack web developer based in Yangon, Myanmar.
             </Text>
-            <Text fontSize={{ lg: "lg" }} mb="3" lineHeight={7}>
-                I&apos;m a fullstack web developer based in Yangon, Myanmar. I
-                have a serious passion for developing dynamic user experiences
-                and creating innovative web applications. With a dab hand at
-                both frontend and backend development, I am committed to
-                delivering high quality solutions that meet the needs of modern
-                digital environments.
+            <Text fontSize={{ lg: "sm" }} mb={5} lineHeight={7}>
+                Interested in Javascript & Typescript, I have experience in
+                implementing front-end frameworks like React.js, and Next.js. In
+                backend development, I have hands-on experience in Node.js,
+                Express.js, and MongoDB to build robust and scalable web
+                applications.
             </Text>
-            <Text fontSize={{ lg: "lg" }} mb="3" lineHeight={7}>
+            <Text fontSize={{ lg: "sm" }} mb="3" lineHeight={7}>
+                Always eager to contribute my skills to a dynamic team,
+                collaborate on exciting projects, and contribute to the creation
+                of innovative digital solutions.
+            </Text>
+            {/* I have a serious passion for developing dynamic user experiences and
+            creating innovative web applications. */}
+            {/* <Text fontSize={{ lg: "sm" }} mb="3" lineHeight={7}>
                 I am currently working as a frontend developer at @Shopdoora
                 eCommerce. I am dedicated to continuously learning and growth in
                 the field of web development. Always eager to contribute my
                 skills to a dynamic team, collaborate on exciting projects, and
                 contribute to the creation of innovative digital solutions.
-            </Text>
+            </Text> */}
         </Box>
     );
 };
