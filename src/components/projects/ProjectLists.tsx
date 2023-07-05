@@ -13,7 +13,7 @@ const ProjectLists = () => {
                     description="BitBazaar offers an extensive and diverse collection of
                         games and also have a wide range of games available, so
                         you can find the perfect fit for your gaming setup."
-                    techs={["Next.js", "TypeScript", "Chakra UI", "Redux"]}
+                    techs={["Next.js", "TypeScript", "ChakraUI", "Redux"]}
                 />
                 <ProjectCard
                     title="Empress"

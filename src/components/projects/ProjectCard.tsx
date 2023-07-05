@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { useColorMode, Heading, Text, Flex, Box } from "@chakra-ui/react";
 
 interface Props {
@@ -8,6 +11,7 @@ interface Props {
 
 const ProjectCard = ({ title, description, techs }: Props) => {
     const { colorMode } = useColorMode();
+    const [lineColor, setLineColor] = useState("blue.500");
 
     const boxShadowColor = {
         light: "0px 8px 26px rgba(0, 0, 0, 0.2)",
@@ -23,26 +27,31 @@ const ProjectCard = ({ title, description, techs }: Props) => {
             boxShadow={boxShadowColor[colorMode]}
         >
             <Flex
-                p={5}
+                p={[5, 15, 25]}
                 flexDir="column"
                 justify="space-between"
-                minHeight="280px"
+                h="100%"
+                minHeight="250px"
             >
-                <Box>
+                <Flex flexDir="column" height="full">
                     <Heading fontSize="md" fontWeight="semibold" mb={4}>
                         {title}
                     </Heading>
-                    <Text fontSize="sm" mb={3}>
+
+                    <Text fontSize="xs" mb={3}>
                         {description}
                     </Text>
-                    <Flex flexWrap="wrap" columnGap={3}>
-                        {techs?.map((tech, i) => (
-                            <Text key={i} fontSize="sm">
+                    <Flex mt="auto" flexWrap="wrap" columnGap={3}>
+                        {techs?.map((tech, i, arr) => (
+                            <Text key={tech} fontSize="xs">
                                 {tech}
+                                <span style={{ color: "#3182ce" }}>
+                                    {i !== arr.length - 1 ? " | " : " "}
+                                </span>
                             </Text>
                         ))}
                     </Flex>
-                </Box>
+                </Flex>
             </Flex>
         </Flex>
     );

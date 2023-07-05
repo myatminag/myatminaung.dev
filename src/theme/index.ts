@@ -19,6 +19,7 @@ const theme = extendTheme({
         }),
     },
     fontSizes: {
+        xs: "0.9rem",
         sm: "1rem",
         md: "1.3rem",
         lg: "1.6rem",
