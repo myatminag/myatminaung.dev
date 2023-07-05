@@ -1,6 +1,12 @@
 import { useColorMode, Heading, Text, Flex, Box } from "@chakra-ui/react";
 
-const ProjectCard = () => {
+interface Props {
+    title: string;
+    description: string;
+    techs: string[];
+}
+
+const ProjectCard = ({ title, description, techs }: Props) => {
     const { colorMode } = useColorMode();
 
     const boxShadowColor = {
@@ -24,20 +30,13 @@ const ProjectCard = () => {
             >
                 <Box>
                     <Heading fontSize="md" fontWeight="semibold" mb={4}>
-                        BitBazaar
+                        {title}
                     </Heading>
                     <Text fontSize="sm" mb={3}>
-                        BitBazaar offers an extensive and diverse collection of
-                        games and also have a wide range of games available, so
-                        you can find the perfect fit for your gaming setup.
+                        {description}
                     </Text>
                     <Flex flexWrap="wrap" columnGap={3}>
-                        {[
-                            ".Next.js",
-                            ".TailwindCss",
-                            ".React Query",
-                            ".Rawg Api",
-                        ].map((tech, i) => (
+                        {techs?.map((tech, i) => (
                             <Text key={i} fontSize="sm">
                                 {tech}
                             </Text>
