@@ -44,7 +44,7 @@ const Experience = () => {
             <Box>
                 <Box mb={4}>
                     <Text fontSize="md" fontWeight="semibold">
-                        Fullstack Developer At @TeeHtwin NonProfit Org
+                        Fullstack Developer At @TeeHtwin Non-Profit Org
                     </Text>
                     <Text fontSize="xs">November 2022 - Present</Text>
                 </Box>
