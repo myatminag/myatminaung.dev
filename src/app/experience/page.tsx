@@ -44,9 +44,9 @@ const Experience = () => {
             <Box>
                 <Box mb={4}>
                     <Text fontSize="md" fontWeight="semibold">
-                        Fullstack Developer At @TeeHtwin
+                        Fullstack Developer At @TeeHtwin NonProfit Org
                     </Text>
-                    <Text fontSize="xs">November 2023 - Present</Text>
+                    <Text fontSize="xs">November 2022 - Present</Text>
                 </Box>
                 <UnorderedList>
                     <ListItem mb={3}>
