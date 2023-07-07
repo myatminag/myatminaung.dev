@@ -1,7 +1,6 @@
 "use client";
 
 import {
-    Box,
     Container,
     Flex,
     HStack,
@@ -12,7 +11,6 @@ import {
 
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Description from "@/components/Description";
-import TechStack from "@/components/TechStack";
 import ProjectLists from "@/components/projects/ProjectLists";
 import Footer from "@/components/Footer";
 
@@ -23,6 +21,7 @@ export default function Home() {
                 <HStack gap={6}>
                     <Text fontSize="sm">Home</Text>
                     <Text fontSize="sm">Experience</Text>
+                    <Text fontSize="sm">Resume</Text>
                 </HStack>
                 <ThemeSwitch />
             </Flex>
