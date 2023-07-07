@@ -33,7 +33,7 @@ export const ChakraWrapper = ({ children }: { children: React.ReactNode }) => {
                             <Link href="/experience">
                                 <Text fontSize="sm">Experience</Text>
                             </Link>
-                            <Link href="/resume">
+                            <Link href="/resume.pdf" target="__blank">
                                 <Text fontSize="sm">Resume</Text>
                             </Link>
                         </HStack>

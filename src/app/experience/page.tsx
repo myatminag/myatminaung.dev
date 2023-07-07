@@ -1,13 +1,6 @@
 "use client";
 
-import {
-    Box,
-    UnorderedList,
-    ListItem,
-    VStack,
-    Text,
-    Divider,
-} from "@chakra-ui/react";
+import { Box, UnorderedList, ListItem, Text, Divider } from "@chakra-ui/react";
 
 const Experience = () => {
     return (
