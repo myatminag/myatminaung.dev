@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
     Container,
     Flex,
@@ -7,6 +8,7 @@ import {
     Text,
     VStack,
     Divider,
+    Box,
 } from "@chakra-ui/react";
 
 import ThemeSwitch from "@/components/ThemeSwitch";
@@ -16,18 +18,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
-        <Container maxW="2xl" py={8}>
-            <Flex alignItems="center" justifyContent="space-between" mb={6}>
-                <HStack gap={6}>
-                    <Text fontSize="sm">Home</Text>
-                    <Text fontSize="sm">Experience</Text>
-                    <Text fontSize="sm">Resume</Text>
-                </HStack>
-                <ThemeSwitch />
-            </Flex>
-
-            <Divider />
-
+        <Box>
             <VStack mt={10} spacing={10}>
                 <Description />
                 <Divider />
@@ -35,6 +26,6 @@ export default function Home() {
                 <Divider />
                 <Footer />
             </VStack>
-        </Container>
+        </Box>
     );
 }

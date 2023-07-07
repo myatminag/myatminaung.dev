@@ -1,3 +1,5 @@
+import { Container } from "@chakra-ui/react";
+
 import "./globals.css";
 import { ChakraWrapper } from "../provider/provider";
 
