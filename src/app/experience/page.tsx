@@ -1,15 +1,25 @@
 "use client";
 
-import { Box, UnorderedList, ListItem, Text, Divider } from "@chakra-ui/react";
+import {
+    Box,
+    UnorderedList,
+    ListItem,
+    Text,
+    Divider,
+    HStack,
+} from "@chakra-ui/react";
 
 const Experience = () => {
     return (
         <Box mt={10}>
             <Box>
                 <Box mb={4}>
-                    <Text fontSize="md" fontWeight="semibold">
-                        Frontend Developer At @Shopdoora
-                    </Text>
+                    <HStack>
+                        <Text fontSize="md" fontWeight="semibold">
+                            Frontend Developer,
+                        </Text>
+                        <Text fontSize="xs">@Shopdoora</Text>
+                    </HStack>
                     <Text fontSize="xs">January 2023 - Present</Text>
                 </Box>
                 <UnorderedList>
@@ -43,9 +53,12 @@ const Experience = () => {
             <Divider my={6} />
             <Box>
                 <Box mb={4}>
-                    <Text fontSize="md" fontWeight="semibold">
-                        Fullstack Developer At @TeeHtwin Non-Profit Org
-                    </Text>
+                    <HStack>
+                        <Text fontSize="md" fontWeight="semibold">
+                            Fullstack Developer,
+                        </Text>
+                        <Text fontSize="xs">@TeeHtwin.org</Text>
+                    </HStack>
                     <Text fontSize="xs">November 2022 - Present</Text>
                 </Box>
                 <UnorderedList>
