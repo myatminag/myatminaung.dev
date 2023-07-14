@@ -9,12 +9,14 @@ import {
     HStack,
 } from "@chakra-ui/react";
 
+// later it will fetch from notion cms
+
 const Experience = () => {
     return (
         <Box mt={10}>
             <Box>
                 <Box mb={4}>
-                    <HStack>
+                    <HStack alignItems="baseline">
                         <Text fontSize="md" fontWeight="semibold">
                             Frontend Developer,
                         </Text>
@@ -53,7 +55,7 @@ const Experience = () => {
             <Divider my={6} />
             <Box>
                 <Box mb={4}>
-                    <HStack>
+                    <HStack alignItems="baseline">
                         <Text fontSize="md" fontWeight="semibold">
                             Fullstack Developer,
                         </Text>
