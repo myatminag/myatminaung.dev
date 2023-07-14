@@ -22,10 +22,9 @@ const ProjectCard = ({ title, description, techs, link }: Props) => {
         <Flex
             flexDir="column"
             border="2px solid transparent"
-            borderColor="gray.200"
             borderRadius={5}
             boxShadow={boxShadowColor[colorMode]}
-            _hover={{ transform: "scale(1.05)", border: `2px solid blue` }}
+            _hover={{ transform: "scale(1.05)", border: `2px solid #0BC5EA` }}
             transition="transform .5s ease-in-out, border .5s ease-in-out"
         >
             <Flex
