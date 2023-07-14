@@ -7,11 +7,11 @@ interface Props {
     title: string;
     description: string;
     techs: string[];
+    link: string[];
 }
 
-const ProjectCard = ({ title, description, techs }: Props) => {
+const ProjectCard = ({ title, description, techs, link }: Props) => {
     const { colorMode } = useColorMode();
-    const [lineColor, setLineColor] = useState("blue.500");
 
     const boxShadowColor = {
         light: "0px 8px 26px rgba(0, 0, 0, 0.2)",
@@ -21,10 +21,12 @@ const ProjectCard = ({ title, description, techs }: Props) => {
     return (
         <Flex
             flexDir="column"
-            // border="1px solid"
+            border="2px solid transparent"
             borderColor="gray.200"
             borderRadius={5}
             boxShadow={boxShadowColor[colorMode]}
+            _hover={{ transform: "scale(1.05)", border: `2px solid blue` }}
+            transition="transform .5s ease-in-out, border .5s ease-in-out"
         >
             <Flex
                 p={[5, 15, 25]}

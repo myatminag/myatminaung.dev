@@ -1,6 +1,8 @@
 import { Heading, Box, SimpleGrid } from "@chakra-ui/react";
 import ProjectCard from "@/components/projects/ProjectCard";
 
+// later it will fetch from notion cms
+
 const ProjectLists = () => {
     return (
         <Box>
@@ -14,6 +16,7 @@ const ProjectLists = () => {
                         games and also have a wide range of games available, so
                         you can find the perfect fit for your gaming setup."
                     techs={["Next.js", "TypeScript", "ChakraUI", "Redux"]}
+                    link={["", ""]}
                 />
                 <ProjectCard
                     title="Empress"
@@ -25,11 +28,13 @@ const ProjectLists = () => {
                         "Express.js",
                         "MongoDB",
                     ]}
+                    link={["", ""]}
                 />
                 <ProjectCard
                     title="Kanote API"
                     description="Art Selling Application is currently under development and aims to create a seamless and user-friendly platform for artists to showcase and sell their artwork online."
                     techs={["Node.js", "Express.js", "Socket.io", "MongoDB"]}
+                    link={["", ""]}
                 />
                 <ProjectCard
                     title="Journey Blog"
@@ -42,6 +47,7 @@ const ProjectLists = () => {
                         "Express.js",
                         "MongoDB",
                     ]}
+                    link={["", ""]}
                 />
             </SimpleGrid>
         </Box>
