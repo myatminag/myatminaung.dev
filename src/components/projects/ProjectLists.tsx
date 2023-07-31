@@ -16,7 +16,8 @@ const ProjectLists = () => {
                         games and also have a wide range of games available, so
                         you can find the perfect fit for your gaming setup."
                     techs={["Next.js", "TypeScript", "ChakraUI", "Redux"]}
-                    link={["", ""]}
+                    demoHref="https://bitbazaar.vercel.app/"
+                    repoHref="https://github.com/myatminag/BitBazaar"
                 />
                 <ProjectCard
                     title="Empress"
@@ -28,13 +29,15 @@ const ProjectLists = () => {
                         "Express.js",
                         "MongoDB",
                     ]}
-                    link={["", ""]}
+                    demoHref="https://empress.vercel.app/"
+                    repoHref="https://github.com/myatminag/Empress"
                 />
                 <ProjectCard
                     title="Kanote API"
                     description="Art Selling Application is currently under development and aims to create a seamless and user-friendly platform for artists to showcase and sell their artwork online."
                     techs={["Node.js", "Express.js", "Socket.io", "MongoDB"]}
-                    link={["", ""]}
+                    demoHref=""
+                    repoHref=""
                 />
                 <ProjectCard
                     title="Journey Blog"
@@ -47,7 +50,8 @@ const ProjectLists = () => {
                         "Express.js",
                         "MongoDB",
                     ]}
-                    link={["", ""]}
+                    demoHref=""
+                    repoHref=""
                 />
             </SimpleGrid>
         </Box>

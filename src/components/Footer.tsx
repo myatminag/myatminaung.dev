@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import { HStack, Text, VStack, IconButton } from "@chakra-ui/react";
 
