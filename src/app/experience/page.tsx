@@ -61,7 +61,7 @@ const Experience = () => {
                         </Text>
                         <Text fontSize="xs">@TeeHtwin.org</Text>
                     </HStack>
-                    <Text fontSize="xs">November 2022 - Present</Text>
+                    <Text fontSize="xs">October 2022 - January 2023</Text>
                 </Box>
                 <UnorderedList>
                     <ListItem fontSize={{ lg: "sm" }} mb={3}>

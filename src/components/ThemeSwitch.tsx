@@ -8,7 +8,13 @@ const ThemeSwitch = () => {
         <IconButton
             aria-label="Dark Mode Toggle"
             variant="ghost"
-            icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+            icon={
+                colorMode === "dark" ? (
+                    <SunIcon boxSize={4} />
+                ) : (
+                    <MoonIcon boxSize={4} />
+                )
+            }
             onClick={toggleColorMode}
             _hover={{ background: "none" }}
             _focus={{ background: "none", border: "none" }}
