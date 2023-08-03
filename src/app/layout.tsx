@@ -1,7 +1,5 @@
-import { Container } from "@chakra-ui/react";
-
 import "./globals.css";
-import { ChakraWrapper } from "../provider/provider";
+import { ChakraWrapper } from "@/provider/chakra.provider";
 
 export const metadata = {
     title: "Myat Min Aung | A Full Stack Web Developer",
