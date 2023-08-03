@@ -15,7 +15,12 @@ const ProjectLists = () => {
                     description="BitBazaar offers an extensive and diverse collection of
                         games and also have a wide range of games available, so
                         you can find the perfect fit for your gaming setup."
-                    techs={["Next.js", "TypeScript", "ChakraUI", "Redux"]}
+                    techs={[
+                        "Next.js",
+                        "TypeScript",
+                        "Rawg.io Api",
+                        "React Query",
+                    ]}
                     demoHref="https://bitbazaar.vercel.app/"
                     repoHref="https://github.com/myatminag/BitBazaar"
                 />

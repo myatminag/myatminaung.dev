@@ -48,7 +48,7 @@ const ProjectCard = ({
                         <Heading fontSize="18px" fontWeight="semibold">
                             {title}
                         </Heading>
-                        <HStack rowGap={2}>
+                        <HStack columnGap={4}>
                             <Link href={demoHref}>
                                 <BsBoxArrowUpRight fontSize="15px" />
                             </Link>
