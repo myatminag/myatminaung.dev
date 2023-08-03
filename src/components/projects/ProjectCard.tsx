@@ -1,25 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import {
-    useColorMode,
-    Heading,
-    Text,
-    Flex,
-    HStack,
-} from "@chakra-ui/react";
-import { MdOutlineViewInAr } from "react-icons/md"
-import { BsBoxArrowUpRight } from "react-icons/bs"
+import { useColorMode, Heading, Text, Flex, HStack } from "@chakra-ui/react";
+import { MdOutlineViewInAr } from "react-icons/md";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 interface Props {
     title: string;
     description: string;
     techs: string[];
     demoHref: string;
-    repoHref: string
+    repoHref: string;
 }
 
-const ProjectCard = ({ title, description, techs, demoHref, repoHref }: Props) => {
+const ProjectCard = ({
+    title,
+    description,
+    techs,
+    demoHref,
+    repoHref,
+}: Props) => {
     const { colorMode } = useColorMode();
 
     const boxShadowColor = {
@@ -45,7 +45,7 @@ const ProjectCard = ({ title, description, techs, demoHref, repoHref }: Props) =
             >
                 <Flex flexDir="column" height="full">
                     <HStack justifyContent="space-between" mb={4}>
-                        <Heading fontSize="md" fontWeight="semibold">
+                        <Heading fontSize="18px" fontWeight="semibold">
                             {title}
                         </Heading>
                         <HStack rowGap={2}>
