@@ -9,6 +9,15 @@ module.exports = {
     ],
     theme: {
         extend: {
+            container: {
+                padding: {
+                    DEFAULT: "1rem",
+                    sm: "2rem",
+                    lg: "4rem",
+                    xl: "5rem",
+                    "2xl": "6rem",
+                },
+            },
             backgroundImage: {
                 "gradient-radial":
                     "radial-gradient(50% 50% at 50% 50%, var(--tw-gradient-stops))",

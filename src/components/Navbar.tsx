@@ -1,25 +1,21 @@
-"use client";
-
 import Link from "next/link";
-import { Flex, HStack, Text } from "@chakra-ui/react";
-import ThemeSwitch from "@/components/ThemeSwitch";
 
 const Navbar = () => {
     return (
-        <Flex alignItems="center" justifyContent="space-between" mb={6}>
-            <HStack gap={6}>
+        <div className="w-full flex items-center justify-between">
+            <div className="flex items-center gap-x-6">
                 <Link href="/">
-                    <Text fontSize="sm">Home</Text>
+                    <p className="text-zinc-500">Home</p>
                 </Link>
                 <Link href="/experience">
-                    <Text fontSize="sm">Experience</Text>
+                    <p>Experience</p>
                 </Link>
                 <Link href="/resume.pdf" target="__blank">
-                    <Text fontSize="sm">Resume</Text>
+                    <p>Resume</p>
                 </Link>
-            </HStack>
-            <ThemeSwitch />
-        </Flex>
+            </div>
+            <div>Dark Mode</div>
+        </div>
     );
 };
 
