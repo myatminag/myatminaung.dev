@@ -23,6 +23,8 @@ export default function Home() {
                 quantity={100}
             />
 
+            <ProjectLists />
+
             {/* <h1 className="z-10 text-3xl text-center text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-4xl whitespace-nowrap bg-clip-text">
                 Myat Min Aung
             </h1> */}
