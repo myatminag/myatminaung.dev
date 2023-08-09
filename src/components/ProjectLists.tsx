@@ -7,7 +7,7 @@ const ProjectLists = () => {
             <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-2">
                 <div className="grid grid-cols-1 gap-4">
                     <ProjectCard>
-                        <div className="p-8 text-[#ced4da]">
+                        <div className="p-8">
                             <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
                                 BitBazaar
                             </p>
@@ -20,7 +20,7 @@ const ProjectLists = () => {
                         </div>
                     </ProjectCard>
                     <ProjectCard>
-                        <div className="p-8 text-[#ced4da]">
+                        <div className="p-8">
                             <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
                                 Empress
                             </p>
@@ -33,7 +33,7 @@ const ProjectLists = () => {
                         </div>
                     </ProjectCard>
                     <ProjectCard>
-                        <div className="p-8 text-[#ced4da]">
+                        <div className="p-8">
                             <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
                                 Inner Journey
                             </p>
@@ -48,7 +48,7 @@ const ProjectLists = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                     <ProjectCard>
-                        <div className="p-8 text-[#ced4da]">
+                        <div className="p-8">
                             <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
                                 NVEC LMS
                             </p>
@@ -65,7 +65,7 @@ const ProjectLists = () => {
                         </div>
                     </ProjectCard>
                     <ProjectCard>
-                        <div className="p-8 text-[#ced4da]">
+                        <div className="p-8">
                             <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
                                 Kanote API
                             </p>

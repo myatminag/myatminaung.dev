@@ -1,7 +1,3 @@
-"use client";
-
-import Link from "next/link";
-
 import Description from "@/components/Description";
 import ProjectLists from "@/components/ProjectLists";
 import Particles from "@/components/Particles";
