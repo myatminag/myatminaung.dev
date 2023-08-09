@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 import Description from "@/components/Description";
-import ProjectLists from "@/components/projects/ProjectLists";
+import ProjectLists from "@/components/ProjectLists";
 import Particles from "@/components/Particles";
 import Navbar from "@/components/Navbar";
 
