@@ -4,7 +4,7 @@ const ProjectLists = () => {
     return (
         <div>
             <p>Projects</p>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-2">
                 <div className="grid grid-cols-1 gap-4">
                     <ProjectCard>
                         <div className="p-8 text-[#ced4da]">

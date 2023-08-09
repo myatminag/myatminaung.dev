@@ -4,13 +4,12 @@ import Link from "next/link";
 
 import Description from "@/components/Description";
 import ProjectLists from "@/components/projects/ProjectLists";
-import Footer from "@/components/Footer";
 import Particles from "@/components/Particles";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
     return (
-        <div className="container">
+        <div className="pb-8 container">
             <Navbar />
 
             {/* <div className="w-full h-[0.5px] bg-zinc-500 my-8" /> */}

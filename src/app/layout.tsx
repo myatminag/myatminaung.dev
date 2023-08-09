@@ -29,7 +29,7 @@ export default function RootLayout({
             className={[inter.variable, calSans.variable].join(" ")}
         >
             <body className="bg-black">
-                <main className="min-h-screen w-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+                <main className="max-w-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black">
                     {children}
                 </main>
             </body>
