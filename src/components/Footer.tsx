@@ -1,5 +1,5 @@
+import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
-import { HStack, Text, VStack, IconButton } from "@chakra-ui/react";
 
 const Footer = () => {
     const FOOTER_DATA = [
@@ -7,38 +7,37 @@ const Footer = () => {
             id: 1,
             label: "facebook",
             link: "https://www.facebook.com/profile.php?id=100008542208276",
-            icon: <FaFacebook fontSize="20px" />,
+            icon: <FaFacebook fontSize="22px" color="#FFFFFF" />,
         },
         {
             id: 1,
             label: "linkedin",
             link: "https://www.linkedin.com/in/myatmin-aung-830039245/",
-            icon: <FaLinkedin fontSize="20px" />,
+            icon: <FaLinkedin fontSize="22px" color="#FFFFFF" />,
         },
         {
             id: 1,
             label: "github",
             link: "https://github.com/myatminag",
-            icon: <FaGithub fontSize="20px" />,
+            icon: <FaGithub fontSize="22px" color="#FFFFFF" />,
         },
     ];
 
     return (
-        <VStack>
-            <HStack gap={6}>
+        <div className="flex flex-col items-center">
+            <div className="flex items-center gap-x-8 mb-6">
                 {FOOTER_DATA.map((data) => (
-                    <IconButton
+                    <Link
                         key={data.id}
-                        as="a"
                         aria-label={data.label}
-                        variant="ghost"
                         href={data.link}
-                        icon={data.icon}
-                    />
+                    >
+                        {data.icon}
+                    </Link>
                 ))}
-            </HStack>
-            <Text fontSize="xs">Developed by Myatmin Aung</Text>
-        </VStack>
+            </div>
+            <p className="text-zinc-400 text-sm">Developed by Myatmin Aung</p>
+        </div>
     );
 };
 

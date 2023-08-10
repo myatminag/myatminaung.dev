@@ -3,7 +3,12 @@ import ProjectCard from "./ProjectCard";
 const ProjectLists = () => {
     return (
         <div>
-            <p>Projects</p>
+            <header className="text-2xl lg:text-3xl tracking-wider font-bold text-zinc-200 mb-3">
+                Feature Projects 👨‍💻
+            </header>
+            <p className="text-zinc-400 mb-6">
+                Some of the projects are from work and some are on my own time.
+            </p>
             <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-2">
                 <div className="grid grid-cols-1 gap-4">
                     <ProjectCard>
