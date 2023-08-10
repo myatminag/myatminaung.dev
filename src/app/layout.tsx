@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import "./globals.css";
 
+import Navbar from "@/components/Navbar";
 import Particles from "@/components/Particles";
 
 export const metadata = {
@@ -32,10 +33,13 @@ export default function RootLayout({
         >
             <body className="bg-black">
                 <main className="max-w-screen bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+                    <Navbar />
+
                     <Particles
                         className="absolute inset-0 -z-10 animate-fade-in"
                         quantity={100}
                     />
+
                     {children}
                 </main>
             </body>

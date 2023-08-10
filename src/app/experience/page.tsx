@@ -1,96 +1,83 @@
-"use client";
-
-import {
-    Box,
-    UnorderedList,
-    ListItem,
-    Text,
-    Divider,
-    HStack,
-} from "@chakra-ui/react";
-
-// later it will fetch from notion cms
-
 const Experience = () => {
     return (
-        <Box mt={10}>
-            <Box>
-                <Box mb={4}>
-                    <HStack alignItems="baseline">
-                        <Text fontSize="md" fontWeight="semibold">
-                            Frontend Developer,
-                        </Text>
-                        <Text fontSize="xs">@Shopdoora</Text>
-                    </HStack>
-                    <Text fontSize="xs">January 2023 - Present</Text>
-                </Box>
-                <UnorderedList>
-                    <ListItem fontSize={{ lg: "sm" }} mb={3}>
+        <div className="pb-8 container">
+            <div>
+                <div className="flex items-center gap-x-3 mb-2">
+                    <p className="text-zinc-200 text-xl font-semibold">
+                        Frontend Developer,
+                    </p>
+                    <p className="text-zinc-400 text-sm">@Shopdoora</p>
+                </div>
+                <p className="text-zinc-400 text-sm mb-3">
+                    January 2023 - Present
+                </p>
+                <ul className="text-zinc-400 list-disc list-inside space-y-2">
+                    <li className="leading-7">
                         Collaborated with cross-functional teams, including
                         designers, testers, and backend developers, to deliver
                         high-quality features on tight timelines.
-                    </ListItem>
-                    <ListItem fontSize={{ lg: "sm" }} mb={3}>
+                    </li>
+                    <li className="leading-7">
                         Developed and maintained micro-frontends using React,
                         Next and state management libraries like Redux and
                         Zustand.
-                    </ListItem>
-                    <ListItem fontSize={{ lg: "sm" }} mb={3}>
+                    </li>
+                    <li className="leading-7">
                         Implemented responsive design strategies and
                         mobile-first development approach to ensure seamless
                         user experiences across all devices.
-                    </ListItem>
-                    <ListItem fontSize={{ lg: "sm" }} mb={3}>
+                    </li>
+                    <li className="leading-7">
                         Worked alongside with five front-end developers for
                         developing eCommerce service platforms for variety of
                         seller, retailer, and vendor.
-                    </ListItem>
-                    <ListItem fontSize={{ lg: "sm" }}>
+                    </li>
+                    <li className="leading-7">
                         Implemented and shipped the front-end of Aya Zay
                         multi-seller web app for Aya Bank which let users can
                         buy various kinds of products at Aya Pay application.
-                    </ListItem>
-                </UnorderedList>
-            </Box>
-            <Divider my={6} />
-            <Box>
-                <Box mb={4}>
-                    <HStack alignItems="baseline">
-                        <Text fontSize="md" fontWeight="semibold">
-                            Fullstack Developer,
-                        </Text>
-                        <Text fontSize="xs">@TeeHtwin.org</Text>
-                    </HStack>
-                    <Text fontSize="xs">October 2022 - January 2023</Text>
-                </Box>
-                <UnorderedList>
-                    <ListItem fontSize={{ lg: "sm" }} mb={3}>
+                    </li>
+                </ul>
+            </div>
+            <div className="w-full h-px bg-zinc-800 my-12" />
+            <div>
+                <div className="flex items-center gap-x-3 mb-2">
+                    <p className="text-zinc-200 text-xl font-semibold">
+                        Fullstack Developer,
+                    </p>
+                    <p className="text-zinc-400 text-sm">@TeeHtwin.org</p>
+                </div>
+                <p className="text-zinc-400 text-sm mb-3">
+                    October 2022 - January 2023
+                </p>
+                <ul className="text-zinc-400 list-disc list-inside space-y-2">
+                    <li className="leading-7">
                         Collaborated with a team of developers and designers to
                         create responsive and user-friendly web applications.
-                    </ListItem>
-                    <ListItem fontSize={{ lg: "sm" }} mb={3}>
+                    </li>
+                    <li className="leading-7">
                         Implemented front-end frameworks such as React and
                         Nextjs to enhance the user interface and improve overall
                         user experience.
-                    </ListItem>
-                    <ListItem fontSize={{ lg: "sm" }} mb={3}>
+                    </li>
+                    <li className="leading-7">
                         Utilized server-side programming languages like Node.js
                         and Express.js to build robust and scalable back-end
                         functionality.
-                    </ListItem>
-                    <ListItem fontSize={{ lg: "sm" }} mb={3}>
+                    </li>
+                    <li className="leading-7">
                         Collaborated closely with team members to understand
                         project requirements, provide feedback, and deliver
                         non-profit projects.
-                    </ListItem>
-                    <ListItem fontSize={{ lg: "sm" }}>
+                    </li>
+                    <li className="leading-7">
                         Kept up-to-date with the latest technologies, industry
                         trends, and best practices through continuous learning
                         and self-improvement.
-                    </ListItem>
-                </UnorderedList>
-            </Box>
-        </Box>
+                    </li>
+                </ul>
+            </div>
+        </div>
     );
 };
 

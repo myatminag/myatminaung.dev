@@ -7,10 +7,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
     return (
         <div className="pb-8 container">
-            <Navbar />
-
-            <div className="w-full h-px bg-zinc-800 mb-12" />
-
             <Description />
             {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
 

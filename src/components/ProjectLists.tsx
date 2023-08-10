@@ -4,7 +4,7 @@ const ProjectLists = () => {
     return (
         <div>
             <header className="text-2xl lg:text-3xl tracking-wider font-bold text-zinc-200 mb-3">
-                Feature Projects 👨‍💻
+                Featured Projects 👨‍💻
             </header>
             <p className="text-zinc-400 mb-6">
                 Some of the projects are from work and some are on my own time.
