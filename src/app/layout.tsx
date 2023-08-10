@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import Particles from "@/components/Particles";
+import Footer from "@/components/Footer";
 
 export const metadata = {
     title: "Myat Min Aung | A Full Stack Web Developer",
@@ -41,6 +42,8 @@ export default function RootLayout({
                     />
 
                     {children}
+
+                    <Footer />
                 </main>
             </body>
         </html>

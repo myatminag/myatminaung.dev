@@ -1,8 +1,8 @@
 const Experience = () => {
     return (
-        <div className="pb-8 container">
+        <div className="container">
             <div>
-                <div className="flex items-center gap-x-3 mb-2">
+                <div className="flex items-baseline gap-x-3 mb-2">
                     <p className="text-zinc-200 text-xl font-semibold">
                         Frontend Developer,
                     </p>
@@ -41,7 +41,7 @@ const Experience = () => {
             </div>
             <div className="w-full h-px bg-zinc-800 my-12" />
             <div>
-                <div className="flex items-center gap-x-3 mb-2">
+                <div className="flex items-baseline gap-x-3 mb-2">
                     <p className="text-zinc-200 text-xl font-semibold">
                         Fullstack Developer,
                     </p>
@@ -77,6 +77,7 @@ const Experience = () => {
                     </li>
                 </ul>
             </div>
+            <div className="w-full h-px bg-zinc-800 my-12" />
         </div>
     );
 };

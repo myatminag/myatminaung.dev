@@ -24,7 +24,7 @@ const Footer = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center pb-8">
             <div className="flex items-center gap-x-8 mb-6">
                 {FOOTER_DATA.map((data) => (
                     <Link
