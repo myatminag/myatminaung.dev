@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { MdOutlineViewInAr } from "react-icons/md";
+import { BsBoxArrowUpRight } from "react-icons/bs";
+
 import ProjectCard from "./ProjectCard";
 
 const ProjectLists = () => {
@@ -13,9 +17,25 @@ const ProjectLists = () => {
                 <div className="grid grid-cols-1 gap-4">
                     <ProjectCard>
                         <div className="p-8">
-                            <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
-                                BitBazaar
-                            </p>
+                            <div className="flex items-center justify-between">
+                                <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
+                                    BitBazaar
+                                </p>
+                                <div className="flex items-center gap-x-4">
+                                    <Link href="https://bitbazaar.vercel.app/">
+                                        <BsBoxArrowUpRight
+                                            size="18px"
+                                            className="text-zinc-400"
+                                        />
+                                    </Link>
+                                    <Link href="https://github.com/myatminag/BitBazaar">
+                                        <MdOutlineViewInAr
+                                            size="20px"
+                                            className="text-zinc-400"
+                                        />
+                                    </Link>
+                                </div>
+                            </div>
                             <p className="mt-4 leading-6 text-sm duration-1000 text-zinc-400 group-hover:text-zinc-200">
                                 BitBazaar offers an extensive and diverse
                                 collection of games and also have a wide range
@@ -26,9 +46,25 @@ const ProjectLists = () => {
                     </ProjectCard>
                     <ProjectCard>
                         <div className="p-8">
-                            <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
-                                Empress
-                            </p>
+                            <div className="flex items-center justify-between">
+                                <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
+                                    Empress
+                                </p>
+                                <div className="flex items-center gap-x-4">
+                                    <Link href="https://empress.vercel.app/">
+                                        <BsBoxArrowUpRight
+                                            size="18px"
+                                            className="text-zinc-400"
+                                        />
+                                    </Link>
+                                    <Link href="https://github.com/myatminag/Empress">
+                                        <MdOutlineViewInAr
+                                            size="20px"
+                                            className="text-zinc-400"
+                                        />
+                                    </Link>
+                                </div>
+                            </div>
                             <p className="mt-4 leading-6 text-sm duration-1000 text-zinc-400 group-hover:text-zinc-200">
                                 A fully functional ecommerce built with mern
                                 stack that users can browse variety of products
@@ -39,9 +75,25 @@ const ProjectLists = () => {
                     </ProjectCard>
                     <ProjectCard>
                         <div className="p-8">
-                            <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
-                                Inner Journey
-                            </p>
+                            <div className="flex items-center justify-between">
+                                <p className="z-20 text-xl font-medium duration-1000 text-zinc-200 group-hover:text-white font-display">
+                                    The Journey
+                                </p>
+                                <div className="flex items-center gap-x-4">
+                                    <Link href="https://journeyss.vercel.app/">
+                                        <BsBoxArrowUpRight
+                                            size="18px"
+                                            className="text-zinc-400"
+                                        />
+                                    </Link>
+                                    <Link href="https://github.com/myatminag/TheJourney">
+                                        <MdOutlineViewInAr
+                                            size="20px"
+                                            className="text-zinc-400"
+                                        />
+                                    </Link>
+                                </div>
+                            </div>
                             <p className="mt-4 leading-6 text-sm duration-1000 text-zinc-400 group-hover:text-zinc-200">
                                 Blog Website will focus on delivering an
                                 engaging and responsive user interface, enabling
