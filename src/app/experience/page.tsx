@@ -33,7 +33,7 @@ const Experience = () => {
                         seller, retailer, and vendor.
                     </li>
                     <li className="leading-7">
-                        Implemented and shipped the front-end of Aya Zay
+                        Implemented and shipped the frontend of Aya Zay
                         multi-seller web app for Aya Bank which let users can
                         buy various kinds of products at Aya Pay application.
                     </li>

@@ -11,7 +11,8 @@ const ProjectLists = () => {
                 Featured Projects 👨‍💻
             </header>
             <p className="text-zinc-400 mb-6">
-                Some of the projects are from work and some are on my own time.
+                Some of the projects are from freelance and some are on my own
+                time.
             </p>
             <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-2">
                 <div className="grid grid-cols-1 gap-4">
