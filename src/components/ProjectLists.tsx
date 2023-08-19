@@ -23,13 +23,19 @@ const ProjectLists = () => {
                                     BitBazaar
                                 </p>
                                 <div className="flex items-center gap-x-4">
-                                    <Link href="https://bitbazaar.vercel.app/">
+                                    <Link
+                                        target="_blank"
+                                        href="https://bitbazaar.vercel.app/"
+                                    >
                                         <BsBoxArrowUpRight
                                             size="18px"
                                             className="text-zinc-400"
                                         />
                                     </Link>
-                                    <Link href="https://github.com/myatminag/BitBazaar">
+                                    <Link
+                                        target="_blank"
+                                        href="https://github.com/myatminag/BitBazaar"
+                                    >
                                         <MdOutlineViewInAr
                                             size="20px"
                                             className="text-zinc-400"
@@ -52,13 +58,19 @@ const ProjectLists = () => {
                                     Empress
                                 </p>
                                 <div className="flex items-center gap-x-4">
-                                    <Link href="https://empress.vercel.app/">
+                                    <Link
+                                        target="_blank"
+                                        href="https://empress.vercel.app/"
+                                    >
                                         <BsBoxArrowUpRight
                                             size="18px"
                                             className="text-zinc-400"
                                         />
                                     </Link>
-                                    <Link href="https://github.com/myatminag/Empress">
+                                    <Link
+                                        target="_blank"
+                                        href="https://github.com/myatminag/Empress"
+                                    >
                                         <MdOutlineViewInAr
                                             size="20px"
                                             className="text-zinc-400"
@@ -81,13 +93,19 @@ const ProjectLists = () => {
                                     The Journey
                                 </p>
                                 <div className="flex items-center gap-x-4">
-                                    <Link href="https://journeyss.vercel.app/">
+                                    <Link
+                                        target="_blank"
+                                        href="https://journeyss.vercel.app/"
+                                    >
                                         <BsBoxArrowUpRight
                                             size="18px"
                                             className="text-zinc-400"
                                         />
                                     </Link>
-                                    <Link href="https://github.com/myatminag/TheJourney">
+                                    <Link
+                                        target="_blank"
+                                        href="https://github.com/myatminag/TheJourney"
+                                    >
                                         <MdOutlineViewInAr
                                             size="20px"
                                             className="text-zinc-400"
