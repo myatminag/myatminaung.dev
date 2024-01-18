@@ -40,7 +40,7 @@ const Preloader = () => {
 
   return (
     <div ref={loadingRef} aria-hidden={true}>
-      <div className="follow w-full h-screen bg-black flex items-center justify-center absolute top-0">
+      <div className="follow w-full h-screen bg-[#1e1e20] flex items-center justify-center absolute top-0">
         <h1
           ref={textRef}
           className="heading text-xl lg:text-5xl font-semibold lg:leading-[3.5rem] text-white text-center tracking-wider"
