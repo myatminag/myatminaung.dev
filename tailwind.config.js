@@ -6,9 +6,6 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
-  daisyui: {
-    themes: false,
-  },
   theme: {
     extend: {
       container: {
@@ -21,12 +18,8 @@ module.exports = {
           "2xl": "30rem",
         },
       },
-      colors: {
-        gray: {
-          DEFAULT: "#6c757d",
-        },
-      },
     },
   },
-  plugins: [require("daisyui")],
+  // plugins: [require("daisyui")],
+  // daisyui: {},
 };
