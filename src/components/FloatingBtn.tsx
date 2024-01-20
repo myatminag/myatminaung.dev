@@ -1,10 +1,31 @@
 'use client';
 
+import Link from 'next/link';
+
+// ** Component Imports
 import ThemeToggle from './ThemeToggle';
+import IconGithub from './icons/IconGithub';
+import IconLinkedIn from './icons/IconLinkedIn';
 
 const FloatingBtn = () => {
   return (
-    <div className="fixed bottom-5 right-5 z-30">
+    <div className="fixed bottom-5 right-5 z-30 flex flex-col items-center space-y-4">
+      <Link
+        target="_blank"
+        href="https://github.com/myatminag"
+        className="rounded-full border border-gray-300 bg-gray-300 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-black-200 dark:border-black-200 dark:bg-black-200 dark:hover:border-white-100"
+      >
+        <IconGithub className="h-5 w-5 text-black-100 dark:text-white-100" />
+      </Link>
+
+      <Link
+        target="_blank"
+        href="https://www.linkedin.com/in/myat-min-aung-830039245"
+        className="rounded-full border border-gray-300 bg-gray-300 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-black-200 dark:border-black-200 dark:bg-black-200 dark:hover:border-white-100"
+      >
+        <IconLinkedIn className="h-5 w-5 text-black-100 dark:text-white-100" />
+      </Link>
+
       <ThemeToggle />
     </div>
   );
