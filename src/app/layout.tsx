@@ -2,6 +2,7 @@ import './globals.css';
 
 import Preloader from '@/components/Preloader';
 import { ThemeProvider } from './providers';
+import FloatingBtn from '@/components/FloatingBtn';
 
 export const metadata = {
   title: 'Myat Min Aung | A Full Stack Web Developer',
@@ -16,10 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen bg-white-100 transition-colors duration-200 dark:bg-black-100">
         <ThemeProvider>
           <Preloader />
           {children}
+          <FloatingBtn />
         </ThemeProvider>
       </body>
     </html>

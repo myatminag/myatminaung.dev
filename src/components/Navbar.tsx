@@ -1,21 +1,24 @@
-import Link from "next/link";
+import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   return (
-    <div className="pt-12 container">
+    <nav className="flex items-center justify-between py-5">
+      <p className="text-lg font-medium text-black-100 dark:text-white-100">
+        Mma
+      </p>
       <div className="flex items-center gap-x-6">
-        <Link href="/" className="text-zinc-400">
+        <Link href="#" className="text-black-100 dark:text-white-100">
           Home
         </Link>
-        <Link href="/experience" className="text-zinc-400">
+        <Link href="#" className="text-black-100 dark:text-white-100">
+          About
+        </Link>
+        <Link href="#" className="text-black-100 dark:text-white-100">
           Experience
         </Link>
-        <Link href="/resume.pdf" target="__blank" className="text-zinc-400">
-          Resume
-        </Link>
       </div>
-      <div className="w-full h-px bg-zinc-800 my-12" />
-    </div>
+    </nav>
   );
 };
 

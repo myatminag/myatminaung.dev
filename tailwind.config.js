@@ -15,16 +15,19 @@ module.exports = {
           DEFAULT: '1rem',
           sm: '2rem',
           lg: '4rem',
-          xl: '18rem',
           '2xl': '30rem',
         },
       },
       colors: {
         black: {
-          100: '#1C1C1C',
+          100: '#121212',
+          200: '#2B2B2B',
         },
         white: {
-          100: '#FAFAF9',
+          100: '#F9FAFC',
+        },
+        gray: {
+          100: '#777777',
         },
       },
     },
