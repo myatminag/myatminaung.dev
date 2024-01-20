@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useRef } from "react";
-import SplitType from "split-type";
-import { gsap, Expo } from "gsap";
+import { useState, useEffect, useRef } from 'react';
+import SplitType from 'split-type';
+import { gsap, Expo } from 'gsap';
 gsap.registerPlugin();
 
 const Preloader = () => {
@@ -13,13 +13,13 @@ const Preloader = () => {
   useEffect(() => {
     if (textRef.current) {
       SplitType.create(textRef.current, {
-        types: "words,chars",
+        types: 'words,chars',
       });
     }
 
     const count = setInterval(() => {
       setCounter((counter: any) =>
-        counter < 100 ? counter + 1 : (clearInterval(count), setCounter(100))
+        counter < 100 ? counter + 1 : (clearInterval(count), setCounter(100)),
       );
     }, 25);
   }, []);
@@ -28,22 +28,22 @@ const Preloader = () => {
     const q = gsap.utils.selector(loadingRef);
     const tl = gsap.timeline({ defaults: { duration: 0.7 } });
 
-    tl.to(q(".char"), {
+    tl.to(q('.char'), {
       y: 0,
       stagger: 0.05,
       delay: 0.2,
       duration: 0.1,
     });
 
-    tl.to(q(".follow"), { y: "-100%", delay: 0.5 });
+    tl.to(q('.follow'), { y: '-100%', delay: 0.5 });
   }, []);
 
   return (
     <div ref={loadingRef} aria-hidden={true}>
-      <div className="follow w-full h-screen bg-[#2C2C2C] flex items-center justify-center absolute top-0">
+      <div className="follow bg-black-100 dark:bg-white-100 absolute top-0 flex h-screen w-full items-center justify-center">
         <h1
           ref={textRef}
-          className="heading text-xl lg:text-5xl font-semibold lg:leading-[3.5rem] text-white text-center tracking-wider"
+          className="heading text-white-100 dark:text-black-100 text-center text-xl font-semibold tracking-wider text-white lg:text-5xl lg:leading-[3.5rem]"
         >
           Innovate With Passion.
         </h1>

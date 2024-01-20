@@ -1,9 +1,9 @@
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Home() {
   return (
-    <div className="w-full h-screen bg-white dark:bg-[#2C2C2C] dark:text-white text-[#2C2C2C]">
-      This is Content
+    <div className="dark:bg-black-100 bg-white-100 h-screen w-full bg-white">
+      <p className="dark:text-white-100 text-black-100">This is Content</p>
       <ThemeToggle />
     </div>
   );
