@@ -1,6 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import gsap from 'gsap';
+import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
 
 // ** Component Imports
 import ThemeToggle from './ThemeToggle';
@@ -8,8 +11,32 @@ import IconGithub from './icons/IconGithub';
 import IconLinkedIn from './icons/IconLinkedIn';
 
 const FloatingBtn = () => {
+  const floatingBtnRef = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        floatingBtnRef.current,
+        {
+          bottom: '-200px',
+          opacity: 100,
+        },
+        {
+          bottom: '20px',
+          duration: 1.5,
+          delay: 3,
+          ease: 'power4.out',
+        },
+      );
+    },
+    { scope: floatingBtnRef },
+  );
+
   return (
-    <div className="fixed bottom-5 right-5 z-30 flex flex-col items-center space-y-4">
+    <div
+      ref={floatingBtnRef}
+      className="fixed bottom-5 right-5 z-30 flex flex-col items-center space-y-4"
+    >
       <Link
         target="_blank"
         href="https://github.com/myatminag"
