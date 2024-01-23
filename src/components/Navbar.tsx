@@ -29,20 +29,32 @@ const Navbar = () => {
   );
 
   return (
-    <nav ref={navbarRef} className="flex items-center justify-between py-5">
-      <p className="text-lg font-medium text-black-100 dark:text-white-100">
-        Mma
-      </p>
-      <div className="flex items-center gap-x-6">
-        <Link href="#" className="text-black-100 dark:text-white-100">
-          Home
-        </Link>
-        <Link href="#" className="text-black-100 dark:text-white-100">
-          About
-        </Link>
-        <Link href="#" className="text-black-100 dark:text-white-100">
-          Experience
-        </Link>
+    <nav
+      ref={navbarRef}
+      className="bg-white-400 sticky top-0 z-40 bg-white-100 py-5 shadow-sm transition-colors duration-500 dark:bg-black-100"
+    >
+      <div className="container flex items-center justify-between">
+        <p className="text-lg font-medium text-black-100 dark:text-white-100">
+          Mma.dev
+        </p>
+
+        <div className="flex items-center gap-x-6">
+          <Link href="#" className="text-black-100 dark:text-white-100">
+            About
+          </Link>
+          <Link href="#" className="text-black-100 dark:text-white-100">
+            Experience
+          </Link>
+          <Link href="#" className="text-black-100 dark:text-white-100">
+            Projects
+          </Link>
+          <Link href="#" className="text-black-100 dark:text-white-100">
+            Blogs
+          </Link>
+          <Link href="#" className="text-black-100 dark:text-white-100">
+            Contact
+          </Link>
+        </div>
       </div>
     </nav>
   );

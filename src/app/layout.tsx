@@ -1,8 +1,15 @@
 import './globals.css';
+import { Poppins } from 'next/font/google';
 
-import Preloader from '@/components/Preloader';
 import { ThemeProvider } from './providers';
+import Navbar from '@/components/Navbar';
+import Preloader from '@/components/Preloader';
 import FloatingBtn from '@/components/FloatingBtn';
+
+export const poppins = Poppins({
+  weight: ['200', '400', '500', '600', '800', '900'],
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'Myat Min Aung | A Full Stack Web Developer',
@@ -16,10 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white-100 transition-colors duration-200 dark:bg-black-100">
+    <html lang="en" className={poppins.className}>
+      <body className="min-h-screen bg-white-100 transition-colors duration-500 dark:bg-black-100">
         <ThemeProvider>
           <Preloader />
+          <Navbar />
           {children}
           <FloatingBtn />
         </ThemeProvider>

@@ -19,7 +19,6 @@ const FloatingBtn = () => {
         floatingBtnRef.current,
         {
           bottom: '-200px',
-          opacity: 100,
         },
         {
           bottom: '20px',
