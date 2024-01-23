@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Preloader from '@/components/Preloader';
 import FloatingBtn from '@/components/FloatingBtn';
 
-export const poppins = Poppins({
+const poppins = Poppins({
   weight: ['200', '400', '500', '600', '800', '900'],
   subsets: ['latin'],
 });
