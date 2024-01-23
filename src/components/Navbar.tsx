@@ -31,14 +31,14 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="bg-white-400 sticky top-0 z-40 bg-white-100 py-5 shadow-sm transition-colors duration-500 dark:bg-black-100"
+      className="bg-white-400 fixed top-0 z-40 w-full bg-white-100 py-5 shadow-sm transition-colors duration-500 dark:bg-black-100"
     >
       <div className="container flex items-center justify-between">
         <p className="text-lg font-medium text-black-100 dark:text-white-100">
           Mma.dev
         </p>
 
-        <div className="flex items-center gap-x-6">
+        <div className="hidden lg:flex lg:items-center lg:gap-x-6">
           <Link href="#" className="text-black-100 dark:text-white-100">
             About
           </Link>

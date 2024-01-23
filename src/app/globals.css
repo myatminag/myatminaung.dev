@@ -8,6 +8,18 @@
   }
 }
 
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overflow-y: visible;
+  position: relative;
+  overflow-x: hidden;
+}
+
 .heading {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
