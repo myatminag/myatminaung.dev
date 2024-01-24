@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -86,11 +86,78 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container flex min-h-screen w-full flex-col items-center justify-center">
-        About Section
+      <section
+        id="about"
+        className="container grid min-h-screen w-full grid-cols-2"
+      >
+        <ul className="timeline timeline-vertical timeline-snap-icon border max-md:timeline-compact">
+          <li>
+            <div className="timeline-middle text-black-100 dark:text-white-100">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-start mb-10 text-black-100 dark:text-white-100 md:text-end">
+              <p>@ILBC</p>
+              <time className="font-mono uppercase italic">
+                Jan 2023 - <span className="text-green-500">Present</span>
+              </time>
+              <p className="text-lg font-semibold text-black-100 dark:text-white-100">
+                Frontend Developer
+              </p>
+              The Apple Macintosh—later rebranded as the Macintosh 128K—is the
+              original Apple Macintosh personal computer.
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div className="timeline-middle text-black-100 dark:text-white-100">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-end mb-10 text-black-100 dark:text-white-100">
+              <p>@Shopdoora</p>
+              <time className="font-mono italic text-black-100 dark:text-white-100">
+                Jan 2023 - Oct 2023
+              </time>
+              <div className="text-lg font-semibold text-black-100 dark:text-white-100">
+                Frontend Developer
+              </div>
+              Implemented eCommerce service platforms and mobile-first
+              development approach to ensure seamless user experiences across
+              all devices for variety of seller, retailer, and vendor.
+            </div>
+            <hr />
+          </li>
+        </ul>
+        <div className="border"></div>
       </section>
 
-      <section ref={sliderRef} className="flex h-screen w-[400vw] flex-wrap">
+      <section
+        id="projects"
+        ref={sliderRef}
+        className="flex h-screen w-[400vw] flex-wrap"
+      >
         <div className="panel flex min-h-screen w-screen flex-col items-center justify-center bg-red-400">
           Project 1
         </div>
@@ -105,7 +172,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex min-h-screen  w-full flex-col items-center justify-center bg-blue-300">
+      <section
+        id="blog"
+        className="flex min-h-screen w-full flex-col items-center justify-center"
+      >
+        Blog Section
+      </section>
+
+      <section
+        id="contact"
+        className="flex min-h-screen w-full flex-col items-center justify-center bg-blue-300"
+      >
         Contact Section
       </section>
     </div>
