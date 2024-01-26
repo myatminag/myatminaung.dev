@@ -74,7 +74,7 @@ const HeroSection = () => {
       className="container flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center"
     >
       <div className="image-animation block lg:hidden">
-        <Image src="/astronot.svg" alt="astronot" width={500} height={500} />
+        <Image src="/astronautsvg" alt="astronot" width={500} height={500} />
       </div>
       <div>
         <div className="heading">
