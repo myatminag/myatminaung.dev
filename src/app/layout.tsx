@@ -1,13 +1,13 @@
 import './globals.css';
-import { Poppins } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 
 import { ThemeProvider } from './providers';
 import Navbar from '@/components/Navbar';
 import Preloader from '@/components/Preloader';
 import FloatingBtn from '@/components/FloatingBtn';
 
-const poppins = Poppins({
-  weight: ['200', '400', '500', '600', '800', '900'],
+const poppins = Space_Grotesk({
+  weight: ['400', '500', '600'],
   subsets: ['latin'],
 });
 

@@ -1,47 +1,19 @@
 'use client';
 
+import Image from 'next/image';
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// ** Component Import
+import HeroSection from '@/components/sections/HeroSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const containerRef = useRef(null);
   const sliderRef = useRef<HTMLElement | null>(null);
-
-  useGSAP(() => {
-    gsap.fromTo(
-      '.text-heading',
-      {
-        y: 100,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.25,
-        delay: 3,
-        ease: 'power2.inOut',
-      },
-    );
-
-    gsap.fromTo(
-      '.text-paragraph',
-      {
-        y: 100,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.5,
-        delay: 3,
-        ease: 'power2.inOut',
-      },
-    );
-  });
 
   useLayoutEffect(() => {
     let panels = gsap.utils.toArray('.panel');
@@ -67,30 +39,40 @@ export default function Home() {
 
   return (
     <div ref={containerRef}>
-      <section className="container flex min-h-screen flex-col items-start justify-center">
-        <div className="heading">
-          <h1
-            aria-hidden={true}
-            className="text-heading whitespace-nowrap text-3xl font-semibold uppercase text-black-100 dark:text-white-100 lg:text-8xl"
-          >
-            Hi There, I&apos;m <br /> Myat Min Aung
-          </h1>
-        </div>
-        <div className="heading">
-          <p className="text-paragraph mt-5 w-full text-black-100 dark:text-white-100 lg:w-9/12 lg:text-lg">
-            Frontend Developer based in Yangon, Myanmar. I&apos;m dedicated to
-            continuously learning and eager to contribute my skills to a dynamic
-            team, collaborate on exciting projects, and contribute to the
-            creation of innovative digital solutions.
-          </p>
-        </div>
-      </section>
+      <HeroSection />
 
       <section
         id="about"
-        className="container grid min-h-screen w-full grid-cols-2"
+        className="container grid min-h-screen grid-cols-1 lg:grid-cols-2"
       >
-        <ul className="timeline timeline-vertical timeline-snap-icon border max-md:timeline-compact">
+        <div className="flex w-full items-center justify-start">
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <p className="text-heading font-semibold text-black-100 dark:text-white-100">
+                I&apos;m a frontend developer based in Yangon, Myanmar.
+              </p>
+              <p className="text-black-100 opacity-70 dark:text-white-200">
+                I&apos;ve honed my skills in JavaScript & TypeScript, always
+                staying on the pulse of the latest trends and technologies. But
+                beyond the languages and frameworks, my true passion lies in the
+                seamless fusion of design and functionality.
+              </p>
+              <p className="text-black-100 opacity-70 dark:text-white-200">
+                I&apos;ve honed my skills in JavaScript & TypeScript, always
+                staying on the pulse of the latest trends and technologies. But
+                beyond the languages and frameworks, my true passion lies in the
+                seamless fusion of design and functionality.
+              </p>
+              <p className="text-black-100 opacity-70 dark:text-white-200">
+                I&apos;m dedicated to continuously learning and eager to
+                contribute my skills to a dynamic team, collaborate on exciting
+                projects, and contribute to the creation of innovative digital
+                solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* <ul className="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
           <li>
             <div className="timeline-middle text-black-100 dark:text-white-100">
               <svg
@@ -106,16 +88,21 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <div className="timeline-start mb-10 text-black-100 dark:text-white-100 md:text-end">
-              <p>@ILBC</p>
-              <time className="font-mono uppercase italic">
-                Jan 2023 - <span className="text-green-500">Present</span>
-              </time>
-              <p className="text-lg font-semibold text-black-100 dark:text-white-100">
+            <div className="timeline-start mb-10 md:text-end">
+              <p className="text-lg font-semibold text-black-100 dark:text-white-100 ">
+                ILBC
+              </p>
+              <p className="text-black-100 dark:text-white-100">
                 Frontend Developer
               </p>
-              The Apple Macintosh—later rebranded as the Macintosh 128K—is the
-              original Apple Macintosh personal computer.
+              <time className="font-mono text-xs uppercase italic text-black-100 dark:text-white-100">
+                Oct 2023 - <span className="text-green-500">Present</span>
+              </time>
+              <p className="text-black-100 opacity-70 dark:text-white-100">
+                Implemented eCommerce service platforms and mobile-first
+                development approach to ensure seamless user experiences across
+                all devices for variety of seller, retailer, and vendor.
+              </p>
             </div>
             <hr />
           </li>
@@ -135,22 +122,24 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <div className="timeline-end mb-10 text-black-100 dark:text-white-100">
-              <p>@Shopdoora</p>
-              <time className="font-mono italic text-black-100 dark:text-white-100">
+            <div className="timeline-end">
+              <p className="text-lg font-semibold text-black-100 dark:text-white-100 ">
+                Shopdoora
+              </p>
+              <p className="text-black-100 dark:text-white-100">
+                Frontend Developer
+              </p>
+              <time className="font-mono text-xs uppercase italic text-black-100 dark:text-white-100">
                 Jan 2023 - Oct 2023
               </time>
-              <div className="text-lg font-semibold text-black-100 dark:text-white-100">
-                Frontend Developer
-              </div>
-              Implemented eCommerce service platforms and mobile-first
-              development approach to ensure seamless user experiences across
-              all devices for variety of seller, retailer, and vendor.
+              <p className="dark:text-white-200 text-black-100 opacity-70">
+                Implemented eCommerce service platforms and mobile-first
+                development approach to ensure seamless user experiences across
+                all devices for variety of seller, retailer, and vendor.
+              </p>
             </div>
-            <hr />
           </li>
-        </ul>
-        <div className="border"></div>
+        </ul> */}
       </section>
 
       <section

@@ -48,9 +48,6 @@ const Navbar = () => {
           <Link href="#projects" className="text-black-100 dark:text-white-100">
             Projects
           </Link>
-          <Link href="#blog" className="text-black-100 dark:text-white-100">
-            Blogs
-          </Link>
           <Link href="#contact" className="text-black-100 dark:text-white-100">
             Contact
           </Link>

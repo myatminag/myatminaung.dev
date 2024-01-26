@@ -14,9 +14,12 @@ module.exports = {
         padding: {
           DEFAULT: '1rem',
           sm: '2rem',
-          lg: '4rem',
+          lg: '5rem',
           '2xl': '30rem',
         },
+      },
+      fontSize: {
+        heading: '20px',
       },
       colors: {
         black: {
@@ -25,6 +28,7 @@ module.exports = {
         },
         white: {
           100: '#F9FAFC',
+          200: '#F3F4F6',
         },
         gray: {
           100: '#777777',
