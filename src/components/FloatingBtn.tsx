@@ -34,7 +34,7 @@ const FloatingBtn = () => {
   return (
     <div
       ref={floatingBtnRef}
-      className="fixed bottom-5 right-5 z-30 flex flex-col items-center space-y-4"
+      className="fixed bottom-5 right-5 z-30 hidden flex-col items-center space-y-4 lg:flex"
     >
       <Link
         target="_blank"

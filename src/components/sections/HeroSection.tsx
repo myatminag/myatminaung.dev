@@ -40,18 +40,6 @@ const HeroSection = () => {
 
       let imageTL = gsap.timeline({ repeat: -1 });
       imageTL
-        .fromTo(
-          '.image-animation',
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            duration: 1,
-            delay: 3,
-            ease: 'power2.inOut',
-          },
-        )
         .to('.image-animation', {
           y: '+=30',
           x: '-=30',
