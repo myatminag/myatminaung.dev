@@ -136,7 +136,7 @@ const AboutSection = () => {
                       Frontend Developer
                     </p>
                     <time className="font-mono text-sm text-black-100 opacity-70 dark:text-white-100">
-                      Jan 2023 - Oct 2023
+                      Oct 2022 - Oct 2023
                     </time>
                   </div>
                 </div>
