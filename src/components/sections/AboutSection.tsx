@@ -5,6 +5,10 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+// ** Component Import
+import IconPhone from '../icons/IconPhone';
+import IconMail from '../icons/IconMail';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
@@ -37,7 +41,7 @@ const AboutSection = () => {
       className="container my-10 grid min-h-screen place-content-center lg:my-0"
     >
       <div className="flex flex-col items-center justify-center gap-y-6 lg:flex-row lg:items-start lg:gap-x-12">
-        <aside className="flex flex-col items-center space-y-3 lg:w-[400px]">
+        <aside className="flex flex-col items-start space-y-3 lg:w-[400px] lg:items-center">
           <Image
             src="/myProfile.jpeg"
             alt="my-profile"
@@ -45,12 +49,24 @@ const AboutSection = () => {
             height={500}
             className="rounded-lg lg:w-[300px] lg:scale-100"
           />
-          <div className="flex w-full items-center lg:w-[300px]">
+          <div className="flex flex-col items-start gap-y-2 lg:w-[300px]">
             <Link
-              href=""
-              className="w-full rounded-lg border py-1.5 text-center font-semibold text-black-100 opacity-70 dark:text-white-100"
+              href="mailto:myatminaung.dev@gmail.com"
+              className="flex items-center gap-x-3"
             >
-              View Resume
+              <IconPhone className="w-4 text-white-100" />
+              <p className="font-semibold text-black-100 dark:text-white-100">
+                +959427274346
+              </p>
+            </Link>
+            <Link
+              href="mailto:myatminaung.dev@gmail.com"
+              className="flex items-center gap-x-3"
+            >
+              <IconMail className="w-4 text-white-100" />
+              <p className="font-semibold text-black-100 dark:text-white-100">
+                myatminaung.dev@gmail.com
+              </p>
             </Link>
           </div>
         </aside>
