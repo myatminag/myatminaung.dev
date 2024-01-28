@@ -63,13 +63,15 @@ const AboutSection = () => {
               Over the years, that curiosity evolved into a deep-seated passion
               for building software that my journey into the world of code
               started with a curiosity about how technology shapes our daily
-              lives
+              lives.
             </p>
             <p className="text-black-100 opacity-70 dark:text-white-200">
-              I&apos;ve honed my skills in JavaScript & TypeScript, always
-              staying on the pulse of the latest trends and technologies. But
-              beyond the languages and frameworks, my true passion lies in the
-              seamless fusion of design and functionality.
+              I&apos;ve honed my skills in{' '}
+              <strong className="opacity-100">JavaScript</strong> &{' '}
+              <strong>TypeScript,</strong> always staying on the pulse of the
+              latest trends and technologies. But beyond the languages and
+              frameworks, my true passion lies in the seamless fusion of design
+              and functionality.
             </p>
             <p className="text-black-100 opacity-70 dark:text-white-200">
               I&apos;m dedicated to continuously learning and eager to
@@ -85,7 +87,7 @@ const AboutSection = () => {
             <div className="flex w-full items-center justify-start">
               <div className="grid w-full grid-cols-1 gap-4">
                 <div className="relative flex max-w-2xl items-start gap-x-4 before:absolute before:bottom-0 before:left-6 before:top-[3rem] before:h-[calc(70px)] before:w-[1px] before:bg-zinc-200 dark:before:bg-zinc-800 lg:gap-x-6">
-                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-gray-300 text-black-100 dark:bg-black-200 dark:text-white-200">
+                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-zinc-200 text-black-100 dark:bg-black-200 dark:text-white-200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -112,7 +114,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 <div className="relative flex max-w-2xl items-start gap-x-4 lg:gap-x-6">
-                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-gray-300 text-black-100 dark:bg-black-200 dark:text-white-200">
+                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-zinc-200 text-black-100 dark:bg-black-200 dark:text-white-200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
