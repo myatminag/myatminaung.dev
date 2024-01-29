@@ -17,34 +17,37 @@ interface Props {
 const ProjectSection = ({ containerRef }: Props) => {
   const sliderRef = useRef<HTMLElement | null>(null);
 
-  useLayoutEffect(() => {
-    if (sliderRef.current) {
-      let context = gsap.context(() => {
-        let panels = gsap.utils.toArray('.panel');
-        gsap.to(panels, {
-          xPercent: -100 * (panels.length - 1),
-          ease: 'none',
-          scrollTrigger: {
-            trigger: sliderRef.current,
-            pin: true,
-            scrub: 1,
-            snap: 1 / (panels.length - 1),
-            end: () => '+=' + sliderRef.current?.offsetWidth,
-          },
-        });
-      }, containerRef);
+  useGSAP(
+    () => {
+      if (sliderRef.current) {
+        let context = gsap.context(() => {
+          let panels = gsap.utils.toArray('.panel');
+          gsap.to(panels, {
+            xPercent: -100 * (panels.length - 1),
+            ease: 'none',
+            scrollTrigger: {
+              trigger: sliderRef.current,
+              pin: true,
+              scrub: 1,
+              snap: 1 / (panels.length - 1),
+              end: () => '+=' + sliderRef.current?.offsetWidth,
+            },
+          });
+        }, containerRef);
 
-      return () => context.revert();
-    }
-  });
+        return () => context.revert();
+      }
+    },
+    { scope: sliderRef },
+  );
 
   return (
     <section
       id="projects"
       ref={sliderRef}
-      className="flex h-screen w-[400vw] flex-wrap "
+      className="flex min-h-screen w-[400vw] flex-wrap"
     >
-      <div className="panel grid min-h-screen w-screen place-content-center px-[1rem] lg:grid-cols-2 lg:px-[8rem]">
+      <div className="panel grid w-screen place-content-center px-[1rem] lg:grid-cols-2 lg:px-[8rem]">
         <div>
           <Image
             src="https://myatminag.s3.ap-southeast-1.amazonaws.com/Mac%20Mockup%20Final.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECAaDmFwLXNvdXRoZWFzdC0xIkcwRQIhAIjgGJGeduorRC6EzfshBmI1cdNXyQisnsN1yeDlgDxeAiAM03tk%2FOwSMhQ%2Fe9NZ%2B4MMCICepzTxy2kYaJJAl9Zx3yrtAgjZ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDI4OTkyMzU4MjM3MiIMw%2FRBUjfEf%2FwilzsjKsEC5fudmzG9N9PYjob0poTvjrXHaTRawuUzZmCF8IxsiW6qxXtzocMIxIdBwGF3attRJSRcAH6OUhyN7lEApOEQSxYi2vp51XldEyb3WTSaAFY9kojtqGSGKp9PMCfyAl2b%2BZ0vG%2FBN6AFQ8XRdksbOHqzcwnlo26gN21fXKIxUECYqLxNkXFwpo%2BWRNa0tUfTPTPY8Jjg4zw6NQs0Mxx5tCIxOsarBPZvJJBZ%2FQAZmdxuGQ4jIP6Np0wBI5CvtXPTeYxE2t1UwW%2BBe9wApwmMbn%2BnWr7tguSLSS1fWbGjcM%2B4wBmK7SYAGOyGE%2F%2FsJ2CSghwiaxidPvKgUNPWLWcWgl9%2BEM5sH1sn8YIazvDMrVqTgE2pC0QGXmipxYKSBY%2B3K%2FnCScDmjAik4ARmOJOEe5g3GwMGT1aN%2FywdTrbwAQaUFMOX02a0GOrMCCngW105X3gcGanIbxw638gRfo%2B6rgC4PFDalBV0dGKEuQz8MlztZ1sv%2BWxsmjts2I4Eob8nvoBlb19yTcike3oRML8ecr%2BXEYtAAyVk%2FeHXbNIAa7oKTdWfl293jMAx4zEjv6yMjRk%2BMuow%2BAuSwoBw8x1APnJ69onR70j25gPYE58fgZortPfUpIJEQT0GgVoVblW7HRGPU%2Fvic0AktmhSNdR0T7L97N7mEagJR5hE2c7CQFiQ5rZcHn9kjaIky0MDkqKmLy9W3NkgVXcR7%2BLf5X%2Beh1yr60djWUBhIYdWB2DQT1pIweo55fV9sGxrMe7ILtUbTWhhjJCzNVt2AbLiglFIqJwdeeOatcEVwAbPQF7AFhsxi3JvqrMWcdkjt8aWvemC0L1U2ffFQ9nh2QgBXyQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240128T160546Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAUHAGKZGSC4X6SJF5%2F20240128%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Signature=f5ac058cde264e9edcdc8378c343f17250a984f136a5dce47fa544dbcb703470"
