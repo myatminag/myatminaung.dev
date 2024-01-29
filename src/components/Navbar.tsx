@@ -9,30 +9,30 @@ import ThemeToggle from './ThemeToggle';
 const Navbar = () => {
   const navbarRef = useRef(null);
 
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        navbarRef.current,
-        {
-          y: '-100%',
-        },
-        {
-          y: '0%',
-          duration: 1,
-          delay: 3.5,
-          ease: 'power4.out',
-        },
-      );
-    },
-    {
-      scope: navbarRef,
-    },
-  );
+  // useGSAP(
+  //   () => {
+  //     gsap.fromTo(
+  //       navbarRef.current,
+  //       {
+  //         y: '-100%',
+  //       },
+  //       {
+  //         y: '0%',
+  //         duration: 1,
+  //         delay: 3.5,
+  //         ease: 'power4.out',
+  //       },
+  //     );
+  //   },
+  //   {
+  //     scope: navbarRef,
+  //   },
+  // );
 
   return (
     <nav
       ref={navbarRef}
-      className="bg-white-400 fixed top-0 z-40 w-full bg-white-100 py-5 shadow-sm transition-colors duration-500 dark:bg-black-100"
+      className="bg-white-400 sticky top-0 z-40 w-full bg-white-100 py-5 shadow-sm transition-colors duration-500 dark:bg-black-100"
     >
       <div className="container flex items-center justify-between">
         <Link

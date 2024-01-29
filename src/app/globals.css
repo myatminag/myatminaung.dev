@@ -9,16 +9,7 @@
 }
 
 html {
-  overflow-y: scroll;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth !important;
-}
-
-body {
-  overflow-y: visible;
-  position: relative;
-  overflow-x: hidden;
 }
 
 .heading {

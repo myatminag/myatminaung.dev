@@ -41,47 +41,18 @@ const AboutSection = () => {
       className="container my-10 grid min-h-screen place-content-center lg:my-0"
     >
       <div className="flex flex-col items-center justify-center gap-y-6 lg:flex-row lg:items-start lg:gap-x-12">
-        <aside className="flex flex-col items-start space-y-3 lg:w-[400px] lg:items-center">
-          <Image
-            src="/myProfile.jpeg"
-            alt="my-profile"
-            width={500}
-            height={500}
-            className="rounded-lg lg:w-[300px] lg:scale-100"
-          />
-          <div className="flex flex-col items-start gap-y-2 lg:w-[300px]">
-            <Link
-              href="mailto:myatminaung.dev@gmail.com"
-              className="flex items-center gap-x-3"
-            >
-              <IconPhone className="w-4 text-white-100" />
-              <p className="font-semibold text-black-100 dark:text-white-100">
-                +959427274346
-              </p>
-            </Link>
-            <Link
-              href="mailto:myatminaung.dev@gmail.com"
-              className="flex items-center gap-x-3"
-            >
-              <IconMail className="w-4 text-white-100" />
-              <p className="font-semibold text-black-100 dark:text-white-100">
-                myatminaung.dev@gmail.com
-              </p>
-            </Link>
-          </div>
-        </aside>
         <div className="flex-1 space-y-6">
           <div className="space-y-3">
-            <p className="text-heading font-semibold text-black-100 dark:text-white-100">
-              I&apos;m a frontend developer based in Yangon, Myanmar.
+            <p className="text-heading font-semibold text-black-100 dark:text-white-100 lg:text-xl">
+              Hello, I&apos;m Myat Min Aung 👋
             </p>
-            <p className="text-black-100 opacity-70 dark:text-white-200">
-              Over the years, that curiosity evolved into a deep-seated passion
-              for building software that my journey into the world of code
-              started with a curiosity about how technology shapes our daily
-              lives.
+            <p className="text-black-100 opacity-70 dark:text-white-200 lg:text-lg">
+              I&apos;m a frontend developer based in Yangon, Myanmar. Over the
+              years, that curiosity evolved into a deep-seated passion for
+              building software that my journey into the world of code started
+              with a curiosity about how technology shapes our daily lives.
             </p>
-            <p className="text-black-100 opacity-70 dark:text-white-200">
+            <p className="text-black-100 opacity-70 dark:text-white-200 lg:text-lg">
               I&apos;ve honed my skills in{' '}
               <strong className="opacity-100">JavaScript</strong> &{' '}
               <strong>TypeScript,</strong> always staying on the pulse of the
@@ -89,7 +60,7 @@ const AboutSection = () => {
               frameworks, my true passion lies in the seamless fusion of design
               and functionality.
             </p>
-            <p className="text-black-100 opacity-70 dark:text-white-200">
+            <p className="text-black-100 opacity-70 dark:text-white-200 lg:text-lg">
               I&apos;m dedicated to continuously learning and eager to
               contribute my skills to a dynamic team, collaborate on exciting
               projects, and contribute to the creation of innovative digital
@@ -98,7 +69,7 @@ const AboutSection = () => {
           </div>
           <div className="space-y-3">
             <p className="text-heading font-semibold text-black-100 dark:text-white-100">
-              Work Experience
+              Work Experience 💼
             </p>
             <div className="flex w-full items-center justify-start">
               <div className="grid w-full grid-cols-1 gap-4">
@@ -160,6 +131,35 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+        <aside className="flex flex-col items-start space-y-3 lg:w-[400px] lg:items-center">
+          <Image
+            src="/myProfile.jpeg"
+            alt="my-profile"
+            width={500}
+            height={500}
+            className="rounded-lg lg:w-[300px] lg:scale-100"
+          />
+          <div className="flex flex-col items-start gap-y-2 lg:w-[300px]">
+            <Link
+              href="mailto:myatminaung.dev@gmail.com"
+              className="flex items-center gap-x-3"
+            >
+              <IconPhone className="w-4 text-black-100 dark:text-white-100" />
+              <p className="text-black-100 dark:text-white-100">
+                +959427274346
+              </p>
+            </Link>
+            <Link
+              href="mailto:myatminaung.dev@gmail.com"
+              className="flex items-center gap-x-3"
+            >
+              <IconMail className="w-4 text-black-100 dark:text-white-100" />
+              <p className="text-black-100 dark:text-white-100">
+                myatminaung.dev@gmail.com
+              </p>
+            </Link>
+          </div>
+        </aside>
       </div>
     </section>
   );

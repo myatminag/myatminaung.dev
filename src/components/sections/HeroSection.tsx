@@ -98,11 +98,11 @@ const HeroSection = () => {
   return (
     <section
       ref={heroSectionRef}
-      className="container relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center"
+      className="container relative flex min-h-[calc(100vh-68px)] flex-col items-start justify-center lg:flex-row lg:items-center"
     >
       <div className="img-container">
         <Image
-          src="/astronaut.svg"
+          src="/avatar.png"
           alt="astronot"
           width={500}
           height={500}
@@ -113,12 +113,17 @@ const HeroSection = () => {
         <div className="heading">
           <h1
             aria-hidden={true}
-            className="heading-animation whitespace-nowrap text-3xl font-semibold text-black-100 dark:text-white-100 lg:text-7xl"
+            className="heading-animation text-3xl font-semibold text-black-100 dark:text-white-100 lg:text-4xl"
           >
-            <span className="text-lg lg:text-3xl">
-              Welcome, I&apos;m Myat Min Aung 👋{' '}
-            </span>{' '}
-            <br /> A Frontend Developer
+            Full-time Frontend Developer,
+          </h1>
+        </div>
+        <div className="heading">
+          <h1
+            aria-hidden={true}
+            className="heading-animation text-3xl font-semibold text-black-100 dark:text-white-100 lg:text-4xl"
+          >
+            Academically pursuing Software Engineering
           </h1>
         </div>
         <div className="heading space-y-3">
@@ -134,19 +139,13 @@ const HeroSection = () => {
       </div>
       <div className="img-container">
         <Image
-          src="/astronaut.svg"
+          src="/avatar.png"
           alt="astronot"
           width={500}
           height={500}
           className="image-animation hidden lg:block"
         />
       </div>
-      <Link
-        href="#about"
-        className="scroll-animation absolute bottom-16 left-1/2 hidden translate-x-1/2 animate-bounce lg:block"
-      >
-        <IconMouse className="text-black-100 dark:text-white-100" />
-      </Link>
     </section>
   );
 };
