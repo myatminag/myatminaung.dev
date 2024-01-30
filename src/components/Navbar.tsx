@@ -9,47 +9,62 @@ import ThemeToggle from './ThemeToggle';
 const Navbar = () => {
   const navbarRef = useRef(null);
 
-  // useGSAP(
-  //   () => {
-  //     gsap.fromTo(
-  //       navbarRef.current,
-  //       {
-  //         y: '-100%',
-  //       },
-  //       {
-  //         y: '0%',
-  //         duration: 1,
-  //         delay: 3.5,
-  //         ease: 'power4.out',
-  //       },
-  //     );
-  //   },
-  //   {
-  //     scope: navbarRef,
-  //   },
-  // );
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        navbarRef.current,
+        {
+          y: '-100%',
+        },
+        {
+          y: '0%',
+          duration: 1,
+          delay: 3.5,
+          ease: 'power4.out',
+        },
+      );
+    },
+    {
+      scope: navbarRef,
+    },
+  );
 
   return (
     <nav
       ref={navbarRef}
-      className="bg-white-400 sticky top-0 z-40 w-full bg-white-100 py-5 shadow-sm transition-colors duration-500 dark:bg-black-100"
+      className="dark:border-primary-100 dark:bg-main-100 fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-100 py-5"
     >
       <div className="container flex items-center justify-between">
         <Link
           href="#"
-          className="text-lg font-medium text-black-100 dark:text-white-100"
+          className="text-lg font-medium text-black-100 dark:text-secondary-100"
         >
           Mma.dev
         </Link>
 
         <div className="hidden lg:flex lg:items-center lg:gap-x-12">
-          <Link href="#about" className="text-black-100 dark:text-white-100">
+          <Link
+            href="#about"
+            className="uppercase text-black-100 dark:text-secondary-100"
+          >
             About
           </Link>
-          <Link href="#projects" className="text-black-100 dark:text-white-100">
+          <Link
+            href="#projects"
+            className="uppercase text-black-100 dark:text-secondary-100"
+          >
             Projects
           </Link>
-          <Link href="#contact" className="text-black-100 dark:text-white-100">
+          <Link
+            href="#blog"
+            className="uppercase text-black-100 dark:text-secondary-100"
+          >
+            Blogs
+          </Link>
+          <Link
+            href="#contact"
+            className="uppercase text-black-100 dark:text-secondary-100"
+          >
             Contact
           </Link>
         </div>
@@ -57,13 +72,13 @@ const Navbar = () => {
         <div className="flex items-center gap-x-3 lg:hidden">
           <ThemeToggle />
 
-          <label className="swap swap-rotate rounded-full border border-gray-300 bg-gray-300 p-2 transition-all duration-500 dark:border-black-200 dark:bg-black-200 lg:hover:-translate-y-1.5 lg:hover:border-black-200 lg:dark:hover:border-white-100">
+          <label className="dark:border-primary-100 dark:bg-main-200 swap swap-rotate rounded-full border border-zinc-200 bg-zinc-100 p-2 transition-all duration-500 lg:hover:-translate-y-1.5 lg:hover:border-black-200 lg:dark:hover:border-white-100">
             {/* this hidden checkbox controls the state */}
             <input type="checkbox" />
 
             {/* hamburger icon */}
             <svg
-              className="swap-off h-5 w-5 fill-current text-black-100 dark:text-white-100"
+              className="text-main-100 swap-off h-5 w-5 fill-current dark:text-secondary-100"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -72,7 +87,7 @@ const Navbar = () => {
 
             {/* close icon */}
             <svg
-              className="swap-on h-5 w-5 fill-current text-black-100 dark:text-white-100"
+              className="text-main-100 swap-on h-5 w-5 fill-current dark:text-secondary-100"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >

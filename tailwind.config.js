@@ -14,25 +14,23 @@ module.exports = {
         padding: {
           DEFAULT: '1rem',
           sm: '2rem',
-          lg: '4rem',
-          xl: '3rem',
-          '2xl': '6rem',
+          lg: '6rem',
+          '2xl': '8rem',
         },
       },
       fontSize: {
         heading: '20px',
       },
       colors: {
-        black: {
-          100: '#121212',
-          200: '#2B2B2B',
+        main: {
+          100: '#22181c',
+          200: '#1F1E1E',
         },
-        white: {
-          100: '#F9FAFC',
-          200: '#F3F4F6',
+        primary: {
+          100: '#312f2f',
         },
-        gray: {
-          100: '#777777',
+        secondary: {
+          100: '#fef9ff',
         },
       },
     },

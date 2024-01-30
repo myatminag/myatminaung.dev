@@ -43,16 +43,16 @@ const AboutSection = () => {
       <div className="flex flex-col items-center justify-center gap-y-6 lg:flex-row lg:items-start lg:gap-x-12">
         <div className="flex-1 space-y-6">
           <div className="space-y-3">
-            <p className="text-heading font-semibold text-black-100 dark:text-white-100 lg:text-xl">
-              Hello, I&apos;m Myat Min Aung 👋
+            <p className="text-heading text-xl font-medium text-black-100 dark:text-white-100 lg:text-3xl">
+              About Me 👋
             </p>
-            <p className="text-black-100 opacity-70 dark:text-white-200 lg:text-lg">
+            <p className="dark:text-secondary-100 text-black-100">
               I&apos;m a frontend developer based in Yangon, Myanmar. Over the
               years, that curiosity evolved into a deep-seated passion for
               building software that my journey into the world of code started
               with a curiosity about how technology shapes our daily lives.
             </p>
-            <p className="text-black-100 opacity-70 dark:text-white-200 lg:text-lg">
+            <p className="dark:text-secondary-100 text-black-100">
               I&apos;ve honed my skills in{' '}
               <strong className="opacity-100">JavaScript</strong> &{' '}
               <strong>TypeScript,</strong> always staying on the pulse of the
@@ -60,7 +60,7 @@ const AboutSection = () => {
               frameworks, my true passion lies in the seamless fusion of design
               and functionality.
             </p>
-            <p className="text-black-100 opacity-70 dark:text-white-200 lg:text-lg">
+            <p className="dark:text-secondary-100 text-black-100">
               I&apos;m dedicated to continuously learning and eager to
               contribute my skills to a dynamic team, collaborate on exciting
               projects, and contribute to the creation of innovative digital
@@ -68,7 +68,7 @@ const AboutSection = () => {
             </p>
           </div>
           <div className="space-y-3">
-            <p className="text-heading font-semibold text-black-100 dark:text-white-100">
+            <p className="text-heading font-medium text-black-100 dark:text-white-100">
               Work Experience 💼
             </p>
             <div className="flex w-full items-center justify-start">
@@ -89,13 +89,13 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <p className="text-lg font-semibold text-black-100 dark:text-white-100">
+                    <p className="font-medium text-black-100 dark:text-white-100">
                       ILBC
                     </p>
-                    <p className="mb-1 text-black-100 dark:text-white-100">
+                    <p className="dark:text-secondary-100 mb-1 text-black-100">
                       Frontend Developer
                     </p>
-                    <time className="font-mono text-sm text-black-100 opacity-70 dark:text-white-100">
+                    <time className="dark:text-secondary-100 font-mono text-sm text-black-100">
                       Oct 2023 - <span className="text-green-500">Present</span>
                     </time>
                   </div>
@@ -116,13 +116,13 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <p className="text-lg font-semibold text-black-100 dark:text-white-100">
+                    <p className="font-medium text-black-100 dark:text-white-100">
                       Shopdoora
                     </p>
-                    <p className="mb-1 text-black-100 dark:text-white-100">
+                    <p className="dark:text-secondary-100 mb-1 text-black-100">
                       Frontend Developer
                     </p>
-                    <time className="font-mono text-sm text-black-100 opacity-70 dark:text-white-100">
+                    <time className="dark:text-secondary-100 font-mono text-sm text-black-100">
                       Oct 2022 - Oct 2023
                     </time>
                   </div>
@@ -137,24 +137,24 @@ const AboutSection = () => {
             alt="my-profile"
             width={500}
             height={500}
-            className="rounded-lg lg:w-[300px] lg:scale-100"
+            className="w-[300px] rounded-lg lg:w-[300px] lg:scale-100"
           />
           <div className="flex flex-col items-start gap-y-2 lg:w-[300px]">
             <Link
               href="mailto:myatminaung.dev@gmail.com"
-              className="flex items-center gap-x-3"
+              className="flex w-full items-center gap-x-3 rounded border border-zinc-200 px-4 py-2 transition-all duration-500 dark:border-zinc-700"
             >
-              <IconPhone className="w-4 text-black-100 dark:text-white-100" />
-              <p className="text-black-100 dark:text-white-100">
+              <IconPhone className="dark:text-secondary-100 w-4 text-black-100" />
+              <p className="dark:text-secondary-100 text-sm text-black-100">
                 +959427274346
               </p>
             </Link>
             <Link
               href="mailto:myatminaung.dev@gmail.com"
-              className="flex items-center gap-x-3"
+              className="flex w-full items-center gap-x-3 rounded border border-zinc-200 px-4 py-2 transition-all duration-500 dark:border-zinc-700"
             >
-              <IconMail className="w-4 text-black-100 dark:text-white-100" />
-              <p className="text-black-100 dark:text-white-100">
+              <IconMail className="dark:text-secondary-100 w-4 text-black-100" />
+              <p className="dark:text-secondary-100 text-sm text-black-100">
                 myatminaung.dev@gmail.com
               </p>
             </Link>

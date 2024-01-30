@@ -1,13 +1,13 @@
 import './globals.css';
-import { Space_Grotesk } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 import { ThemeProvider } from './providers';
 import Navbar from '@/components/Navbar';
 import Preloader from '@/components/Preloader';
 import FloatingBtn from '@/components/FloatingBtn';
 
-const poppins = Space_Grotesk({
-  weight: ['400', '500', '600'],
+const inter = Inter({
+  weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
 });
 
@@ -23,10 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.className}>
-      <body className="min-h-screen bg-white-100 transition-colors duration-500 dark:bg-black-100">
+    <html lang="en" className={inter.className}>
+      <body className="dark:bg-main-100 min-h-screen bg-secondary-100 transition-colors duration-300">
         <ThemeProvider>
-          <Preloader />
+          {/* <Preloader /> */}
           <Navbar />
           {children}
           <FloatingBtn />

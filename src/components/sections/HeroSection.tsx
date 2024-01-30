@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 
 // ** Component Import
 import IconMouse from '../icons/IconMouse';
+import IconBgHero from '../icons/IconBgHero';
 
 const HeroSection = () => {
   const heroSectionRef = useRef(null);
@@ -13,7 +14,7 @@ const HeroSection = () => {
   useGSAP(
     () => {
       gsap.fromTo(
-        '.heading-animation',
+        '.hero-animation',
         {
           y: 100,
           opacity: 0,
@@ -23,20 +24,7 @@ const HeroSection = () => {
           opacity: 1,
           duration: 1.25,
           delay: 3,
-          ease: 'power2.inOut',
-        },
-      );
-
-      gsap.fromTo(
-        '.paragraph-animation',
-        {
-          y: 150,
-        },
-        {
-          y: 0,
-          duration: 1.5,
-          stagger: 0.2,
-          delay: 3,
+          stagger: 0.5,
           ease: 'power2.inOut',
         },
       );
@@ -68,28 +56,26 @@ const HeroSection = () => {
       let imageTL = gsap.timeline({ repeat: -1 });
       imageTL
         .to('.image-animation', {
-          y: '+=30',
-          x: '-=30',
-          duration: 3,
-          ease: 'power1',
-          rotation: '+=5',
-        })
-        .to('.image-animation', {
           y: '-=30',
-          x: '+=30',
+          x: '+=20',
+          ease: 'power1.inOut',
           duration: 3,
-          ease: 'power1.out',
-          rotation: '-=5',
         })
         .to('.image-animation', {
-          x: '-=30',
+          y: '+=30',
+          x: '-=20',
+          ease: 'power1.inOut',
           duration: 3,
-          ease: 'power1.out',
         })
         .to('.image-animation', {
-          x: '+=30',
+          y: '-=20',
+          ease: 'power1.inOut',
           duration: 3,
-          ease: 'power1.out',
+        })
+        .to('.image-animation', {
+          y: '+=20',
+          ease: 'power1.inOut',
+          duration: 3,
         });
     },
     { scope: heroSectionRef },
@@ -98,53 +84,41 @@ const HeroSection = () => {
   return (
     <section
       ref={heroSectionRef}
-      className="container relative flex min-h-[calc(100vh-68px)] flex-col items-start justify-center lg:flex-row lg:items-center"
+      className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
-      <div className="img-container">
-        <Image
-          src="/avatar.png"
-          alt="astronot"
-          width={500}
-          height={500}
-          className="image-animation block lg:hidden"
-        />
-      </div>
-      <div>
-        <div className="heading">
-          <h1
-            aria-hidden={true}
-            className="heading-animation text-3xl font-semibold text-black-100 dark:text-white-100 lg:text-4xl"
-          >
-            Full-time Frontend Developer,
-          </h1>
+      <IconBgHero className="absolute right-0 text-zinc-300 opacity-50 dark:text-zinc-700" />
+      <div className="container">
+        <div className="space-y-3">
+          <div className="heading">
+            <h1
+              aria-hidden={true}
+              className="hero-animation text-xl font-medium text-black-100 dark:text-secondary-100 lg:text-3xl"
+            >
+              Welcome, I&apos;m Myat Min Aung 👋
+            </h1>
+          </div>
+          <div className="heading">
+            <h1
+              aria-hidden={true}
+              className="hero-animation text-3xl font-semibold tracking-wider text-[#736ced] dark:text-[#736ced] lg:text-7xl"
+            >
+              A Frontend Developer
+            </h1>
+          </div>
+          <div className="heading">
+            <p className="hero-animation w-full text-black-100 dark:text-secondary-100 lg:w-9/12 lg:text-lg">
+              As a passionate frontend developer, I specialize in translating
+              ideas into seamless, user-centric web experiences. 💡
+            </p>
+          </div>
         </div>
-        <div className="heading">
-          <h1
-            aria-hidden={true}
-            className="heading-animation text-3xl font-semibold text-black-100 dark:text-white-100 lg:text-4xl"
-          >
-            Academically pursuing Software Engineering
-          </h1>
-        </div>
-        <div className="heading space-y-3">
-          <p className="paragraph-animation mt-5 w-full text-black-100 opacity-70 dark:text-white-200 lg:w-9/12 lg:text-lg">
-            As a passionate frontend developer, I specialize in translating
-            ideas into seamless, user-centric web experiences. 💡
-          </p>
-          <p className="paragraph-animation mt-5 w-full text-black-100 opacity-70 dark:text-white-200 lg:w-9/12 lg:text-lg">
-            Ready to transform your ideas into digital brilliance? Let&apos;s
-            build something extraordinary together! 💻✨
+        <div className="scroll-animation absolute bottom-5 z-20 flex items-center gap-x-1">
+          <IconMouse className="w-4 text-black-100 dark:text-secondary-100" />
+          <p className="text-sm text-black-100 dark:text-secondary-100">
+            Scroll <br />
+            To Explore
           </p>
         </div>
-      </div>
-      <div className="img-container">
-        <Image
-          src="/avatar.png"
-          alt="astronot"
-          width={500}
-          height={500}
-          className="image-animation hidden lg:block"
-        />
       </div>
     </section>
   );
