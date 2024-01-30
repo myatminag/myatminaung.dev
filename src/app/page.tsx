@@ -1,6 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -10,23 +9,22 @@ import AboutSection from '@/components/sections/AboutSection';
 import ProjectSection from '@/components/sections/ProjectSection';
 import BlogSection from '@/components/sections/BlogSection';
 import ContactSection from '@/components/sections/ContactSection';
+import IconBgWave from '@/components/icons/IconBgWave';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const containerRef = useRef(null);
-
   return (
-    <div ref={containerRef}>
+    <main>
       <HeroSection />
 
       <AboutSection />
 
-      <ProjectSection containerRef={containerRef} />
+      <ProjectSection />
 
       <BlogSection />
 
       <ContactSection />
-    </div>
+    </main>
   );
 }

@@ -25,9 +25,11 @@ module.exports = {
         main: {
           100: '#22181c',
           200: '#1F1E1E',
+          300: '#23ce6b',
         },
         primary: {
           100: '#312f2f',
+          200: '#2f242c',
         },
         secondary: {
           100: '#fef9ff',

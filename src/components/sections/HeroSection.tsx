@@ -92,7 +92,7 @@ const HeroSection = () => {
           <div className="heading">
             <h1
               aria-hidden={true}
-              className="hero-animation text-xl font-medium text-black-100 dark:text-secondary-100 lg:text-3xl"
+              className="hero-animation text-primary-100 text-xl font-medium dark:text-secondary-100 lg:text-3xl"
             >
               Welcome, I&apos;m Myat Min Aung 👋
             </h1>
@@ -100,21 +100,21 @@ const HeroSection = () => {
           <div className="heading">
             <h1
               aria-hidden={true}
-              className="hero-animation text-3xl font-semibold tracking-wider text-[#736ced] dark:text-[#736ced] lg:text-7xl"
+              className="hero-animation text-main-300 text-3xl font-semibold tracking-wider lg:text-7xl"
             >
               A Frontend Developer
             </h1>
           </div>
           <div className="heading">
-            <p className="hero-animation w-full text-black-100 dark:text-secondary-100 lg:w-9/12 lg:text-lg">
+            <p className="hero-animation text-primary-100 w-full dark:text-secondary-100 lg:w-9/12 lg:text-lg">
               As a passionate frontend developer, I specialize in translating
               ideas into seamless, user-centric web experiences. 💡
             </p>
           </div>
         </div>
         <div className="scroll-animation absolute bottom-5 z-20 flex items-center gap-x-1">
-          <IconMouse className="w-4 text-black-100 dark:text-secondary-100" />
-          <p className="text-sm text-black-100 dark:text-secondary-100">
+          <IconMouse className="text-primary-100 w-4 dark:text-secondary-100" />
+          <p className="text-primary-100 text-sm dark:text-secondary-100">
             Scroll <br />
             To Explore
           </p>

@@ -14,7 +14,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
         <g fill="none" mask='url("#SvgjsMask1075")'>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1412.5 312.5l-25-25h-25m75 0h-25m50 0h-25l-25 25h-25"
           ></path>
           <path
@@ -23,7 +23,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1062.5 237.5h-50m100 0l-25 25h-75m125-25l-25 25-25 25h-50m150-50l-25-25h-25m325 50h-50l-25-25-25-25h-150l-25 25h-125l-25-25"
           ></path>
           <path
@@ -32,7 +32,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1362.5 337.5l-25-25-25-25h-25m-50 25l-25 25m-25-25l-25 25m300-25h-25l-25 25h-75l-25-25h-175"
           ></path>
           <path
@@ -41,7 +41,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1462.5 237.5h-50l-25-25-25-25h-175"
           ></path>
           <path
@@ -50,7 +50,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1037.5 412.5l-25-25m0 25l-25 25h-50m225-50h-50l-25-25h-25m200 25l-25-25h-25m0 25l-25 25m275-75h-25l-25 25h-75l-25 25h-150l-25 25h-225"
           ></path>
           <path
@@ -59,7 +59,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1312.5 162.5l-25-25m-50 25l-25-25m125 25l-25-25m150 75h-50l-25-25-25-25h-250"
           ></path>
           <path
@@ -68,7 +68,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1462.5 362.5h-25l-25 25h-75l-25 25"
           ></path>
           <path
@@ -77,7 +77,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1162.5 112.5l-25 25m-225-25l-25 25m125 0l-25 25h-125m125-25h-75m200 0l-25-25h-75m-75 0l-25-25h-125m25 25l-25 25m675 50h-50l-25-25-25-25-25-25h-200l-25 25h-125l-25-25h-175"
           ></path>
           <path
@@ -86,7 +86,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1312.5 437.5l-25 25h-50m125-50l-25 25-25 25-25 25m0-50l-25-25h-25m225-25h-25l-25 25h-75l-25 25h-125l-25-25"
           ></path>
           <path
@@ -95,7 +95,7 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
           ></path>
           <path
             stroke='url("#SvgjsLinearGradient1074")'
-            strokeWidth="2"
+            strokeWidth="1.5"
             d="M1062.5 87.5l-25-25h-75m375 25l-25-25h-25m-175 25l-25-25h-25m200 25l-25-25h-75m-150 25h-50m500 75h-50l-25-25-25-25-25-25h-325l-25 25"
           ></path>
           <path
