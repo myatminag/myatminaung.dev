@@ -3,11 +3,14 @@
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
+
 import ThemeToggle from './ThemeToggle';
+import { SmoothScrollContext } from '@/app/scrollProvider';
 
 const Navbar = () => {
   const navbarRef = useRef(null);
+  const { scroll } = useContext(SmoothScrollContext);
 
   useGSAP(
     () => {
@@ -32,53 +35,62 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="dark:border-primary-100 dark:bg-main-100 fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-100 py-5"
+      className="fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-100 py-5 dark:border-primary-100 dark:bg-main-100"
     >
       <div className="container flex items-center justify-between">
-        <Link
-          href="#"
-          className="text-lg font-medium text-black-100 dark:text-secondary-100"
-        >
+        <p className="text-black-100 text-lg font-medium dark:text-secondary-100">
           Mma.dev
-        </Link>
+        </p>
 
         <div className="hidden lg:flex lg:items-center lg:gap-x-12">
-          <Link
-            href="#about"
-            className="uppercase text-black-100 dark:text-secondary-100"
+          <p
+            onClick={(e) => {
+              e.preventDefault();
+              scroll.scrollTo('#about');
+            }}
+            className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
           >
             About
-          </Link>
-          <Link
-            href="#projects"
-            className="uppercase text-black-100 dark:text-secondary-100"
+          </p>
+          <p
+            onClick={(e) => {
+              e.preventDefault();
+              scroll.scrollTo('#projects');
+            }}
+            className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
           >
             Projects
-          </Link>
-          <Link
-            href="#blog"
-            className="uppercase text-black-100 dark:text-secondary-100"
+          </p>
+          <p
+            onClick={(e) => {
+              e.preventDefault();
+              scroll.scrollTo('#blog');
+            }}
+            className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
           >
             Blogs
-          </Link>
-          <Link
-            href="#contact"
-            className="uppercase text-black-100 dark:text-secondary-100"
+          </p>
+          <p
+            onClick={(e) => {
+              e.preventDefault();
+              scroll.scrollTo('#contact');
+            }}
+            className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
           >
             Contact
-          </Link>
+          </p>
         </div>
 
         <div className="flex items-center gap-x-3 lg:hidden">
           <ThemeToggle />
 
-          <label className="dark:border-primary-100 dark:bg-main-200 swap swap-rotate rounded-full border border-zinc-200 bg-zinc-100 p-2 transition-all duration-500 lg:hover:-translate-y-1.5 lg:hover:border-black-200 lg:dark:hover:border-white-100">
+          <label className="lg:hover:border-black-200 lg:dark:hover:border-white-100 swap swap-rotate rounded-full border border-zinc-200 bg-zinc-100 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-main-200 lg:hover:-translate-y-1.5">
             {/* this hidden checkbox controls the state */}
             <input type="checkbox" />
 
             {/* hamburger icon */}
             <svg
-              className="text-main-100 swap-off h-5 w-5 fill-current dark:text-secondary-100"
+              className="swap-off h-5 w-5 fill-current text-main-100 dark:text-secondary-100"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -87,7 +99,7 @@ const Navbar = () => {
 
             {/* close icon */}
             <svg
-              className="text-main-100 swap-on h-5 w-5 fill-current dark:text-secondary-100"
+              className="swap-on h-5 w-5 fill-current text-main-100 dark:text-secondary-100"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >

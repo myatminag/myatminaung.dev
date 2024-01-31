@@ -1,10 +1,11 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 
-import { ThemeProvider } from './providers';
+import { ThemeProvider } from './themeProvider';
 import Navbar from '@/components/Navbar';
 import Preloader from '@/components/Preloader';
 import FloatingBtn from '@/components/FloatingBtn';
+import { SmoothScrollProvider } from './scrollProvider';
 
 const inter = Inter({
   weight: ['300', '400', '500', '700', '900'],
@@ -24,12 +25,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="dark:bg-main-100 min-h-screen bg-secondary-100 transition-colors duration-300">
+      <body className="min-h-screen bg-secondary-100 transition-colors duration-300 dark:bg-main-100">
         <ThemeProvider>
-          {/* <Preloader /> */}
-          <Navbar />
-          {children}
-          <FloatingBtn />
+          <SmoothScrollProvider options={{ smooth: true }}>
+            <Preloader />
+            <Navbar />
+            {children}
+            <FloatingBtn />
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>
