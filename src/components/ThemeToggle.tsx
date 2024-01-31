@@ -4,7 +4,7 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <label className="lg:hover:border-primary-100 dark:border-primary-100 dark:bg-main-200 swap swap-rotate rounded-full border border-zinc-200 bg-zinc-100 p-2 transition-all duration-500 lg:hover:-translate-y-1.5 lg:dark:hover:border-secondary-100">
+    <label className="swap swap-rotate rounded-full border border-zinc-200 bg-zinc-100 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-main-200 lg:hover:-translate-y-1.5 lg:hover:border-primary-100 lg:dark:hover:border-secondary-100">
       <input
         type="checkbox"
         onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
@@ -19,7 +19,7 @@ const ThemeToggle = () => {
       </svg>
       {/* moon icon */}
       <svg
-        className="text-primary-100 swap-off h-5 w-5 fill-current dark:text-secondary-100"
+        className="swap-off h-5 w-5 fill-current text-primary-100 dark:text-secondary-100"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >

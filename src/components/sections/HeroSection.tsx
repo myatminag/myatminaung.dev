@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import gsap from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
@@ -23,21 +21,9 @@ const HeroSection = () => {
           y: 0,
           opacity: 1,
           duration: 1.25,
-          delay: 3,
+          delay: 2.5,
           stagger: 0.5,
           ease: 'power2.inOut',
-        },
-      );
-
-      gsap.fromTo(
-        '.img-container',
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          duration: 1.5,
-          delay: 3,
         },
       );
 
@@ -49,34 +35,9 @@ const HeroSection = () => {
         {
           opacity: 1,
           duration: 1.5,
-          delay: 3,
+          delay: 2.5,
         },
       );
-
-      let imageTL = gsap.timeline({ repeat: -1 });
-      imageTL
-        .to('.image-animation', {
-          y: '-=30',
-          x: '+=20',
-          ease: 'power1.inOut',
-          duration: 3,
-        })
-        .to('.image-animation', {
-          y: '+=30',
-          x: '-=20',
-          ease: 'power1.inOut',
-          duration: 3,
-        })
-        .to('.image-animation', {
-          y: '-=20',
-          ease: 'power1.inOut',
-          duration: 3,
-        })
-        .to('.image-animation', {
-          y: '+=20',
-          ease: 'power1.inOut',
-          duration: 3,
-        });
     },
     { scope: heroSectionRef },
   );
@@ -86,30 +47,32 @@ const HeroSection = () => {
       ref={heroSectionRef}
       className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
-      <IconBgHero className="absolute right-0 text-zinc-300 opacity-50 dark:text-zinc-700" />
+      <IconBgHero className="absolute right-0 text-zinc-300 dark:text-main-200" />
       <div className="container">
-        <div className="space-y-3">
+        <div className="space-y-5">
           <div className="heading">
             <h1
               aria-hidden={true}
-              className="hero-animation text-xl font-medium text-primary-100 dark:text-secondary-100 lg:text-3xl"
+              className="hero-animation dark:text-secondary-200 text-heading font-light uppercase tracking-wider text-primary-100"
             >
-              Welcome, I&apos;m Myat Min Aung 👋
+              Hi, I&apos;m Myat Min Aung
             </h1>
           </div>
-          <div className="heading">
-            <h1
-              aria-hidden={true}
-              className="hero-animation bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-3xl font-semibold tracking-wider text-transparent lg:text-7xl"
-            >
-              A Frontend Developer
-            </h1>
-          </div>
-          <div className="heading">
-            <p className="hero-animation w-full text-primary-100 dark:text-secondary-100 lg:w-9/12 lg:text-lg">
-              As a passionate frontend developer, I specialize in translating
-              ideas into seamless, user-centric web experiences. 💡
-            </p>
+          <h1
+            aria-hidden={true}
+            className="hero-animation text-5xl font-medium tracking-wider text-main-100 dark:text-secondary-100 lg:text-8xl"
+          >
+            On a mission to innovate, problem-solve, and craft robust digital
+            solutions.
+          </h1>
+          <div className="flex flex-col gap-x-10 pt-10 lg:flex-row lg:items-start">
+            <div className="mt-4 hidden h-0.5 w-96 bg-[#292d36] lg:block" />
+            <div className="heading flex-1">
+              <p className="hero-animation dark:text-secondary-200 w-full text-heading font-light tracking-wider text-primary-100">
+                As a passionate frontend developer, I specialize in translating
+                ideas into seamless, user-centric web experiences.
+              </p>
+            </div>
           </div>
         </div>
         <div className="scroll-animation absolute bottom-5 z-20 flex items-center gap-x-1">

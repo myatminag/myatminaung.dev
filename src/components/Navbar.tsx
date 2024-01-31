@@ -1,9 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useContext, useRef } from 'react';
+import { useContext, useRef, MouseEvent } from 'react';
 
 import ThemeToggle from './ThemeToggle';
 import { SmoothScrollContext } from '@/app/scrollProvider';
@@ -12,6 +11,7 @@ const Navbar = () => {
   const navbarRef = useRef(null);
   const { scroll } = useContext(SmoothScrollContext);
 
+  // Navbar animation
   useGSAP(
     () => {
       gsap.fromTo(
@@ -21,8 +21,8 @@ const Navbar = () => {
         },
         {
           y: '0%',
-          duration: 1,
-          delay: 3.5,
+          duration: 1.5,
+          delay: 3,
           ease: 'power4.out',
         },
       );
@@ -32,49 +32,46 @@ const Navbar = () => {
     },
   );
 
+  // Handle to scroll section
+  const handleToScrollSection = (
+    e: MouseEvent<HTMLParagraphElement>,
+    section: string,
+  ) => {
+    e.preventDefault();
+    scroll.scrollTo(section);
+  };
+
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-100 py-5 dark:border-primary-100 dark:bg-main-100"
+      className="fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-100 py-6 dark:border-primary-100 dark:bg-main-100"
     >
       <div className="container flex items-center justify-between">
-        <p className="text-black-100 text-lg font-medium dark:text-secondary-100">
+        <p className="text-black-100 text-heading font-medium tracking-wide dark:text-secondary-100">
           Mma.dev
         </p>
 
-        <div className="hidden lg:flex lg:items-center lg:gap-x-12">
+        <div className="hidden lg:flex lg:items-center lg:gap-x-16">
           <p
-            onClick={(e) => {
-              e.preventDefault();
-              scroll.scrollTo('#about');
-            }}
+            onClick={(e) => handleToScrollSection(e, '#about')}
             className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
           >
             About
           </p>
           <p
-            onClick={(e) => {
-              e.preventDefault();
-              scroll.scrollTo('#projects');
-            }}
+            onClick={(e) => handleToScrollSection(e, '#projects')}
             className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
           >
             Projects
           </p>
           <p
-            onClick={(e) => {
-              e.preventDefault();
-              scroll.scrollTo('#blog');
-            }}
+            onClick={(e) => handleToScrollSection(e, '#blog')}
             className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
           >
             Blogs
           </p>
           <p
-            onClick={(e) => {
-              e.preventDefault();
-              scroll.scrollTo('#contact');
-            }}
+            onClick={(e) => handleToScrollSection(e, '#contact')}
             className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
           >
             Contact

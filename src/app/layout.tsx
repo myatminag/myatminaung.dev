@@ -1,5 +1,5 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Inter_Tight } from 'next/font/google';
 
 import { ThemeProvider } from './themeProvider';
 import Navbar from '@/components/Navbar';
@@ -7,7 +7,7 @@ import Preloader from '@/components/Preloader';
 import FloatingBtn from '@/components/FloatingBtn';
 import { SmoothScrollProvider } from './scrollProvider';
 
-const inter = Inter({
+const inter = Inter_Tight({
   weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
 });

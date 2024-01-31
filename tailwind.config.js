@@ -14,7 +14,7 @@ module.exports = {
         padding: {
           DEFAULT: '1rem',
           sm: '2rem',
-          lg: '6rem',
+          lg: '1rem',
           '2xl': '8rem',
         },
       },
@@ -23,8 +23,8 @@ module.exports = {
       },
       colors: {
         main: {
-          100: '#22181c',
-          200: '#1F1E1E',
+          100: '#242429',
+          200: '#292d36',
           300: '#00ADB5',
         },
         primary: {
@@ -33,6 +33,7 @@ module.exports = {
         },
         secondary: {
           100: '#fef9ff',
+          200: '#969996',
         },
       },
     },

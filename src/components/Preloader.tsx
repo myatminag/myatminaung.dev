@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import SplitType from 'split-type';
 import { gsap } from 'gsap';
-gsap.registerPlugin();
 
 const Preloader = () => {
   const textRef = useRef(null);
