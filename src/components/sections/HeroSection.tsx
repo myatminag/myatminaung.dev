@@ -55,7 +55,7 @@ const HeroSection = () => {
               aria-hidden={true}
               className="hero-animation dark:text-secondary-200 text-heading font-light uppercase tracking-wider text-primary-100"
             >
-              Hi, I&apos;m Myat Min Aung
+              Hi, I&apos;m Myat Min Aung 👋
             </h1>
           </div>
           <h1
@@ -66,7 +66,7 @@ const HeroSection = () => {
             solutions.
           </h1>
           <div className="flex flex-col gap-x-10 pt-10 lg:flex-row lg:items-start">
-            <div className="mt-4 hidden h-0.5 w-96 bg-[#292d36] lg:block" />
+            <div className="mt-4 hidden h-0.5 w-96 bg-main-200 lg:block" />
             <div className="heading flex-1">
               <p className="hero-animation dark:text-secondary-200 w-full text-heading font-light tracking-wider text-primary-100">
                 As a passionate frontend developer, I specialize in translating
