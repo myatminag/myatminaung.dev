@@ -1,38 +1,27 @@
-import Link from "next/link";
-import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import Link from 'next/link';
 
 const Footer = () => {
   const FOOTER_DATA = [
     {
       id: 1,
-      label: "facebook",
-      link: "https://www.facebook.com/profile.php?id=100008542208276",
-      icon: <FaFacebook fontSize="22px" color="#FFFFFF" />,
+      label: 'facebook',
+      link: 'https://www.facebook.com/profile.php?id=100008542208276',
     },
     {
       id: 1,
-      label: "linkedin",
-      link: "https://www.linkedin.com/in/myatmin-aung-830039245/",
-      icon: <FaLinkedin fontSize="22px" color="#FFFFFF" />,
+      label: 'linkedin',
+      link: 'https://www.linkedin.com/in/myatmin-aung-830039245/',
     },
     {
       id: 1,
-      label: "github",
-      link: "https://github.com/myatminag",
-      icon: <FaGithub fontSize="22px" color="#FFFFFF" />,
+      label: 'github',
+      link: 'https://github.com/myatminag',
     },
   ];
 
   return (
-    <div className="flex flex-col items-center pb-8">
-      <div className="flex items-center gap-x-8 mb-6">
-        {FOOTER_DATA.map((data) => (
-          <Link key={data.id} aria-label={data.label} href={data.link}>
-            {data.icon}
-          </Link>
-        ))}
-      </div>
-      <p className="text-zinc-400 text-sm">Developed by Myatmin Aung</p>
+    <div className="flex flex-col items-center border-t border-secondary-200/20 py-16">
+      <p className="text-sm text-zinc-400">Developed by Myatmin Aung</p>
     </div>
   );
 };
