@@ -143,7 +143,7 @@ const AboutSection = () => {
             <p className="text-heading font-light dark:text-secondary-100">
               Tech Stacks 💻
             </p>
-            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 gap-y-3 text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 gap-y-3 font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React.js</li>
