@@ -47,7 +47,7 @@ const HeroSection = () => {
       ref={heroSectionRef}
       className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
-      <IconBgHero className="absolute right-0 text-zinc-300 dark:text-secondary-200/10" />
+      <IconBgHero className="absolute right-0 text-secondary-200/20 dark:text-secondary-200/10" />
       <div className="container">
         <div className="space-y-5">
           <div className="heading">
@@ -60,13 +60,13 @@ const HeroSection = () => {
           </div>
           <h1
             aria-hidden={true}
-            className="hero-animation text-4xl font-medium tracking-wider text-main-100 dark:text-secondary-100 lg:text-8xl"
+            className="hero-animation text-4xl font-medium tracking-wider text-primary-100 dark:text-secondary-100 lg:text-8xl"
           >
             On a mission to innovate, problem-solve, and craft robust digital
             solutions.
           </h1>
           <div className="flex flex-col gap-x-10 lg:flex-row lg:items-start lg:pt-10">
-            <div className="mt-4 hidden h-[1px] w-96 dark:bg-secondary-200/20 lg:block" />
+            <div className="mt-4 hidden h-[1px] w-96 bg-secondary-200/40 dark:bg-secondary-200/20 lg:block" />
             <div className="heading flex-1">
               <p className="hero-animation w-full font-light tracking-wider text-primary-100 dark:text-secondary-200 lg:text-heading">
                 As a passionate frontend developer, I specialize in translating

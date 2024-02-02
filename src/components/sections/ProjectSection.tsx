@@ -16,14 +16,14 @@ const ProjectSection = () => {
     >
       <>
         <div className="mb-5 flex items-center justify-center gap-x-5">
-          <div className="h-[1px] w-16 bg-secondary-200/20" />
-          <header className="text-sm uppercase tracking-wider dark:text-secondary-200">
+          <div className="h-[1px] w-16 bg-secondary-200/40 dark:bg-secondary-200/20" />
+          <header className="text-sm uppercase tracking-wider text-primary-100 dark:text-secondary-200">
             Project
           </header>
-          <div className="h-[1px] w-16 bg-secondary-200/20" />
+          <div className="h-[1px] w-16 bg-secondary-200/40 dark:bg-secondary-200/20" />
         </div>
         <div className="flex justify-center">
-          <p className="mb-10 w-full text-center font-light tracking-wide dark:text-secondary-200 lg:w-6/12 lg:text-heading">
+          <p className="mb-10 w-full text-center font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:w-6/12 lg:text-heading">
             I&apos;ve built several projects for my works over a year but these
             are the ones of my lastest freelance and personal projects.
           </p>
