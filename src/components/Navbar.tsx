@@ -79,6 +79,12 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-x-3 lg:hidden">
+          <p
+            onClick={(e) => handleToScrollSection(e, '#about')}
+            className="text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
+          >
+            About
+          </p>
           <ThemeToggle />
 
           <label className="lg:hover:border-black-200 lg:dark:hover:border-white-100 swap swap-rotate rounded-full border border-zinc-200 bg-zinc-100 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-main-200 lg:hover:-translate-y-1.5">

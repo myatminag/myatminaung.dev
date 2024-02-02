@@ -38,7 +38,7 @@ const AboutSection = () => {
     <section
       id="about"
       ref={aboutSectionRef}
-      className="container grid min-h-screen place-content-center py-10 lg:py-0"
+      className="container grid min-h-screen place-content-center py-28 lg:py-0"
     >
       <div className="mb-10 flex items-center justify-center gap-x-5">
         <div className="h-[1px] w-16 bg-secondary-200/20" />
