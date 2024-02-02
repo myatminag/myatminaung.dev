@@ -12,7 +12,7 @@ const ProjectSection = () => {
   return (
     <section
       id="projects"
-      className="container grid min-h-screen place-content-center py-10 lg:py-0"
+      className="container grid min-h-screen place-content-center py-28"
     >
       <>
         <div className="mb-5 flex items-center justify-center gap-x-5">
@@ -84,6 +84,71 @@ const ProjectSection = () => {
             </ul>
           </div>
         </div>
+        <div>
+          <div className="relative mb-1 aspect-[16/9] overflow-hidden">
+            <Image
+              alt="project-image"
+              src="/project-3.png"
+              width={500}
+              height={500}
+              className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+          <div className="space-y-1.5">
+            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+              Empress
+            </p>
+            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-200">
+              Game store is designed to evolutionize the gaming industry by
+              providing a seamless and immersive shopping experience for gamers.
+            </p>
+            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+              <li>React.js</li>
+              <li>Vite.js</li>
+              <li>Tailwind Css</li>
+              <li>Node.js</li>
+              <li>Expressjs</li>
+              <li>Mongodb</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div className="relative mb-1 aspect-[16/9] overflow-hidden">
+            <Image
+              alt="project-image"
+              src="/project-4.png"
+              width={500}
+              height={500}
+              className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </div>
+          <div className="space-y-1.5">
+            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+              Journey
+            </p>
+            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-200">
+              Game store is designed to evolutionize the gaming industry by
+              providing a seamless and immersive shopping experience for gamers.
+            </p>
+            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+              <li>React.js</li>
+              <li>Vite.js</li>
+              <li>Tailwind Css</li>
+              <li>Node.js</li>
+              <li>Expressjs</li>
+              <li>Mongodb</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
+        <Link
+          href="https://github.com/myatminag"
+          className="after:bg-primaryColor relative flex h-14 w-48 items-center justify-center border border-secondary-200/40 text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:bg-main-200 after:transition-all after:duration-500
+        hover:text-secondary-100 hover:after:w-[100%] dark:text-secondary-200"
+        >
+          <p className="relative z-20 uppercase tracking-wide">View Github</p>
+        </Link>
       </div>
     </section>
   );

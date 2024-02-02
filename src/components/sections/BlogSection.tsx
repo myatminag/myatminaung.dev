@@ -63,6 +63,14 @@ const BlogSection = () => {
           </p>
         </div>
       </div>
+      <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
+        <div
+          className="after:bg-primaryColor relative flex h-14 w-48 items-center justify-center border border-secondary-200/40 text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:bg-main-200 after:transition-all after:duration-500
+        hover:text-secondary-100 hover:after:w-[100%] dark:text-secondary-200"
+        >
+          <p className="relative z-20 uppercase tracking-wide">View Blogs</p>
+        </div>
+      </div>
     </section>
   );
 };
