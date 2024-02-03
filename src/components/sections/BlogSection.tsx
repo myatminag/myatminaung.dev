@@ -45,7 +45,7 @@ const BlogSection = () => {
     <section
       id="blog"
       ref={blogSectionRef}
-      className="container grid min-h-screen place-content-center py-10 lg:py-0"
+      className="container grid min-h-screen place-content-center py-28"
     >
       <>
         <div className="mb-5 flex items-center justify-center gap-x-5">

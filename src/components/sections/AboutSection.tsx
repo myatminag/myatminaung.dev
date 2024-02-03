@@ -10,53 +10,49 @@ import IconMail from '../icons/IconMail';
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
-  const aboutSectionRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useGSAP(
     () => {
-      gsap.fromTo(
+      const tl = gsap.timeline({
+        defaults: { duration: 0.8, ease: 'power2.out' },
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: '50% bottom',
+        },
+      });
+
+      tl.fromTo(
         '.about-intro',
         {
-          y: '100',
+          y: 100,
           opacity: 0,
         },
         {
-          y: '0',
-          duration: 1,
-          stagger: 0.2,
+          y: 0,
+          stagger: 0.1,
           opacity: 1,
-          ease: 'power1.inOut',
-          scrollTrigger: {
-            trigger: '.about-intro',
-          },
         },
-      );
-
-      gsap.fromTo(
+      ).fromTo(
         '.about-me',
         {
-          y: '100',
+          y: 100,
           opacity: 0,
         },
         {
-          y: '0',
-          duration: 1,
+          y: 0,
           stagger: 0.2,
           opacity: 1,
-          ease: 'power1.inOut',
-          scrollTrigger: {
-            trigger: '.about-me',
-          },
         },
       );
     },
-    { scope: aboutSectionRef },
+    { scope: sectionRef },
   );
 
   return (
     <section
       id="about"
-      ref={aboutSectionRef}
+      ref={sectionRef}
       className="container grid min-h-screen place-content-center py-28 lg:py-0"
     >
       <div className="mb-10 flex items-center justify-center gap-x-5">
@@ -173,7 +169,7 @@ const AboutSection = () => {
               <li>Java</li>
             </ul>
           </div>
-          <div className="space-y-3 lg:hidden">
+          <div className="about-me space-y-3 lg:hidden">
             <p className="text-heading font-light text-primary-100 dark:text-secondary-100">
               Work Experience 💼
             </p>

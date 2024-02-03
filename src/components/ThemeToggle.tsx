@@ -4,14 +4,14 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <label className="swap-rotate swap rounded-full border border-zinc-200 bg-secondary-200/20 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-main-200 lg:hover:-translate-y-1.5 lg:hover:border-primary-100 lg:dark:hover:border-secondary-100">
+    <label className="swap swap-rotate rounded-full border border-zinc-200 bg-secondary-200/20 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-main-200 lg:hover:-translate-y-1.5 lg:hover:border-primary-100 lg:dark:hover:border-secondary-100">
       <input
         type="checkbox"
         onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       />
       {/* sun icon */}
       <svg
-        className="swap-on h-5 w-5 fill-current dark:text-secondary-100"
+        className="swap-on h-5 w-5 fill-current text-primary-100 dark:text-secondary-100"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >

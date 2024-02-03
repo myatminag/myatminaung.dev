@@ -12,15 +12,14 @@ import IconGithub from '../icons/IconGithub';
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectSection = () => {
-  const projectSectionRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useGSAP(
     () => {
       const tl = gsap.timeline({
         defaults: { duration: 0.8, ease: 'power2.out' },
         scrollTrigger: {
-          trigger: projectSectionRef.current,
-          start: '50% bottom',
+          trigger: sectionRef.current,
         },
       });
 
@@ -60,13 +59,13 @@ const ProjectSection = () => {
           },
         );
     },
-    { scope: projectSectionRef },
+    { scope: sectionRef },
   );
 
   return (
     <section
       id="projects"
-      ref={projectSectionRef}
+      ref={sectionRef}
       className="container grid min-h-screen place-content-center py-28"
     >
       <>

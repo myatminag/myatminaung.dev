@@ -54,7 +54,6 @@ const Navbar = () => {
     },
   );
 
-  // Handle to scroll section
   const handleToScrollSection = (
     e: MouseEvent<HTMLLIElement>,
     section: string,
@@ -103,7 +102,7 @@ const Navbar = () => {
         <div className="relative flex items-center gap-x-3 lg:hidden">
           <ThemeToggle />
 
-          <label className="swap swap-rotate rounded-full border border-zinc-200 bg-secondary-200/20 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-main-200 lg:hover:-translate-y-1.5">
+          <label className="swap-rotate swap rounded-full border border-zinc-200 bg-secondary-200/20 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-main-200 lg:hover:-translate-y-1.5">
             <input type="checkbox" onClick={() => setIsOpen(!isOpen)} />
 
             <svg
@@ -124,29 +123,29 @@ const Navbar = () => {
           </label>
 
           {isOpen && (
-            <div className="absolute right-2 top-12 rounded-md px-5 py-2.5 dark:bg-main-200 lg:hidden">
+            <div className="bg-secondary-300 absolute right-2 top-12 rounded-md bg-secondary-200/20 px-5 py-2.5 dark:bg-main-200 lg:hidden">
               <ul className="flex flex-col items-start gap-y-4 lg:hidden">
                 <li
                   onClick={(e) => handleToScrollSection(e, '#about')}
-                  className="menu-item text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
+                  className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-100"
                 >
                   About
                 </li>
                 <li
                   onClick={(e) => handleToScrollSection(e, '#projects')}
-                  className="menu-item text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
+                  className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-100"
                 >
                   Projects
                 </li>
                 <li
                   onClick={(e) => handleToScrollSection(e, '#blog')}
-                  className="menu-item text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
+                  className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-100"
                 >
                   Blogs
                 </li>
                 <li
                   onClick={(e) => handleToScrollSection(e, '#contact')}
-                  className="menu-item text-black-100 cursor-pointer text-sm uppercase dark:text-secondary-100"
+                  className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-100"
                 >
                   Contact
                 </li>
