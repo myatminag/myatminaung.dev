@@ -88,7 +88,7 @@ const ProjectSection = () => {
           <div className="project-image relative mb-2 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
-              src="/project-1.png"
+              src="/project-1.webp"
               width={500}
               height={500}
               className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
@@ -121,7 +121,7 @@ const ProjectSection = () => {
           <div className="project-image relative mb-2 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
-              src="/project-2.png"
+              src="/project-2.webp"
               width={500}
               height={500}
               className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
@@ -160,7 +160,7 @@ const ProjectSection = () => {
           <div className="project-image relative mb-2 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
-              src="/project-3.png"
+              src="/project-3.webp"
               width={500}
               height={500}
               className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
@@ -202,7 +202,7 @@ const ProjectSection = () => {
           <div className="project-image relative mb-1 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
-              src="/project-4.png"
+              src="/project-4.webp"
               width={500}
               height={500}
               className="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105"
