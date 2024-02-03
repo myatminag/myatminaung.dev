@@ -30,12 +30,13 @@ const HeroSection = () => {
       gsap.fromTo(
         '.scroll-animation',
         {
-          opacity: 0,
+          y: '100',
         },
         {
-          opacity: 1,
+          y: '2.5',
           duration: 1.5,
-          delay: 2.5,
+          delay: 3,
+          ease: 'power4.out',
         },
       );
     },

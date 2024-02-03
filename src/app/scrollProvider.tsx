@@ -16,12 +16,10 @@ export const SmoothScrollContext = createContext<SmoothScrollContextType>({
 
 type SmoothScrollProviderProps = {
   children: ReactNode;
-  options: ScrollOptions;
 };
 
 export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
   children,
-  options,
 }) => {
   const [scroll, setScroll] = useState<any>(null);
 
@@ -31,7 +29,17 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
         try {
           const LocomotiveScroll = (await import('locomotive-scroll')).default;
 
-          setScroll(new LocomotiveScroll());
+          setScroll(
+            new LocomotiveScroll({
+              lenisOptions: {
+                smoothWheel: true,
+                smoothTouch: false,
+                duration: 1,
+                orientation: 'vertical',
+                gestureOrientation: 'vertical',
+              },
+            }),
+          );
         } catch (error) {
           throw new Error(`[SmoothScrollProvider]: ${error}`);
         }
@@ -41,7 +49,7 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
     return () => {
       scroll && scroll.destroy();
     };
-  }, [scroll, options]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [scroll]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <SmoothScrollContext.Provider value={{ scroll }}>

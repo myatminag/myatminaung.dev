@@ -17,17 +17,16 @@ const Preloader = () => {
         });
       }
 
-      const q = gsap.utils.selector(loadingRef);
       const tl = gsap.timeline({ defaults: { duration: 0.7 } });
 
-      tl.to(q('.char'), {
+      tl.to('.char', {
         y: 0,
         stagger: 0.05,
         delay: 0.2,
         duration: 0.1,
       });
 
-      tl.to(q('.follow'), {
+      tl.to('.follow', {
         y: '-100%',
         delay: 0.5,
         duration: 2,

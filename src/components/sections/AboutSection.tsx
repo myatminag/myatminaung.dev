@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -17,16 +15,37 @@ const AboutSection = () => {
   useGSAP(
     () => {
       gsap.fromTo(
-        aboutSectionRef.current,
+        '.about-intro',
         {
-          autoAlpha: 0,
+          y: '100',
+          opacity: 0,
         },
         {
-          autoAlpha: 1,
+          y: '0',
           duration: 1,
+          stagger: 0.2,
+          opacity: 1,
           ease: 'power1.inOut',
           scrollTrigger: {
-            trigger: aboutSectionRef.current,
+            trigger: '.about-intro',
+          },
+        },
+      );
+
+      gsap.fromTo(
+        '.about-me',
+        {
+          y: '100',
+          opacity: 0,
+        },
+        {
+          y: '0',
+          duration: 1,
+          stagger: 0.2,
+          opacity: 1,
+          ease: 'power1.inOut',
+          scrollTrigger: {
+            trigger: '.about-me',
           },
         },
       );
@@ -49,10 +68,10 @@ const AboutSection = () => {
       </div>
       <div className="flex flex-col items-center justify-center gap-y-6 lg:flex-row lg:items-start lg:gap-x-12">
         <aside className="flex flex-col items-start space-y-5">
-          <p className="text-4xl font-medium tracking-wide text-primary-100 dark:text-secondary-100">
+          <p className="about-intro text-4xl font-medium tracking-wide text-primary-100 dark:text-secondary-100">
             Turning ideas into immersive digital experiences.
           </p>
-          <div className="hidden space-y-3 lg:block">
+          <div className="about-intro hidden space-y-3 lg:block">
             <p className="text-heading font-light text-primary-100 dark:text-secondary-100">
               Work Experience 💼
             </p>
@@ -118,13 +137,13 @@ const AboutSection = () => {
         </aside>
         <div className="space-y-8">
           <div className="space-y-3">
-            <p className="w-full text-justify font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:text-heading">
+            <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:text-heading">
               I&apos;m a frontend developer based in Yangon, Myanmar. Over the
               years, that curiosity evolved into a deep-seated passion for
               building software that my journey into the world of code started
               with a curiosity about how technology shapes our daily lives.
             </p>
-            <p className="w-full text-justify font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:text-heading">
+            <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:text-heading">
               I&apos;ve honed my skills in{' '}
               <strong className="opacity-100">JavaScript</strong> &{' '}
               <strong>TypeScript,</strong> always staying on the pulse of the
@@ -132,14 +151,14 @@ const AboutSection = () => {
               frameworks, my true passion lies in the seamless fusion of design
               and functionality.
             </p>
-            <p className="text-justify font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:text-heading">
+            <p className="about-me font-light tracking-wide text-primary-100 backdrop:text-justify dark:text-secondary-200 lg:text-heading">
               I&apos;m dedicated to continuously learning and eager to
               contribute my skills to a dynamic team, collaborate on exciting
               projects, and contribute to the creation of innovative digital
               solutions.
             </p>
           </div>
-          <div className="space-y-3">
+          <div className="about-me space-y-3">
             <p className="text-heading font-light text-primary-100 dark:text-secondary-100">
               Tech Stacks 💻
             </p>

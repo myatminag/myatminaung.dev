@@ -18,10 +18,10 @@ const FloatingBtn = () => {
       gsap.fromTo(
         floatingBtnRef.current,
         {
-          bottom: '-200px',
+          bottom: '-100%',
         },
         {
-          bottom: '20px',
+          bottom: '2.5%',
           duration: 1.5,
           delay: 3,
           ease: 'power4.out',

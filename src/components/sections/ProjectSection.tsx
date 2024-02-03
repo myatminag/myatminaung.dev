@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MutableRefObject } from 'react';
+import { useRef, MutableRefObject } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -8,10 +8,64 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // ** Component Import
 import IconExplore from '../icons/IconExplore';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const ProjectSection = () => {
+  const projectSectionRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        defaults: { duration: 0.8, ease: 'power2.out' },
+        scrollTrigger: {
+          trigger: projectSectionRef.current,
+          start: '50% bottom',
+        },
+      });
+
+      tl.fromTo(
+        '.project-intro',
+        {
+          y: 100,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+        },
+      )
+        .fromTo(
+          '.project-image',
+          {
+            y: 100,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.2,
+          },
+        )
+        .fromTo(
+          '.project-desc',
+          {
+            y: 100,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            stagger: 0.2,
+            opacity: 1,
+          },
+        );
+    },
+    { scope: projectSectionRef },
+  );
+
   return (
     <section
       id="projects"
+      ref={projectSectionRef}
       className="container grid min-h-screen place-content-center py-28"
     >
       <>
@@ -23,7 +77,7 @@ const ProjectSection = () => {
           <div className="h-[1px] w-16 bg-secondary-200/40 dark:bg-secondary-200/20" />
         </div>
         <div className="flex justify-center">
-          <p className="mb-10 w-full text-center font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:w-6/12 lg:text-heading">
+          <p className="project-intro mb-10 w-full text-center font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:w-6/12 lg:text-heading">
             I&apos;ve built several projects for my works over a year but these
             are the ones of my lastest freelance and personal projects.
           </p>
@@ -31,7 +85,7 @@ const ProjectSection = () => {
       </>
       <div className="grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-12">
         <div>
-          <div className="relative mb-1 aspect-[16/9] overflow-hidden">
+          <div className="project-image relative mb-1 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
               src="/project-1.png"
@@ -41,14 +95,14 @@ const ProjectSection = () => {
             />
           </div>
           <div className="space-y-1.5">
-            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-100">
               New Vision Education Center
             </p>
-            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-200">
+            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
               The Learning Management System (LMS) project is a web-based
               platform designed to facilitate online learning and training
             </p>
-            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
               <li>Next.js</li>
               <li>Tailwind Css</li>
               <li>React Query</li>
@@ -59,7 +113,7 @@ const ProjectSection = () => {
           </div>
         </div>
         <div>
-          <div className="relative mb-1 aspect-[16/9] overflow-hidden">
+          <div className="project-image relative mb-1 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
               src="/project-2.png"
@@ -69,14 +123,14 @@ const ProjectSection = () => {
             />
           </div>
           <div className="space-y-1.5">
-            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-100">
               BitBazaar
             </p>
-            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-200">
+            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
               Game store is designed to evolutionize the gaming industry by
               providing a seamless and immersive shopping experience for gamers.
             </p>
-            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
               <li>Next.js</li>
               <li>Tailwind Css</li>
               <li>React Query</li>
@@ -85,7 +139,7 @@ const ProjectSection = () => {
           </div>
         </div>
         <div>
-          <div className="relative mb-1 aspect-[16/9] overflow-hidden">
+          <div className="project-image relative mb-1 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
               src="/project-3.png"
@@ -95,14 +149,14 @@ const ProjectSection = () => {
             />
           </div>
           <div className="space-y-1.5">
-            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-100">
               Empress
             </p>
-            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-200">
+            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
               Game store is designed to evolutionize the gaming industry by
               providing a seamless and immersive shopping experience for gamers.
             </p>
-            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
               <li>React.js</li>
               <li>Vite.js</li>
               <li>Tailwind Css</li>
@@ -113,7 +167,7 @@ const ProjectSection = () => {
           </div>
         </div>
         <div>
-          <div className="relative mb-1 aspect-[16/9] overflow-hidden">
+          <div className="project-image relative mb-1 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
               src="/project-4.png"
@@ -123,14 +177,14 @@ const ProjectSection = () => {
             />
           </div>
           <div className="space-y-1.5">
-            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-100">
               Journey
             </p>
-            <p className="font-light tracking-wide text-primary-100 dark:text-secondary-200">
+            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
               Game store is designed to evolutionize the gaming industry by
               providing a seamless and immersive shopping experience for gamers.
             </p>
-            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
               <li>React.js</li>
               <li>Vite.js</li>
               <li>Tailwind Css</li>

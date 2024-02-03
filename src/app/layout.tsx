@@ -28,8 +28,8 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="min-h-screen bg-secondary-100 transition-colors duration-300 dark:bg-main-100">
         <ThemeProvider>
-          <SmoothScrollProvider options={{ smooth: true }}>
-            <Preloader />
+          <SmoothScrollProvider>
+            {/* <Preloader /> */}
             <Navbar />
             {children}
             <FloatingBtn />
