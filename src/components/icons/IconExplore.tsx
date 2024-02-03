@@ -4,16 +4,21 @@ const IconExplore = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
+      width="25"
+      height="25"
       fill="none"
-      viewBox="0 0 58 62"
+      viewBox="0 0 25 25"
       {...props}
     >
-      <path
-        fill="currentColor"
-        d="M56.546.602a2.61 2.61 0 00-2.77-.357L0 25.485v4.885l22.587 9.035 14.488 22.29h4.885L57.395 3.262a2.61 2.61 0 00-.85-2.661zM38.944 57.036L26.49 37.876l19.163-20.988-3.032-2.769-19.313 21.153-18.623-7.45L52.6 5.333 38.944 57.035z"
-      ></path>
+      <g fill="currentColor" clipPath="url(#clip0_176_2)">
+        <path d="M12.5 3.125A9.375 9.375 0 113.125 12.5 9.427 9.427 0 0112.5 3.125zm0-2.083A11.458 11.458 0 1023.958 12.5 11.406 11.406 0 0012.5 1.042z"></path>
+        <path d="M17.344 6.927l-6.927 3.49-3.49 6.927a.573.573 0 00.73.729l6.926-3.49 3.49-6.927a.573.573 0 00-.73-.729zM12.5 13.542a1.041 1.041 0 110-2.083 1.041 1.041 0 010 2.083z"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_176_2">
+          <path fill="#fff" d="M0 0H25V25H0z"></path>
+        </clipPath>
+      </defs>
     </svg>
   );
 };

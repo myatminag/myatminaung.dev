@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-secondary-100 transition-colors duration-300 dark:bg-main-100">
         <ThemeProvider>
           <SmoothScrollProvider>
-            {/* <Preloader /> */}
+            <Preloader />
             <Navbar />
             {children}
             <FloatingBtn />

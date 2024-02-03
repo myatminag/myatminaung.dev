@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef, MutableRefObject } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // ** Component Import
 import IconExplore from '../icons/IconExplore';
+import IconGithub from '../icons/IconGithub';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +86,7 @@ const ProjectSection = () => {
       </>
       <div className="grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-12">
         <div>
-          <div className="project-image relative mb-1 aspect-[16/9] overflow-hidden">
+          <div className="project-image relative mb-2 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
               src="/project-1.png"
@@ -95,9 +96,14 @@ const ProjectSection = () => {
             />
           </div>
           <div className="space-y-1.5">
-            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-100">
-              New Vision Education Center
-            </p>
+            <div className="project-desc flex items-center justify-between">
+              <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+                New Vision Education Center
+              </p>
+              <Link href="https://nvec-lms.vercel.app/" target="_blank">
+                <IconExplore className="text-primary-100 dark:text-secondary-200" />
+              </Link>
+            </div>
             <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
               The Learning Management System (LMS) project is a web-based
               platform designed to facilitate online learning and training
@@ -113,7 +119,7 @@ const ProjectSection = () => {
           </div>
         </div>
         <div>
-          <div className="project-image relative mb-1 aspect-[16/9] overflow-hidden">
+          <div className="project-image relative mb-2 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
               src="/project-2.png"
@@ -123,9 +129,22 @@ const ProjectSection = () => {
             />
           </div>
           <div className="space-y-1.5">
-            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-100">
-              BitBazaar
-            </p>
+            <div className="project-desc flex items-center justify-between">
+              <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+                BitBazaar
+              </p>
+              <div className="flex items-center gap-x-3">
+                <Link
+                  href="https://github.com/myatminag/BitBazaar"
+                  target="_blank"
+                >
+                  <IconGithub className="w-6 text-primary-100 dark:text-secondary-200" />
+                </Link>
+                <Link href="https://bitbazaar.vercel.app/" target="_blank">
+                  <IconExplore className="text-primary-100 dark:text-secondary-200" />
+                </Link>
+              </div>
+            </div>
             <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
               Game store is designed to evolutionize the gaming industry by
               providing a seamless and immersive shopping experience for gamers.
@@ -139,7 +158,7 @@ const ProjectSection = () => {
           </div>
         </div>
         <div>
-          <div className="project-image relative mb-1 aspect-[16/9] overflow-hidden">
+          <div className="project-image relative mb-2 aspect-[16/9] overflow-hidden">
             <Image
               alt="project-image"
               src="/project-3.png"
@@ -149,12 +168,26 @@ const ProjectSection = () => {
             />
           </div>
           <div className="space-y-1.5">
-            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-100">
-              Empress
-            </p>
+            <div className="project-desc flex items-center justify-between">
+              <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+                Empress
+              </p>
+              <div className="flex items-center gap-x-3">
+                <Link
+                  href="https://github.com/myatminag/Empress"
+                  target="_blank"
+                >
+                  <IconGithub className="w-6 text-primary-100 dark:text-secondary-200" />
+                </Link>
+                <Link href="https://empress.vercel.app/" target="_blank">
+                  <IconExplore className="text-primary-100 dark:text-secondary-200" />
+                </Link>
+              </div>
+            </div>
             <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
-              Game store is designed to evolutionize the gaming industry by
-              providing a seamless and immersive shopping experience for gamers.
+              The eCommerce platform caters to a diverse range of products,
+              offering users a visually appealing interface combined with
+              advanced functionality.
             </p>
             <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
               <li>React.js</li>
@@ -177,12 +210,25 @@ const ProjectSection = () => {
             />
           </div>
           <div className="space-y-1.5">
-            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-100">
-              Journey
-            </p>
+            <div className="project-desc flex items-center justify-between">
+              <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+                Journey
+              </p>
+              <div className="flex items-center gap-x-3">
+                <Link
+                  href="https://github.com/myatminag/TheJourney"
+                  target="_blank"
+                >
+                  <IconGithub className="w-6 text-primary-100 dark:text-secondary-200" />
+                </Link>
+                <Link href="https://journeyss.vercel.app/" target="_blank">
+                  <IconExplore className="text-primary-100 dark:text-secondary-200" />
+                </Link>
+              </div>
+            </div>
             <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
-              Game store is designed to evolutionize the gaming industry by
-              providing a seamless and immersive shopping experience for gamers.
+              A dynamic and engaging blog platform aimed at providing a
+              captivating space for content creation and consumption.
             </p>
             <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
               <li>React.js</li>
