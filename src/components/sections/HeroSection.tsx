@@ -48,28 +48,28 @@ const HeroSection = () => {
       ref={heroSectionRef}
       className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
-      <IconBgHero className="absolute right-0 text-secondary-200/20 dark:text-secondary-200/10" />
+      <IconBgHero className="absolute right-0 text-primary-500/25 dark:text-primary-200" />
       <div className="container">
         <div className="space-y-5">
           <div className="heading">
             <h1
               aria-hidden={true}
-              className="hero-animation font-light uppercase tracking-wider text-primary-100 dark:text-secondary-200 lg:text-heading"
+              className="hero-animation font-light uppercase tracking-wider text-secondary-200 dark:text-primary-500 lg:text-heading"
             >
               Hi, I&apos;m Myat Min Aung 👋
             </h1>
           </div>
           <h1
             aria-hidden={true}
-            className="hero-animation text-4xl font-medium tracking-wider text-primary-100 dark:text-secondary-100 lg:text-8xl"
+            className="hero-animation dark:text-secondary-400 text-4xl font-medium tracking-wider text-secondary-200 lg:text-8xl"
           >
             On a mission to innovate, problem-solve, and craft robust digital
             solutions.
           </h1>
           <div className="flex flex-col gap-x-10 lg:flex-row lg:items-start lg:pt-10">
-            <div className="mt-4 hidden h-[1px] w-96 bg-secondary-200/40 dark:bg-secondary-200/20 lg:block" />
+            <div className="mt-4 hidden h-[1px] w-96 bg-secondary-100 dark:bg-primary-400 lg:block" />
             <div className="heading flex-1">
-              <p className="hero-animation w-full font-light tracking-wider text-primary-100 dark:text-secondary-200 lg:text-heading">
+              <p className="hero-animation w-full font-light tracking-wider text-secondary-200 dark:text-primary-500 lg:text-heading">
                 As a passionate frontend developer, I specialize in translating
                 ideas into seamless, user-centric web experiences.
               </p>
@@ -77,8 +77,8 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="scroll-animation absolute bottom-5 z-20 flex items-center gap-x-1">
-          <IconMouse className="w-4 text-primary-100 dark:text-secondary-100" />
-          <p className="text-sm text-primary-100 dark:text-secondary-100">
+          <IconMouse className="dark:text-secondary-400 w-4 text-secondary-200" />
+          <p className="dark:text-secondary-400 text-sm text-secondary-200">
             Scroll <br />
             To Explore
           </p>

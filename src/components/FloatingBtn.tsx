@@ -39,17 +39,17 @@ const FloatingBtn = () => {
       <Link
         target="_blank"
         href="https://github.com/myatminag"
-        className="rounded-full border border-zinc-200 bg-secondary-200/20 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-main-200 dark:border-primary-100 dark:bg-main-200 dark:hover:border-secondary-100"
+        className="bg-secondary-400 dark:hover:border-secondary-400 rounded-full border border-zinc-200 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-secondary-200 dark:border-primary-100 dark:bg-primary-200"
       >
-        <IconGithub className="h-5 w-5 text-main-100 dark:text-secondary-100" />
+        <IconGithub className="text-main-100 dark:text-secondary-400 h-5 w-5" />
       </Link>
 
       <Link
         target="_blank"
         href="https://www.linkedin.com/in/myat-min-aung-830039245"
-        className="rounded-full border border-zinc-200 bg-secondary-200/20 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-main-200 dark:border-primary-100 dark:bg-main-200 dark:hover:border-secondary-100"
+        className="bg-secondary-400 dark:hover:border-secondary-400 rounded-full border border-zinc-200 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-secondary-200 dark:border-primary-100 dark:bg-primary-200"
       >
-        <IconLinkedIn className="h-5 w-5 text-main-100 dark:text-secondary-100" />
+        <IconLinkedIn className="text-main-100 dark:text-secondary-400 h-5 w-5" />
       </Link>
 
       <ThemeToggle />

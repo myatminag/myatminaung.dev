@@ -36,10 +36,10 @@ const Preloader = () => {
 
   return (
     <div ref={loadingRef} aria-hidden={true}>
-      <div className="follow fixed inset-0 z-50 flex h-screen w-full items-center justify-center bg-main-100 dark:bg-secondary-100">
+      <div className="follow dark:bg-secondary-400 fixed inset-0 z-50 flex h-screen w-full items-center justify-center bg-primary-100">
         <h1
           ref={textRef}
-          className="heading text-white-100 text-center text-2xl font-semibold tracking-wider text-secondary-100 dark:text-primary-100 lg:text-5xl lg:leading-[3rem]"
+          className="heading text-secondary-400 text-center text-2xl font-semibold tracking-wider dark:text-primary-100 lg:text-5xl lg:leading-[3rem]"
         >
           Innovate With Passion.
         </h1>

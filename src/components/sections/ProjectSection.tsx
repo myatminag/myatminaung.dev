@@ -69,15 +69,15 @@ const ProjectSection = () => {
       className="container grid min-h-screen place-content-center py-28"
     >
       <>
-        <div className="mb-5 flex items-center justify-center gap-x-5">
-          <div className="h-[1px] w-16 bg-secondary-200/40 dark:bg-secondary-200/20" />
-          <header className="text-sm uppercase tracking-wider text-primary-100 dark:text-secondary-200">
-            Project
+        <div className="mb-10 flex items-center justify-center gap-x-5">
+          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-500" />
+          <header className="text-sm uppercase tracking-wider text-secondary-200 dark:text-primary-500">
+            Projects
           </header>
-          <div className="h-[1px] w-16 bg-secondary-200/40 dark:bg-secondary-200/20" />
+          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-500" />
         </div>
         <div className="flex justify-center">
-          <p className="project-intro mb-10 w-full text-center font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:w-6/12 lg:text-heading">
+          <p className="project-intro mb-10 w-full text-center font-light tracking-wide text-secondary-200 dark:text-primary-500 lg:w-6/12 lg:text-heading">
             I&apos;ve built several projects for my works over a year but these
             are the ones of my lastest freelance and personal projects.
           </p>
@@ -96,18 +96,18 @@ const ProjectSection = () => {
           </div>
           <div className="space-y-1.5">
             <div className="project-desc flex items-center justify-between">
-              <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+              <p className="dark:text-secondary-400 font-light tracking-wide text-secondary-200">
                 New Vision Education Center
               </p>
               <Link href="https://nvec-lms.vercel.app/" target="_blank">
-                <IconExplore className="text-primary-100 dark:text-secondary-200" />
+                <IconExplore className="text-secondary-200 dark:text-primary-500" />
               </Link>
             </div>
-            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
+            <p className="project-desc font-light tracking-wide text-secondary-200 dark:text-primary-500">
               The Learning Management System (LMS) project is a web-based
               platform designed to facilitate online learning and training
             </p>
-            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-secondary-200 dark:text-primary-500 lg:gap-x-12">
               <li>Next.js</li>
               <li>Tailwind Css</li>
               <li>React Query</li>
@@ -129,7 +129,7 @@ const ProjectSection = () => {
           </div>
           <div className="space-y-1.5">
             <div className="project-desc flex items-center justify-between">
-              <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+              <p className="dark:text-secondary-400 font-light tracking-wide text-secondary-200">
                 BitBazaar
               </p>
               <div className="flex items-center gap-x-3">
@@ -137,18 +137,18 @@ const ProjectSection = () => {
                   href="https://github.com/myatminag/BitBazaar"
                   target="_blank"
                 >
-                  <IconGithub className="w-6 text-primary-100 dark:text-secondary-200" />
+                  <IconGithub className="w-6 text-secondary-200 dark:text-primary-500" />
                 </Link>
                 <Link href="https://bitbazaar.vercel.app/" target="_blank">
-                  <IconExplore className="text-primary-100 dark:text-secondary-200" />
+                  <IconExplore className="text-secondary-200 dark:text-primary-500" />
                 </Link>
               </div>
             </div>
-            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
+            <p className="project-desc font-light tracking-wide text-secondary-200 dark:text-primary-500">
               Game store is designed to evolutionize the gaming industry by
               providing a seamless and immersive shopping experience for gamers.
             </p>
-            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-secondary-200 dark:text-primary-500 lg:gap-x-12">
               <li>Next.js</li>
               <li>Tailwind Css</li>
               <li>React Query</li>
@@ -168,7 +168,7 @@ const ProjectSection = () => {
           </div>
           <div className="space-y-1.5">
             <div className="project-desc flex items-center justify-between">
-              <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+              <p className="dark:text-secondary-400 font-light tracking-wide text-secondary-200">
                 Empress
               </p>
               <div className="flex items-center gap-x-3">
@@ -176,19 +176,19 @@ const ProjectSection = () => {
                   href="https://github.com/myatminag/Empress"
                   target="_blank"
                 >
-                  <IconGithub className="w-6 text-primary-100 dark:text-secondary-200" />
+                  <IconGithub className="w-6 text-secondary-200 dark:text-primary-500" />
                 </Link>
                 <Link href="https://empress.vercel.app/" target="_blank">
-                  <IconExplore className="text-primary-100 dark:text-secondary-200" />
+                  <IconExplore className="text-secondary-200 dark:text-primary-500" />
                 </Link>
               </div>
             </div>
-            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
+            <p className="project-desc font-light tracking-wide text-secondary-200 dark:text-primary-500">
               The eCommerce platform caters to a diverse range of products,
               offering users a visually appealing interface combined with
               advanced functionality.
             </p>
-            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-secondary-200 dark:text-primary-500 lg:gap-x-12">
               <li>React.js</li>
               <li>Vite.js</li>
               <li>Tailwind Css</li>
@@ -210,7 +210,7 @@ const ProjectSection = () => {
           </div>
           <div className="space-y-1.5">
             <div className="project-desc flex items-center justify-between">
-              <p className="font-light tracking-wide text-primary-100 dark:text-secondary-100">
+              <p className="dark:text-secondary-400 font-light tracking-wide text-secondary-200">
                 Journey
               </p>
               <div className="flex items-center gap-x-3">
@@ -218,18 +218,18 @@ const ProjectSection = () => {
                   href="https://github.com/myatminag/TheJourney"
                   target="_blank"
                 >
-                  <IconGithub className="w-6 text-primary-100 dark:text-secondary-200" />
+                  <IconGithub className="w-6 text-secondary-200 dark:text-primary-500" />
                 </Link>
                 <Link href="https://journeyss.vercel.app/" target="_blank">
-                  <IconExplore className="text-primary-100 dark:text-secondary-200" />
+                  <IconExplore className="text-secondary-200 dark:text-primary-500" />
                 </Link>
               </div>
             </div>
-            <p className="project-desc font-light tracking-wide text-primary-100 dark:text-secondary-200">
+            <p className="project-desc font-light tracking-wide text-secondary-200 dark:text-primary-500">
               A dynamic and engaging blog platform aimed at providing a
               captivating space for content creation and consumption.
             </p>
-            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="project-desc ml-4 flex list-[square] flex-wrap gap-x-6 text-sm font-light text-secondary-200 dark:text-primary-500 lg:gap-x-12">
               <li>React.js</li>
               <li>Vite.js</li>
               <li>Tailwind Css</li>
@@ -243,8 +243,8 @@ const ProjectSection = () => {
       <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
         <Link
           href="https://github.com/myatminag"
-          className="after:bg-primaryColor relative flex h-14 w-48 items-center justify-center border border-secondary-200/40 text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:bg-main-200 after:transition-all after:duration-500
-        hover:text-secondary-100 hover:after:w-[100%] dark:text-secondary-200"
+          className="hover:text-secondary-400 relative flex h-14 w-48 items-center justify-center border border-primary-300 text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:bg-primary-200 after:transition-all
+        after:duration-500 hover:after:w-[100%] dark:text-primary-500"
         >
           <p className="relative z-20 uppercase tracking-wide">View Github</p>
         </Link>

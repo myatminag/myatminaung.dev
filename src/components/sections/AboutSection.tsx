@@ -56,25 +56,25 @@ const AboutSection = () => {
       className="container grid min-h-screen place-content-center py-28 lg:py-0"
     >
       <div className="mb-10 flex items-center justify-center gap-x-5">
-        <div className="h-[1px] w-16 bg-secondary-200/40 dark:bg-secondary-200/20" />
-        <header className="text-sm uppercase tracking-wider text-primary-100 dark:text-secondary-200">
+        <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-500" />
+        <header className="text-sm uppercase tracking-wider text-secondary-200 dark:text-primary-500">
           About
         </header>
-        <div className="h-[1px] w-16 bg-secondary-200/40 dark:bg-secondary-200/20" />
+        <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-500" />
       </div>
       <div className="flex flex-col items-center justify-center gap-y-6 lg:flex-row lg:items-start lg:gap-x-12">
         <aside className="flex flex-col items-start space-y-5">
-          <p className="about-intro text-4xl font-medium tracking-wide text-primary-100 dark:text-secondary-100">
+          <p className="about-intro dark:text-secondary-400 text-4xl font-medium tracking-wide text-secondary-200">
             Turning ideas into immersive digital experiences.
           </p>
           <div className="about-intro hidden space-y-3 lg:block">
-            <p className="text-heading font-light text-primary-100 dark:text-secondary-100">
+            <p className="dark:text-secondary-400 text-heading font-light text-primary-100">
               Work Experience 💼
             </p>
             <div className="flex w-full items-center justify-start">
               <div className="grid w-full grid-cols-1 gap-4">
-                <div className="relative flex max-w-2xl items-start gap-x-4 before:absolute before:bottom-0 before:left-6 before:top-[3rem] before:h-[calc(45px)] before:w-[1.5px] before:bg-secondary-200/20 dark:before:bg-main-200 lg:gap-x-6">
-                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-200/20 text-primary-100 dark:bg-main-200 dark:text-secondary-100">
+                <div className="relative flex max-w-2xl items-start gap-x-4 before:absolute before:bottom-0 before:left-6 before:top-[3rem] before:h-[calc(45px)] before:w-[1px] before:bg-secondary-100 dark:before:bg-primary-400 lg:gap-x-6">
+                  <div className="text-secondary-400 grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 dark:bg-primary-400">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -89,19 +89,22 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <p className="font-medium text-primary-100 dark:text-secondary-200">
+                    <p className="font-medium text-primary-100 dark:text-primary-500">
                       ILBC
                     </p>
-                    <p className="mb-1 text-primary-100 dark:text-secondary-200">
+                    <p className="mb-1 text-primary-100 dark:text-primary-500">
                       Frontend Developer
                     </p>
-                    <time className="font-mono text-sm text-primary-100 dark:text-secondary-200">
-                      Oct 2023 - <span className="text-green-500">Present</span>
+                    <time className="font-mono text-sm text-primary-100 dark:text-primary-500">
+                      Oct 2023 -{' '}
+                      <span className="text-secondary-100 dark:text-primary-400">
+                        Present
+                      </span>
                     </time>
                   </div>
                 </div>
                 <div className="relative flex max-w-2xl items-start gap-x-4 lg:gap-x-6">
-                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-200/20 text-primary-100 dark:bg-main-200 dark:text-secondary-100">
+                  <div className="text-secondary-400 grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 dark:bg-primary-400">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -116,13 +119,13 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <p className="font-medium text-primary-100 dark:text-secondary-200">
+                    <p className="font-medium text-secondary-200 dark:text-primary-500">
                       Shopdoora
                     </p>
-                    <p className="mb-1 text-primary-100 dark:text-secondary-200">
+                    <p className="mb-1 text-secondary-200 dark:text-primary-500">
                       Frontend Developer
                     </p>
-                    <time className="font-mono text-sm text-primary-100 dark:text-secondary-200">
+                    <time className="font-mono text-sm text-secondary-200 dark:text-primary-500">
                       Oct 2022 - Oct 2023
                     </time>
                   </div>
@@ -133,13 +136,13 @@ const AboutSection = () => {
         </aside>
         <div className="space-y-8">
           <div className="space-y-3">
-            <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:text-heading">
+            <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-primary-500 lg:text-heading">
               I&apos;m a frontend developer based in Yangon, Myanmar. Over the
               years, that curiosity evolved into a deep-seated passion for
               building software that my journey into the world of code started
               with a curiosity about how technology shapes our daily lives.
             </p>
-            <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-secondary-200 lg:text-heading">
+            <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-primary-500 lg:text-heading">
               I&apos;ve honed my skills in{' '}
               <strong className="opacity-100">JavaScript</strong> &{' '}
               <strong>TypeScript,</strong> always staying on the pulse of the
@@ -147,7 +150,7 @@ const AboutSection = () => {
               frameworks, my true passion lies in the seamless fusion of design
               and functionality.
             </p>
-            <p className="about-me font-light tracking-wide text-primary-100 backdrop:text-justify dark:text-secondary-200 lg:text-heading">
+            <p className="about-me font-light tracking-wide text-primary-100 backdrop:text-justify dark:text-primary-500 lg:text-heading">
               I&apos;m dedicated to continuously learning and eager to
               contribute my skills to a dynamic team, collaborate on exciting
               projects, and contribute to the creation of innovative digital
@@ -155,10 +158,10 @@ const AboutSection = () => {
             </p>
           </div>
           <div className="about-me space-y-3">
-            <p className="text-heading font-light text-primary-100 dark:text-secondary-100">
+            <p className="dark:text-secondary-400 text-heading font-light text-secondary-200">
               Tech Stacks 💻
             </p>
-            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 gap-y-3 font-light text-primary-100 dark:text-secondary-200 lg:gap-x-12">
+            <ul className="ttext-secondary-200 ml-4 flex list-[square] flex-wrap gap-x-6 gap-y-3 font-light dark:text-primary-500 lg:gap-x-12">
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React.js</li>
@@ -170,31 +173,34 @@ const AboutSection = () => {
             </ul>
           </div>
           <div className="about-me space-y-3 lg:hidden">
-            <p className="text-heading font-light text-primary-100 dark:text-secondary-100">
+            <p className="dark:text-secondary-400 text-heading font-light text-secondary-200">
               Work Experience 💼
             </p>
             <div className="flex items-end justify-between">
               <div>
-                <p className="font-medium tracking-wide text-primary-100 dark:text-secondary-200">
+                <p className="font-medium tracking-wide text-secondary-200 dark:text-primary-500">
                   Frontend Developer
                 </p>
-                <p className="text-primary-100 dark:text-secondary-200">ILBC</p>
+                <p className="text-secondary-200 dark:text-primary-500">ILBC</p>
               </div>
-              <time className="text-black-100 font-mono text-sm text-primary-100 dark:text-secondary-200">
-                Oct 2023 - <span className="text-green-500">Present</span>
+              <time className="text-black-100 font-mono text-sm text-secondary-200 dark:text-primary-500">
+                Oct 2023 -{' '}
+                <span className="text-secondary-100 dark:text-primary-400">
+                  Present
+                </span>
               </time>
             </div>
-            <div className="h-[1px] w-full bg-secondary-200/40 dark:bg-secondary-200/20" />
+            <div className="h-[1px] w-full bg-secondary-200/40 dark:bg-primary-300" />
             <div className="flex items-end justify-between">
               <div>
-                <p className="font-medium tracking-wide text-primary-100 dark:text-secondary-200">
+                <p className="font-medium tracking-wide text-secondary-200 dark:text-primary-500">
                   Frontend Developer
                 </p>
-                <p className="text-primary-100 dark:text-secondary-200">
+                <p className="text-secondary-200 dark:text-primary-500">
                   Shopdoora
                 </p>
               </div>
-              <time className="text-black-100 font-mono text-sm text-primary-100 dark:text-secondary-200">
+              <time className="text-black-100 font-mono text-sm text-secondary-200 dark:text-primary-500">
                 Oct 2022 - Oct 2023
               </time>
             </div>
