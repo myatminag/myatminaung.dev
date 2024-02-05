@@ -13,19 +13,19 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 8.6.3
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 21.6.1
           cache: pnpm
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 8.6.3
+      - name: Install PNPM
+        run: npm install -g pnpm
 
-      - run: npm install -g pnpm
-
-      - run: pnpm install
-
-      - run: pnpm run build
+      - name: Install & Build
+        run: pnpm i & pnpm build
