@@ -1,12 +1,6 @@
 'use client';
 
-import React, {
-  createContext,
-  useEffect,
-  useState,
-  ReactNode,
-  useContext,
-} from 'react';
+import React, { createContext, useEffect, useState, useContext } from 'react';
 
 type SmoothScrollContextType = {
   scroll: any;

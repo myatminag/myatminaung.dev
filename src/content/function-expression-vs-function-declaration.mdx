@@ -1,0 +1,72 @@
+---
+title: 'Function Expression vs Function Declaration in JavaScript'
+publishDate: '5th Feb, 2024'
+---
+
+When you're working with JavaScript, It is essential to understand the different
+ways of defining functions. Among them, we will explore the differences
+between **Function Expression** and **Function Declaration** in this article.
+
+## Function Expression
+
+A function expression refers to the act of assigning a function to a variable. It also
+creates an anonymous function due to the absence of function name. Here's an example
+of a function expression.
+
+```tsx
+const sum = function (a, b) {
+  return a + b;
+};
+```
+
+**Note**: let, const or var can be used to declare a variable.
+
+In this example, we assign an anonymous function to the variable **sum**. Function
+expression are often used when we need to pass a function as an argument to another function
+or when we want to assign a function to a property of an object.
+
+## Function Declaration
+
+A function declaration in JavaScript is a straightforward way to define a function.
+It starts with the **function** keyword followed by the name of the function. It's used
+to define a function that can be invoked later in the code.
+
+```tsx
+function multiply(a, b) {
+  return a * b;
+}
+```
+
+In this example, we define a named function **multiply** that can be called later in the code.
+Function declarations are commonly used when we want to define utility functions or when we
+want to create functions that are accessible throughout the entire scope.
+
+## Hoisting: Declaration vs Expression
+
+Hoisting means the principle of moving declarations of variables, functions or classes to the top
+of the scope in which they are defined. One crucial difference between function declaration vs function
+expression is hoisting.
+
+```tsx
+// Function Declaration
+multiply(2, 2);
+
+function multiply(a, b) {
+  return a * b;
+}
+
+// Function Expression
+sum(2, 3);
+
+const sum = function (a, b) {
+  return a + b;
+};
+```
+
+Function Declaration are hoisted to the top of their containing scope. In the example,
+our function **multiply** can be used before the actual declaration in this code due to the hositing.
+However, attempting to call the function expression before its assignement results in
+`ReferenceError: sum is not defined`.
+
+So, understanding differences between function expression and function declaration is crucial for
+writing clean and maintainable JavaScript code.
