@@ -2,16 +2,25 @@ import gsap from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 
-// ** Component Import
+import { useSmoothScroll } from '@/app/scrollProvider';
+
 import IconMouse from '../icons/IconMouse';
 import IconBgHero from '../icons/IconBgHero';
 
 const HeroSection = () => {
   const heroSectionRef = useRef(null);
 
+  const { scroll } = useSmoothScroll();
+
   useGSAP(
     () => {
-      gsap.fromTo(
+      const tl = gsap.timeline({
+        defaults: {
+          ease: 'power2.inOut',
+        },
+      });
+
+      tl.fromTo(
         '.hero-animation',
         {
           y: 100,
@@ -20,10 +29,18 @@ const HeroSection = () => {
         {
           y: 0,
           opacity: 1,
-          duration: 1.25,
+          stagger: 0.2,
+          duration: 1.5,
           delay: 2.5,
-          stagger: 0.5,
-          ease: 'power2.inOut',
+        },
+      ).fromTo(
+        '.text-bar',
+        {
+          width: 0,
+        },
+        {
+          width: '384px',
+          duration: 1,
         },
       );
 
@@ -35,8 +52,8 @@ const HeroSection = () => {
         {
           y: '2.5',
           duration: 1.5,
-          delay: 3,
-          ease: 'power4.out',
+          delay: 2.5,
+          ease: 'power2.inOut',
         },
       );
     },
@@ -61,13 +78,15 @@ const HeroSection = () => {
           </div>
           <h1
             aria-hidden={true}
-            className="hero-animation dark:text-secondary-400 text-4xl font-medium tracking-wider text-secondary-200 lg:text-8xl"
+            className="hero-animation text-4xl font-medium tracking-wider text-secondary-200 dark:text-secondary-400 lg:text-8xl"
           >
             On a mission to innovate, problem-solve, and craft robust digital
             solutions.
           </h1>
           <div className="flex flex-col gap-x-10 lg:flex-row lg:items-start lg:pt-10">
-            <div className="mt-4 hidden h-[1px] w-96 bg-secondary-100 dark:bg-primary-400 lg:block" />
+            <div className="w-96">
+              <div className="text-bar mt-4 hidden h-[1px] bg-secondary-100 dark:bg-primary-400 lg:block" />
+            </div>
             <div className="heading flex-1">
               <p className="hero-animation w-full font-light tracking-wider text-secondary-200 dark:text-primary-500 lg:text-heading">
                 As a passionate frontend developer, I specialize in translating
@@ -76,13 +95,16 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="scroll-animation absolute bottom-5 z-20 flex items-center gap-x-1">
-          <IconMouse className="dark:text-secondary-400 w-4 text-secondary-200" />
-          <p className="dark:text-secondary-400 text-sm text-secondary-200">
+        <button
+          onClick={() => scroll.scrollTo('#about')}
+          className="scroll-animation absolute bottom-5 z-20 flex items-center gap-x-2"
+        >
+          <IconMouse className="w-4 text-secondary-200 dark:text-secondary-400" />
+          <p className="text-start text-sm text-secondary-200 dark:text-secondary-400">
             Scroll <br />
             To Explore
           </p>
-        </div>
+        </button>
       </div>
     </section>
   );

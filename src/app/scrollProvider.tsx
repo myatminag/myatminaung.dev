@@ -1,26 +1,24 @@
 'use client';
 
-import React, { createContext, useEffect, useState, ReactNode } from 'react';
-
-type ScrollOptions = {
-  [key: string]: any;
-};
+import React, {
+  createContext,
+  useEffect,
+  useState,
+  ReactNode,
+  useContext,
+} from 'react';
 
 type SmoothScrollContextType = {
   scroll: any;
 };
 
-export const SmoothScrollContext = createContext<SmoothScrollContextType>({
+const SmoothScrollContext = createContext<SmoothScrollContextType>({
   scroll: null,
 });
 
-type SmoothScrollProviderProps = {
-  children: ReactNode;
-};
+const useSmoothScroll = () => useContext(SmoothScrollContext);
 
-export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
-  children,
-}) => {
+const SmoothScrollProvider = ({ children }: { children: React.ReactNode }) => {
   const [scroll, setScroll] = useState<any>(null);
 
   useEffect(() => {
@@ -58,5 +56,4 @@ export const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({
   );
 };
 
-SmoothScrollContext.displayName = 'SmoothScrollContext';
-SmoothScrollProvider.displayName = 'SmoothScrollProvider';
+export { useSmoothScroll, SmoothScrollProvider };

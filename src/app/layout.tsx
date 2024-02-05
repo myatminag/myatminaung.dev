@@ -14,9 +14,9 @@ const inter = Inter_Tight({
 });
 
 export const metadata = {
-  title: 'Myat Min Aung | A Full Stack Web Developer',
+  title: 'Myat Min Aung | A Frontend Developer',
   description:
-    'Hello, I am Myat Min Aung. I am a full-stack web developer from Yangon, Myanmar. Specializing in mern-stack development, I am using Reactjs & Nextjs on fontend development and Expressjs & Nodejs on backend development. I have a serious passion for developing web applications, dynamic user experiences and creating intuitive.',
+    'Hello, I am Myat Min Aung. I am front-end developer from Yangon, Myanmar.',
 };
 
 export default function RootLayout({
