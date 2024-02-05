@@ -7,17 +7,18 @@ import { useRef, MouseEvent, useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { useSmoothScroll } from '@/app/scrollProvider';
 
+const NavMenu = [
+  { id: 1, title: 'About', href: '#about' },
+  { id: 2, title: 'Projects', href: '#projects' },
+  { id: 3, title: 'Blogs', href: '#blogs' },
+  { id: 4, title: 'Contact', href: '#contact' },
+];
+
 const Navbar = () => {
   const navbarRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const { scroll } = useSmoothScroll();
 
-  const tl = gsap.timeline({
-    paused: true,
-    defaults: { duration: 0.3, ease: 'power1.inOut' },
-  });
-
-  // Navbar animation
   useGSAP(
     () => {
       gsap.fromTo(
@@ -32,22 +33,6 @@ const Navbar = () => {
           ease: 'power4.out',
         },
       );
-
-      if (isOpen) {
-        tl.fromTo(
-          '.menu-item',
-          {
-            opacity: 0,
-            y: '0.5rem',
-            stagger: 0.1,
-          },
-          {
-            opacity: 1,
-            y: '5rem',
-            stagger: 0.1,
-          },
-        );
-      }
     },
     {
       scope: navbarRef,
@@ -73,48 +58,24 @@ const Navbar = () => {
         </p>
 
         <ul className="hidden lg:flex lg:items-center lg:gap-x-16">
-          <li
-            onClick={(e) => handleToScrollSection(e, '#about')}
-            className="relative cursor-pointer text-sm uppercase tracking-wider text-secondary-200 after:absolute 
+          {NavMenu.map((menu) => (
+            <li
+              key={menu.id}
+              onClick={(e) => handleToScrollSection(e, menu.href)}
+              className="relative cursor-pointer text-sm uppercase tracking-wider text-secondary-200 after:absolute 
             after:-bottom-[5px] after:left-0 after:h-[3px] after:w-[0%] after:rounded-xl after:bg-secondary-100 
             after:duration-300 hover:after:w-[100%] 
             dark:text-secondary-400 dark:after:bg-primary-400"
-          >
-            About
-          </li>
-          <li
-            onClick={(e) => handleToScrollSection(e, '#projects')}
-            className="relative cursor-pointer text-sm uppercase tracking-wider text-secondary-200 after:absolute 
-            after:-bottom-[5px] after:left-0 after:h-[3px] after:w-[0%] after:rounded-xl after:bg-secondary-100 
-            after:duration-300 hover:after:w-[100%] 
-            dark:text-secondary-400 dark:after:bg-primary-400"
-          >
-            Projects
-          </li>
-          <li
-            onClick={(e) => handleToScrollSection(e, '#blog')}
-            className="relative cursor-pointer text-sm uppercase tracking-wider text-secondary-200 after:absolute 
-            after:-bottom-[5px] after:left-0 after:h-[3px] after:w-[0%] after:rounded-xl after:bg-secondary-100 
-            after:duration-300 hover:after:w-[100%] 
-            dark:text-secondary-400 dark:after:bg-primary-400"
-          >
-            Blogs
-          </li>
-          <li
-            onClick={(e) => handleToScrollSection(e, '#contact')}
-            className="relative cursor-pointer text-sm uppercase tracking-wider text-secondary-200 after:absolute 
-            after:-bottom-[5px] after:left-0 after:h-[3px] after:w-[0%] after:rounded-xl after:bg-secondary-100 
-            after:duration-300 hover:after:w-[100%] 
-            dark:text-secondary-400 dark:after:bg-primary-400"
-          >
-            Contact
-          </li>
+            >
+              {menu.title}
+            </li>
+          ))}
         </ul>
 
         <div className="relative flex items-center gap-x-3 lg:hidden">
           <ThemeToggle />
 
-          <label className="swap swap-rotate rounded-full border border-zinc-200 bg-secondary-400 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-primary-200 lg:hover:-translate-y-1.5">
+          <label className="swap-rotate swap rounded-full border border-zinc-200 bg-secondary-400 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-primary-200 lg:hover:-translate-y-1.5">
             <input type="checkbox" onClick={() => setIsOpen(!isOpen)} />
 
             <svg
@@ -137,30 +98,15 @@ const Navbar = () => {
           {isOpen && (
             <div className="absolute right-2 top-12 rounded-md bg-secondary-400 px-5 py-2.5 dark:bg-primary-200 lg:hidden">
               <ul className="flex flex-col items-start gap-y-4 lg:hidden">
-                <li
-                  onClick={(e) => handleToScrollSection(e, '#about')}
-                  className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-400"
-                >
-                  About
-                </li>
-                <li
-                  onClick={(e) => handleToScrollSection(e, '#projects')}
-                  className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-400"
-                >
-                  Projects
-                </li>
-                <li
-                  onClick={(e) => handleToScrollSection(e, '#blog')}
-                  className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-400"
-                >
-                  Blogs
-                </li>
-                <li
-                  onClick={(e) => handleToScrollSection(e, '#contact')}
-                  className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-400"
-                >
-                  Contact
-                </li>
+                {NavMenu.map((menu) => (
+                  <li
+                    key={menu.id}
+                    onClick={(e) => handleToScrollSection(e, '#about')}
+                    className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-400"
+                  >
+                    {menu.title}
+                  </li>
+                ))}
               </ul>
             </div>
           )}

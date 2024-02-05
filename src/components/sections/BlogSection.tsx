@@ -43,7 +43,7 @@ const BlogSection = () => {
 
   return (
     <section
-      id="blog"
+      id="blogs"
       ref={blogSectionRef}
       className="container grid min-h-screen place-content-center py-28"
     >
@@ -66,9 +66,9 @@ const BlogSection = () => {
         {[...Array(3)].map((_, index) => (
           <div
             key={index}
-            className="blog-card bg-secondary-400 space-y-3 rounded-md p-4 dark:bg-primary-200"
+            className="blog-card space-y-3 rounded-md bg-secondary-400 p-4 dark:bg-primary-200"
           >
-            <p className="dark:text-secondary-400 line-clamp-2 font-light tracking-wide text-secondary-200">
+            <p className="line-clamp-2 font-light tracking-wide text-secondary-200 dark:text-secondary-400">
               Lorem ipsum dolor sit amet.
             </p>
             <time className="font-mono text-sm font-light text-secondary-200 dark:text-primary-500">
@@ -85,8 +85,8 @@ const BlogSection = () => {
       </div>
       <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
         <div
-          className="hover:text-secondary-400 relative flex h-14 w-48 items-center justify-center border border-primary-300 text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:bg-primary-200 after:transition-all
-        after:duration-500 hover:after:w-[100%] dark:text-primary-500"
+          className="relative flex h-14 w-48 items-center justify-center border border-primary-300 text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:bg-primary-200 after:transition-all after:duration-500
+        hover:text-secondary-400 hover:after:w-[100%] dark:text-primary-500"
         >
           <p className="relative z-20 uppercase tracking-wide">View Blogs</p>
         </div>
