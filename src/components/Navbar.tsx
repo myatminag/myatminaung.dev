@@ -50,12 +50,15 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-300 py-6 dark:border-primary-100 dark:bg-primary-100"
+      className="fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-400 py-6 dark:border-primary-100 dark:bg-primary-100"
     >
       <div className="container flex items-center justify-between">
-        <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-400">
+        <button
+          onClick={() => scroll.scrollTo('#hero')}
+          className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-400"
+        >
           Mma.dev
-        </p>
+        </button>
 
         <ul className="hidden lg:flex lg:items-center lg:gap-x-16">
           {NavMenu.map((menu) => (
@@ -75,7 +78,7 @@ const Navbar = () => {
         <div className="relative flex items-center gap-x-3 lg:hidden">
           <ThemeToggle />
 
-          <label className="dark:border-primary-600 dark:bg-primary-600 swap swap-rotate rounded-full border border-zinc-200 bg-secondary-400 p-2 transition-all duration-500 lg:hover:-translate-y-1.5">
+          <label className="dark:border-primary-600 dark:bg-primary-600 swap swap-rotate rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 lg:hover:-translate-y-1.5">
             <input type="checkbox" onClick={() => setIsOpen(!isOpen)} />
 
             <svg
@@ -96,7 +99,7 @@ const Navbar = () => {
           </label>
 
           {isOpen && (
-            <div className="absolute right-2 top-12 rounded-md bg-secondary-400 px-5 py-2.5 dark:bg-primary-200 lg:hidden">
+            <div className="absolute right-2 top-12 rounded-md bg-secondary-300 px-5 py-2.5 dark:bg-primary-200 lg:hidden">
               <ul className="flex flex-col items-start gap-y-4 lg:hidden">
                 {NavMenu.map((menu) => (
                   <li

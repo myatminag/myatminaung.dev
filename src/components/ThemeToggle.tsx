@@ -4,7 +4,7 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <label className="dark:border-primary-600 dark:bg-primary-600 swap swap-rotate rounded-full border border-zinc-200 bg-secondary-400 p-2 transition-all duration-500 lg:hover:-translate-y-1.5 lg:hover:border-primary-100 lg:dark:hover:border-secondary-400">
+    <label className="dark:border-primary-600 dark:bg-primary-600 swap swap-rotate rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 lg:hover:-translate-y-1.5 lg:hover:border-primary-100 lg:dark:hover:border-secondary-400">
       <input
         type="checkbox"
         onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}

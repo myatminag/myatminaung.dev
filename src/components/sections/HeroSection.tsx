@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { useSmoothScroll } from '@/app/scrollProvider';
 
 import IconMouse from '../icons/IconMouse';
-import IconBgHero from '../icons/IconBgHero';
+import BackgroundCircuit from '../BackgroundCircuit';
 
 const HeroSection = () => {
   const heroSectionRef = useRef(null);
@@ -62,10 +62,11 @@ const HeroSection = () => {
 
   return (
     <section
+      id="hero"
       ref={heroSectionRef}
       className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
-      <IconBgHero className="absolute right-0 text-primary-500/25 dark:text-primary-200/70" />
+      <BackgroundCircuit className="dark:text-primary-600/70 absolute right-0 text-secondary-300" />
       <div className="container">
         <div className="space-y-5">
           <div className="heading">
@@ -79,10 +80,10 @@ const HeroSection = () => {
 
           <h1
             aria-hidden={true}
-            className="hero-animation text-4xl font-medium tracking-wider text-primary-100 dark:bg-gradient-to-b dark:from-neutral-200 dark:to-neutral-600 dark:bg-clip-text dark:text-transparent lg:text-7xl lg:leading-[1.15]"
+            className="hero-animation w-full text-4xl font-medium tracking-wider text-primary-100 dark:bg-gradient-to-b dark:from-neutral-200 dark:to-neutral-600 dark:bg-clip-text dark:text-transparent lg:w-9/12 lg:text-7xl lg:leading-[1.15]"
           >
-            On a mission to innovate, <br /> problem-solve, and craft <br />{' '}
-            robust digital solutions.
+            On a mission to innovate, problem-solve, and craft robust digital
+            solutions.
           </h1>
 
           <div className="flex flex-col gap-x-10 lg:flex-row lg:items-start lg:pt-10">

@@ -2,16 +2,16 @@ import { SVGProps, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
+const BackgroundCircuit = (props: SVGProps<SVGSVGElement>) => {
   const backgroundRef = useRef(null);
 
   useGSAP(
     () => {
       gsap.fromTo(
         '#svg-path',
-        { strokeDasharray: '0 500' },
+        { strokeDasharray: '0 250' },
         {
-          strokeDasharray: '500 0',
+          strokeDasharray: '250 0',
           duration: 2,
           delay: 2.5,
           ease: 'power2.inOut',
@@ -172,4 +172,4 @@ const IconBgHero = (props: SVGProps<SVGSVGElement>) => {
   );
 };
 
-export default IconBgHero;
+export default BackgroundCircuit;

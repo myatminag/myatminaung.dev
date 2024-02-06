@@ -66,7 +66,7 @@ const BlogSection = () => {
         {[...Array(3)].map((_, index) => (
           <div
             key={index}
-            className="blog-card dark:bg-primary-600 space-y-3 rounded-xl bg-secondary-400 p-5"
+            className="blog-card dark:bg-primary-600 space-y-3 rounded-xl bg-secondary-300 p-5"
           >
             <p className="line-clamp-2 font-medium tracking-wide text-secondary-200 dark:text-secondary-400">
               Lorem ipsum dolor sit amet.
