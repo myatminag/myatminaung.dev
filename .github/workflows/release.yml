@@ -52,7 +52,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd '/home/ubuntu/myatminaung.dev'
-            git fetch & git pull origin main
+            git pull
             pnpm i
             pnpm prune --prod
             pm2 reload myatminaung.dev
