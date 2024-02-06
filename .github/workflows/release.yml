@@ -42,3 +42,16 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: '.next'
           target: '/home/ubuntu/myatminaung.dev'
+
+      - name: SSH into VPS and reload PM2
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd '/home/ubuntu/myatminaung.dev'
+            git fetch & git pull
+            pnpm i
+            pm2 reload myatminaung.dev
