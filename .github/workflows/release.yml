@@ -55,4 +55,4 @@ jobs:
             git pull
             pnpm i
             pnpm prune --prod
-            pm2 reload myatminaung.dev
+            pm2 reload portfolio
