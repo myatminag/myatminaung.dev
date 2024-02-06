@@ -71,11 +71,11 @@ const ProjectSection = () => {
     >
       <>
         <div className="mb-10 flex items-center justify-center gap-x-5">
-          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-500" />
+          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-neutral-500" />
           <header className="text-sm uppercase tracking-wider text-secondary-200 dark:text-primary-500">
             Projects
           </header>
-          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-500" />
+          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-neutral-500" />
         </div>
         <div className="flex justify-center">
           <p className="project-intro mb-10 w-full text-center font-light tracking-wide text-secondary-200 dark:text-primary-500 lg:w-6/12 lg:text-heading">
@@ -84,7 +84,7 @@ const ProjectSection = () => {
           </p>
         </div>
       </>
-      <div className="grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-12">
+      <div className="grid grid-cols-1 gap-y-6 lg:grid-cols-3 lg:gap-12">
         {ProjectList.map((project) => (
           <div key={project.id}>
             <div className="project-image relative mb-2 aspect-[16/9] overflow-hidden">
@@ -127,8 +127,8 @@ const ProjectSection = () => {
       <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
         <Link
           href="https://github.com/myatminag"
-          className="relative flex h-14 w-48 items-center justify-center border border-primary-300 text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:bg-primary-200 after:transition-all after:duration-500
-        hover:text-secondary-400 hover:after:w-[100%] dark:text-primary-500"
+          className="border-primary-600 after:bg-primary-600 relative flex h-14 w-48 items-center justify-center border text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:transition-all after:duration-500
+        hover:text-secondary-400 hover:after:w-[100%] dark:text-primary-500 dark:hover:text-secondary-300"
         >
           <p className="relative z-20 uppercase tracking-wide">View Github</p>
         </Link>

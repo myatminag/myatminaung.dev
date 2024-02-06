@@ -56,25 +56,25 @@ const AboutSection = () => {
       className="container grid min-h-screen place-content-center py-28 lg:py-0"
     >
       <div className="mb-10 flex items-center justify-center gap-x-5">
-        <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-500" />
+        <div className="h-[1px] w-16 bg-secondary-200 dark:bg-neutral-500" />
         <header className="text-sm uppercase tracking-wider text-secondary-200 dark:text-primary-500">
           About
         </header>
-        <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-500" />
+        <div className="dark:bg-neutral-00 h-[1px] w-16 bg-secondary-200 dark:bg-neutral-500" />
       </div>
       <div className="flex flex-col items-center justify-center gap-y-6 lg:flex-row lg:items-start lg:gap-x-12">
         <aside className="flex flex-col items-start space-y-5">
-          <p className="about-intro dark:text-secondary-400 text-4xl font-medium tracking-wide text-secondary-200">
+          <p className="about-intro text-4xl font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
             Turning ideas into immersive digital experiences.
           </p>
           <div className="about-intro hidden space-y-3 lg:block">
-            <p className="dark:text-secondary-400 text-heading font-light text-primary-100">
+            <p className="text-heading font-medium tracking-wide text-primary-100 dark:text-secondary-300">
               Work Experience 💼
             </p>
             <div className="flex w-full items-center justify-start">
               <div className="grid w-full grid-cols-1 gap-4">
                 <div className="relative flex max-w-2xl items-start gap-x-4 before:absolute before:bottom-0 before:left-6 before:top-[3rem] before:h-[calc(45px)] before:w-[1px] before:bg-secondary-100 dark:before:bg-primary-400 lg:gap-x-6">
-                  <div className="text-secondary-400 grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 dark:bg-primary-400">
+                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 text-secondary-300 dark:bg-primary-400">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -104,7 +104,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 <div className="relative flex max-w-2xl items-start gap-x-4 lg:gap-x-6">
-                  <div className="text-secondary-400 grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 dark:bg-primary-400">
+                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 text-secondary-400 dark:bg-primary-400">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -158,7 +158,7 @@ const AboutSection = () => {
             </p>
           </div>
           <div className="about-me space-y-3">
-            <p className="dark:text-secondary-400 text-heading font-light text-secondary-200">
+            <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
               Tech Stacks 💻
             </p>
             <ul className="ttext-secondary-200 ml-4 flex list-[square] flex-wrap gap-x-6 gap-y-3 font-light dark:text-primary-500 lg:gap-x-12">
@@ -173,7 +173,7 @@ const AboutSection = () => {
             </ul>
           </div>
           <div className="about-me space-y-3 lg:hidden">
-            <p className="dark:text-secondary-400 text-heading font-light text-secondary-200">
+            <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
               Work Experience 💼
             </p>
             <div className="flex items-end justify-between">

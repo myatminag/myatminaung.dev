@@ -65,7 +65,7 @@ const HeroSection = () => {
       ref={heroSectionRef}
       className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
-      <IconBgHero className="absolute right-0 text-primary-500/25 dark:text-primary-200" />
+      <IconBgHero className="absolute right-0 text-primary-500/25 dark:text-primary-200/70" />
       <div className="container">
         <div className="space-y-5">
           <div className="heading">
@@ -76,13 +76,15 @@ const HeroSection = () => {
               Hi, I&apos;m Myat Min Aung 👋
             </h1>
           </div>
+
           <h1
             aria-hidden={true}
-            className="hero-animation text-4xl font-medium tracking-wider text-secondary-200 dark:text-secondary-400 lg:text-8xl"
+            className="hero-animation text-4xl font-medium tracking-wider text-primary-100 dark:bg-gradient-to-b dark:from-neutral-200 dark:to-neutral-600 dark:bg-clip-text dark:text-transparent lg:text-7xl lg:leading-[1.15]"
           >
-            On a mission to innovate, problem-solve, and craft robust digital
-            solutions.
+            On a mission to innovate, <br /> problem-solve, and craft <br />{' '}
+            robust digital solutions.
           </h1>
+
           <div className="flex flex-col gap-x-10 lg:flex-row lg:items-start lg:pt-10">
             <div className="w-96">
               <div className="text-bar mt-4 hidden h-[1px] bg-secondary-100 dark:bg-primary-400 lg:block" />
@@ -99,8 +101,8 @@ const HeroSection = () => {
           onClick={() => scroll.scrollTo('#about')}
           className="scroll-animation absolute bottom-5 z-20 flex items-center gap-x-2"
         >
-          <IconMouse className="w-4 text-secondary-200 dark:text-secondary-400" />
-          <p className="text-start text-sm text-secondary-200 dark:text-secondary-400">
+          <IconMouse className="w-4 text-secondary-200 dark:text-secondary-300" />
+          <p className="text-start text-sm text-secondary-200 dark:text-secondary-300">
             Scroll <br />
             To Explore
           </p>

@@ -75,7 +75,7 @@ const Navbar = () => {
         <div className="relative flex items-center gap-x-3 lg:hidden">
           <ThemeToggle />
 
-          <label className="swap-rotate swap rounded-full border border-zinc-200 bg-secondary-400 p-2 transition-all duration-500 dark:border-primary-100 dark:bg-primary-200 lg:hover:-translate-y-1.5">
+          <label className="dark:border-primary-600 dark:bg-primary-600 swap swap-rotate rounded-full border border-zinc-200 bg-secondary-400 p-2 transition-all duration-500 lg:hover:-translate-y-1.5">
             <input type="checkbox" onClick={() => setIsOpen(!isOpen)} />
 
             <svg
