@@ -69,7 +69,7 @@ const AboutSection = () => {
           </p>
           <div className="about-intro hidden space-y-3 lg:block">
             <p className="text-heading font-medium tracking-wide text-primary-100 dark:text-secondary-300">
-              Work Experience 💼
+              Work Experience
             </p>
             <div className="flex w-full items-center justify-start">
               <div className="grid w-full grid-cols-1 gap-4">
@@ -159,9 +159,9 @@ const AboutSection = () => {
           </div>
           <div className="about-me space-y-3">
             <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
-              Tech Stacks 💻
+              Tech Stacks
             </p>
-            <ul className="ttext-secondary-200 ml-4 flex list-[square] flex-wrap gap-x-6 gap-y-3 font-light dark:text-primary-500 lg:gap-x-12">
+            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 gap-y-3 font-light text-secondary-200 dark:text-primary-500 lg:gap-x-12">
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React.js</li>

@@ -66,7 +66,7 @@ const HeroSection = () => {
       ref={heroSectionRef}
       className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
-      <BackgroundCircuit className="dark:text-primary-600/70 absolute right-0 text-secondary-300" />
+      <BackgroundCircuit className="absolute right-0 text-secondary-300 dark:text-primary-600" />
       <div className="container">
         <div className="space-y-5">
           <div className="heading">
@@ -74,13 +74,13 @@ const HeroSection = () => {
               aria-hidden={true}
               className="hero-animation font-light uppercase tracking-wider text-secondary-200 dark:text-primary-500 lg:text-heading"
             >
-              Hi, I&apos;m Myat Min Aung 👋
+              Hi, I&apos;m Myat Min Aung
             </h1>
           </div>
 
           <h1
             aria-hidden={true}
-            className="hero-animation w-full text-4xl font-medium tracking-wider text-primary-100 dark:bg-gradient-to-b dark:from-neutral-200 dark:to-neutral-600 dark:bg-clip-text dark:text-transparent lg:w-9/12 lg:text-7xl lg:leading-[1.15]"
+            className="hero-animation w-full text-4xl font-medium tracking-wider text-primary-100 dark:text-secondary-300 lg:w-9/12 lg:text-7xl lg:leading-[1.15]"
           >
             On a mission to innovate, problem-solve, and craft robust digital
             solutions.
@@ -88,7 +88,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col gap-x-10 lg:flex-row lg:items-start lg:pt-10">
             <div className="w-96">
-              <div className="text-bar mt-4 hidden h-[1px] bg-secondary-100 dark:bg-primary-400 lg:block" />
+              <div className="text-bar mt-4 hidden h-[0.5px] bg-secondary-100 dark:bg-primary-500 lg:block" />
             </div>
             <div className="heading flex-1">
               <p className="hero-animation w-full font-light tracking-wider text-secondary-200 dark:text-primary-500 lg:text-heading">

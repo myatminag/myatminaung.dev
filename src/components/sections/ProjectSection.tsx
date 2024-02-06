@@ -98,7 +98,7 @@ const ProjectSection = () => {
             </div>
             <div className="space-y-1.5">
               <div className="project-desc flex items-center justify-between">
-                <p className="font-light tracking-wide text-secondary-200 dark:text-secondary-400">
+                <p className="font-medium tracking-wide text-secondary-200 dark:text-secondary-400">
                   {project.title}
                 </p>
                 <div className="flex items-center gap-x-3">
@@ -127,7 +127,7 @@ const ProjectSection = () => {
       <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
         <Link
           href="https://github.com/myatminag"
-          className="border-primary-600 after:bg-primary-600 relative flex h-14 w-48 items-center justify-center border text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:transition-all after:duration-500
+          className="relative flex h-14 w-48 items-center justify-center border border-primary-600 text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:bg-primary-600 after:transition-all after:duration-500
         hover:text-secondary-400 hover:after:w-[100%] dark:text-primary-500 dark:hover:text-secondary-300"
         >
           <p className="relative z-20 uppercase tracking-wide">View Github</p>

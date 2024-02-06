@@ -1,5 +1,5 @@
 import './globals.css';
-import { Inter_Tight } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 
 import { ThemeProvider } from './themeProvider';
 import { SmoothScrollProvider } from './scrollProvider';
@@ -8,7 +8,7 @@ import Navbar from '@/components/Navbar';
 import Preloader from '@/components/Preloader';
 import FloatingBtn from '@/components/FloatingBtn';
 
-const inter = Inter_Tight({
+const inter = Roboto({
   weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
 });
