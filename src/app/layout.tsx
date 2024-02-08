@@ -16,18 +16,22 @@ const inter = Roboto({
 export const metadata = {
   title: 'Myat Min Aung | A Frontend Developer',
   description:
-    "Hello, I'm Myat Min Aung. I'm front-end developer from Yangon, Myanmar.",
+    'A Software Engineer, specializing in frontend development with a passion for crafting intuitive and elegant user experiences.',
   openGraph: {
     title: 'Myat Min Aung | A Frontend Developer',
-    description: '',
+    description:
+      'A Software Engineer, specializing in frontend development with a passion for crafting intuitive and elegant user experiences.',
+    url: 'https://myatminaung.dev',
     images: [
       {
-        url: 'http://13.229.154.61:3000/og-image.png',
+        url: 'https://myatminaung.dev/og-image.png',
         width: 800,
         height: 600,
       },
     ],
     type: 'website',
+    locale: 'en_US',
+    siteName: 'Myat Min Aung',
   },
   robots: {
     index: true,
@@ -43,7 +47,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: '',
+    google: 'J9tOkvXzjAeDeg2uNflnsr4Yi4ymNNFqlGn0iIbZAFc',
   },
 };
 
