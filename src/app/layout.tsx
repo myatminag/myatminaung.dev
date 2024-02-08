@@ -17,6 +17,13 @@ export const metadata = {
   title: 'Myat Min Aung | A Frontend Developer',
   description:
     'A Software Engineer, specializing in frontend development with a passion for crafting intuitive and elegant user experiences.',
+  keywords: [
+    'myatminaung',
+    'Myat Min Aung',
+    'Myatmin Aung',
+    'Frontend Developer',
+    'Software Engineer',
+  ],
   openGraph: {
     title: 'Myat Min Aung | A Frontend Developer',
     description:
