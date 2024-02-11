@@ -24,17 +24,6 @@ const AboutSection = () => {
       });
 
       tl.fromTo(
-        '.about-intro',
-        {
-          y: 100,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          stagger: 0.1,
-          opacity: 1,
-        },
-      ).fromTo(
         '.about-me',
         {
           y: 100,
@@ -65,10 +54,10 @@ const AboutSection = () => {
       </div>
       <div className="flex flex-col items-center justify-center gap-y-6 lg:flex-row lg:items-start lg:gap-x-12">
         <aside className="flex w-full flex-col items-start space-y-5 lg:w-[320px]">
-          <p className="about-intro text-4xl font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
+          <p className="about-me text-4xl font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
             Turning ideas into immersive digital experiences.
           </p>
-          <div className="about-intro hidden space-y-3 lg:block">
+          <div className="about-me hidden space-y-3 lg:block">
             <p className="text-heading font-medium tracking-wide text-primary-100 dark:text-secondary-300">
               Work Experience
             </p>
@@ -115,7 +104,7 @@ const AboutSection = () => {
         </aside>
         <div className="space-y-8 lg:flex-1">
           <div className="space-y-3">
-            <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
+            <p className="about-me text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
               Personal Bio
             </p>
             <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-primary-500 lg:text-heading">

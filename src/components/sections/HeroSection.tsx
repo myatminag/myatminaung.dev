@@ -47,13 +47,13 @@ const HeroSection = () => {
       gsap.fromTo(
         '.scroll-animation',
         {
-          y: '100',
+          bottom: '-100%',
         },
         {
-          y: '2.5',
-          duration: 1.5,
+          bottom: '2.5%',
+          duration: 2,
           delay: 2.5,
-          ease: 'power2.inOut',
+          ease: 'power4.out',
         },
       );
     },
@@ -100,7 +100,7 @@ const HeroSection = () => {
         </div>
         <button
           onClick={() => scroll.scrollTo('#about')}
-          className="scroll-animation absolute bottom-5 z-20 flex items-center gap-x-2"
+          className="scroll-animation absolute bottom-5 z-30 flex items-center gap-x-2"
         >
           <IconMouse className="w-4 text-secondary-200 dark:text-secondary-300" />
           <p className="text-start text-sm text-secondary-200 dark:text-secondary-300">

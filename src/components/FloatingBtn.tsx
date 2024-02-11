@@ -22,7 +22,7 @@ const FloatingBtn = () => {
         },
         {
           bottom: '2.5%',
-          duration: 1.5,
+          duration: 2,
           delay: 2.5,
           ease: 'power4.out',
         },
@@ -39,7 +39,7 @@ const FloatingBtn = () => {
       <Link
         target="_blank"
         href="https://github.com/myatminag"
-        className="dark:border-primary-600 dark:bg-primary-600 rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary-100 dark:hover:border-secondary-400"
+        className="rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary-100 dark:border-primary-600 dark:bg-primary-600 dark:hover:border-secondary-400"
       >
         <IconGithub className="text-main-100 h-5 w-5 dark:text-secondary-400" />
       </Link>
@@ -47,7 +47,7 @@ const FloatingBtn = () => {
       <Link
         target="_blank"
         href="https://www.linkedin.com/in/myat-min-aung-830039245"
-        className="dark:border-primary-600 dark:bg-primary-600 rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary-100 dark:hover:border-secondary-400"
+        className="rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary-100 dark:border-primary-600 dark:bg-primary-600 dark:hover:border-secondary-400"
       >
         <IconLinkedIn className="text-main-100 h-5 w-5 dark:text-secondary-400" />
       </Link>
