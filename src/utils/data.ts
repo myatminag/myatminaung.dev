@@ -1,3 +1,14 @@
+export const TechnicalSkills = [
+  { id: 1, name: 'JavaScript' },
+  { id: 2, name: 'TypeScript' },
+  { id: 3, name: 'React.js' },
+  { id: 4, name: 'Next.js' },
+  { id: 5, name: 'Node.js' },
+  { id: 6, name: 'Express.js' },
+  { id: 7, name: 'Nest.js' },
+  { id: 8, name: 'Java' },
+];
+
 export const ProjectList = [
   {
     id: 1,

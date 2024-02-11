@@ -1,11 +1,12 @@
 import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// ** Component Import
-import IconPhone from '../icons/IconPhone';
-import IconMail from '../icons/IconMail';
+import { TechnicalSkills } from '@/utils/data';
+
+import IconWork from '../icons/IconWork';
+import IconSkill from '../icons/IconSkill';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,7 +54,7 @@ const AboutSection = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="container grid min-h-screen place-content-center py-28 lg:py-0"
+      className="container grid min-h-screen place-content-center py-28"
     >
       <div className="mb-10 flex items-center justify-center gap-x-5">
         <div className="h-[1px] w-16 bg-secondary-200 dark:bg-neutral-500" />
@@ -63,7 +64,7 @@ const AboutSection = () => {
         <div className="dark:bg-neutral-00 h-[1px] w-16 bg-secondary-200 dark:bg-neutral-500" />
       </div>
       <div className="flex flex-col items-center justify-center gap-y-6 lg:flex-row lg:items-start lg:gap-x-12">
-        <aside className="flex flex-col items-start space-y-5">
+        <aside className="flex w-full flex-col items-start space-y-5 lg:w-[320px]">
           <p className="about-intro text-4xl font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
             Turning ideas into immersive digital experiences.
           </p>
@@ -73,26 +74,15 @@ const AboutSection = () => {
             </p>
             <div className="flex w-full items-center justify-start">
               <div className="grid w-full grid-cols-1 gap-4">
-                <div className="relative flex max-w-2xl items-start gap-x-4 before:absolute before:bottom-0 before:left-6 before:top-[3rem] before:h-[calc(45px)] before:w-[1px] before:bg-secondary-100 dark:before:bg-primary-400 lg:gap-x-6">
-                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 text-secondary-300 dark:bg-primary-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-5 w-5"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                <div className="relative flex max-w-2xl items-start gap-x-4 before:absolute before:bottom-0 before:left-6 before:top-[3rem] before:h-[calc(45px)] before:w-[2px] before:bg-secondary-100 dark:before:bg-primary-600 lg:gap-x-6">
+                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 dark:bg-primary-600">
+                    <IconWork className="text-secondary-300" />
                   </div>
                   <div className="w-full">
-                    <p className="font-medium text-primary-100 dark:text-primary-500">
+                    <p className="text-primary-100 dark:text-primary-500">
                       ILBC
                     </p>
-                    <p className="mb-1 text-primary-100 dark:text-primary-500">
+                    <p className="mb-1 font-light text-primary-100 dark:text-primary-500">
                       Frontend Developer
                     </p>
                     <time className="font-mono text-sm text-primary-100 dark:text-primary-500">
@@ -104,25 +94,14 @@ const AboutSection = () => {
                   </div>
                 </div>
                 <div className="relative flex max-w-2xl items-start gap-x-4 lg:gap-x-6">
-                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 text-secondary-400 dark:bg-primary-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-5 w-5"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-100 dark:bg-primary-600">
+                    <IconWork className="text-secondary-300" />
                   </div>
                   <div className="w-full">
-                    <p className="font-medium text-secondary-200 dark:text-primary-500">
+                    <p className="text-secondary-200 dark:text-primary-500">
                       Shopdoora
                     </p>
-                    <p className="mb-1 text-secondary-200 dark:text-primary-500">
+                    <p className="mb-1 font-light text-secondary-200 dark:text-primary-500">
                       Frontend Developer
                     </p>
                     <time className="font-mono text-sm text-secondary-200 dark:text-primary-500">
@@ -134,13 +113,16 @@ const AboutSection = () => {
             </div>
           </div>
         </aside>
-        <div className="space-y-8">
+        <div className="space-y-8 lg:flex-1">
           <div className="space-y-3">
+            <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
+              Personal Bio
+            </p>
             <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-primary-500 lg:text-heading">
               I&apos;m a frontend developer based in Yangon, Myanmar. Over the
-              years, that curiosity evolved into a deep-seated passion for
-              building software that my journey into the world of code started
-              with a curiosity about how technology shapes our daily lives.
+              years, my journey into the world of code started with a curiosity
+              about how technology shapes our daily lives. That curiosity
+              evolved into a deep-seated passion for building software.
             </p>
             <p className="about-me w-full text-justify font-light tracking-wide text-primary-100 dark:text-primary-500 lg:text-heading">
               I&apos;ve honed my skills in{' '}
@@ -148,40 +130,51 @@ const AboutSection = () => {
               <strong>TypeScript,</strong> always staying on the pulse of the
               latest trends and technologies. But beyond the languages and
               frameworks, my true passion lies in the seamless fusion of design
-              and functionality.
+              and functionality. My focus is on building responsive and
+              accessible web applications that meet modern standards and enhance
+              user satisfaction.
             </p>
             <p className="about-me font-light tracking-wide text-primary-100 backdrop:text-justify dark:text-primary-500 lg:text-heading">
-              I&apos;m dedicated to continuously learning and eager to
-              contribute my skills to a dynamic team, collaborate on exciting
-              projects, and contribute to the creation of innovative digital
-              solutions.
+              In addition to my technical skills, I am passionate about
+              continuous learning and staying up-to-date with the latest trends
+              and best practices in software development. I strive to deliver
+              high-quality code and have a strong attention to detail. With my
+              problem-solving skills and creativity, I enjoy tackling complex
+              challenges and finding innovative solutions.
+            </p>
+            <p className="about-me font-light tracking-wide text-primary-100 backdrop:text-justify dark:text-primary-500 lg:text-heading">
+              I am excited about the opportunity to contribute to meaningful
+              projects and make a positive impact through my work.
             </p>
           </div>
           <div className="about-me space-y-3">
             <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
-              Tech Stacks
+              Technical Skills
             </p>
-            <ul className="ml-4 flex list-[square] flex-wrap gap-x-6 gap-y-3 font-light text-secondary-200 dark:text-primary-500 lg:gap-x-12">
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React.js</li>
-              <li>Next.js</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Nest.js</li>
-              <li>Java</li>
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 lg:grid-cols-4 lg:gap-x-6">
+              {TechnicalSkills.map((skill) => (
+                <div
+                  key={skill.id}
+                  className="flex items-center gap-x-3 rounded-lg border px-4 py-2 dark:border-primary-600"
+                >
+                  <IconSkill className="h-6 w-6 dark:text-secondary-400" />
+                  <li className="font-light text-secondary-200 dark:text-primary-500">
+                    {skill.name}
+                  </li>
+                </div>
+              ))}
             </ul>
           </div>
           <div className="about-me space-y-3 lg:hidden">
             <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-300">
-              Work Experience 💼
+              Work Experience
             </p>
             <div className="flex items-end justify-between">
               <div>
-                <p className="font-medium tracking-wide text-secondary-200 dark:text-primary-500">
+                <p className="text-secondary-200 dark:text-primary-500">ILBC</p>
+                <p className="font-light text-secondary-200 dark:text-primary-500">
                   Frontend Developer
                 </p>
-                <p className="text-secondary-200 dark:text-primary-500">ILBC</p>
               </div>
               <time className="text-black-100 font-mono text-sm text-secondary-200 dark:text-primary-500">
                 Oct 2023 -{' '}
@@ -193,11 +186,11 @@ const AboutSection = () => {
             <div className="h-[1px] w-full bg-secondary-200/40 dark:bg-primary-300" />
             <div className="flex items-end justify-between">
               <div>
-                <p className="font-medium tracking-wide text-secondary-200 dark:text-primary-500">
-                  Frontend Developer
-                </p>
                 <p className="text-secondary-200 dark:text-primary-500">
                   Shopdoora
+                </p>
+                <p className="font-light text-secondary-200 dark:text-primary-500">
+                  Frontend Developer
                 </p>
               </div>
               <time className="text-black-100 font-mono text-sm text-secondary-200 dark:text-primary-500">
