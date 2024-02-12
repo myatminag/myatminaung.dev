@@ -50,12 +50,12 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-400 py-6 dark:border-primary-100 dark:bg-primary-100"
+      className="fixed top-0 z-40 w-full border-b border-zinc-200 bg-secondary-100 py-6 dark:border-primary-100 dark:bg-primary-100"
     >
       <div className="container flex items-center justify-between">
         <button
           onClick={() => scroll.scrollTo('#hero')}
-          className="text-heading font-medium tracking-wide text-secondary-200 dark:text-secondary-400"
+          className="text-heading font-medium tracking-wide text-secondary-200 dark:text-primary-300"
         >
           Mma.dev
         </button>
@@ -66,9 +66,9 @@ const Navbar = () => {
               key={menu.id}
               onClick={(e) => handleToScrollSection(e, menu.href)}
               className="relative cursor-pointer text-sm uppercase tracking-wider text-secondary-200 after:absolute 
-            after:-bottom-[5px] after:left-0 after:h-[3px] after:w-[0%] after:rounded-xl after:bg-secondary-100 
+            after:-bottom-[5px] after:left-0 after:h-[3px] after:w-[0%] after:rounded-xl after:bg-secondary-200 
             after:duration-300 hover:after:w-[100%] 
-            dark:text-secondary-400 dark:after:bg-primary-400"
+            dark:text-primary-300 dark:after:bg-primary-300"
             >
               {menu.title}
             </li>
@@ -78,7 +78,7 @@ const Navbar = () => {
         <div className="relative flex items-center gap-x-3 lg:hidden">
           <ThemeToggle />
 
-          <label className="dark:border-primary-600 dark:bg-primary-600 swap swap-rotate rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 lg:hover:-translate-y-1.5">
+          <label className="swap swap-rotate rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 dark:border-primary-600 dark:bg-primary-600 lg:hover:-translate-y-1.5">
             <input type="checkbox" onClick={() => setIsOpen(!isOpen)} />
 
             <svg
@@ -105,7 +105,7 @@ const Navbar = () => {
                   <li
                     key={menu.id}
                     onClick={(e) => handleToScrollSection(e, '#about')}
-                    className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-secondary-400"
+                    className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-primary-300"
                   >
                     {menu.title}
                   </li>

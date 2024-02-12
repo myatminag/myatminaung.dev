@@ -16,17 +16,7 @@ const BlogSection = () => {
       });
 
       tl.fromTo(
-        '.blog-title',
-        {
-          y: 100,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-        },
-      ).fromTo(
-        '.blog-card',
+        '.blog',
         {
           y: 100,
           opacity: 0,
@@ -49,14 +39,14 @@ const BlogSection = () => {
     >
       <>
         <div className="mb-5 flex items-center justify-center gap-x-5">
-          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-neutral-500" />
-          <header className="text-sm uppercase tracking-wider text-secondary-200 dark:text-primary-500">
+          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-300" />
+          <header className="text-sm uppercase tracking-wider text-secondary-200 dark:text-primary-300">
             Blogs
           </header>
-          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-neutral-500" />
+          <div className="h-[1px] w-16 bg-secondary-200 dark:bg-primary-300" />
         </div>
         <div className="flex justify-center">
-          <p className="blog-title mb-10 w-full text-center font-light tracking-wide text-secondary-200 dark:text-neutral-500 lg:w-6/12 lg:text-heading">
+          <p className="blog mb-10 w-full text-center font-light tracking-wide text-secondary-200 dark:text-primary-300 lg:w-6/12">
             Here is my blog space that I share collection of insights how
             I&apos;ve learned and understood throughout my career.
           </p>
@@ -66,15 +56,15 @@ const BlogSection = () => {
         {[...Array(3)].map((_, index) => (
           <div
             key={index}
-            className="blog-card dark:bg-primary-600 space-y-3 rounded-xl bg-secondary-300 p-5"
+            className="blog space-y-3 rounded-xl bg-secondary-300 p-5 dark:bg-primary-200"
           >
-            <p className="line-clamp-2 font-medium tracking-wide text-secondary-200 dark:text-secondary-400">
+            <p className="line-clamp-2 font-medium tracking-wide text-secondary-200 dark:text-primary-300">
               Lorem ipsum dolor sit amet.
             </p>
-            <time className="font-mono text-sm font-light text-secondary-200 dark:text-primary-500">
+            <time className="font-mono text-sm font-light text-secondary-200 dark:text-primary-300">
               Sept 14, 2023
             </time>
-            <p className="line-clamp-5 font-light text-secondary-200 dark:text-primary-500">
+            <p className="line-clamp-5 font-light text-secondary-200 dark:text-primary-300">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
               vitae cupiditate incidunt vel natus accusantium inventore facere
               nesciunt perspiciatis, ut possimus, aliquam est velit, ratione
@@ -84,11 +74,10 @@ const BlogSection = () => {
         ))}
       </div>
       <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
-        <div
-          className="after:bg-primary-600 border-primary-600 relative flex h-14 w-48 items-center justify-center border text-primary-100 after:absolute after:left-0 after:top-0 after:h-[100%] after:w-[0%] after:transition-all after:duration-500
-        hover:text-secondary-400 hover:after:w-[100%] dark:text-primary-500 dark:hover:text-secondary-300"
-        >
-          <p className="relative z-20 uppercase tracking-wide">View Blogs</p>
+        <div className="blog relative flex h-14 w-48 items-center justify-center rounded-full bg-secondary-200 text-secondary-100 dark:bg-primary-300 dark:text-primary-200">
+          <p className="relative z-20 text-sm uppercase tracking-wide">
+            View Blogs
+          </p>
         </div>
       </div>
     </section>

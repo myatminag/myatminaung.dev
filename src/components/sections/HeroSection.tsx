@@ -66,32 +66,34 @@ const HeroSection = () => {
       ref={heroSectionRef}
       className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
-      <BackgroundCircuit className="absolute right-0 text-secondary-300 dark:text-primary-600" />
+      {/* <BackgroundCircuit className="absolute right-0 text-secondary-300 dark:text-primary-600" /> */}
       <div className="container">
-        <div className="space-y-5">
+        <div className="space-y-8">
           <div className="heading">
             <h1
               aria-hidden={true}
-              className="hero-animation font-light uppercase tracking-wider text-secondary-200 dark:text-primary-500 lg:text-heading"
+              className="hero-animation font-light uppercase tracking-wider text-secondary-200 dark:text-primary-300 lg:text-heading"
             >
               Hi, I&apos;m Myat Min Aung
             </h1>
           </div>
 
-          <h1
-            aria-hidden={true}
-            className="hero-animation w-full text-4xl font-medium tracking-wider text-primary-100 dark:text-secondary-300 lg:w-9/12 lg:text-7xl lg:leading-[1.15]"
-          >
-            On a mission to innovate, problem-solve, and craft robust digital
-            solutions.
-          </h1>
+          <div className="heading">
+            <h1
+              aria-hidden={true}
+              className="hero-animation w-full text-4xl font-medium tracking-wider text-secondary-200 dark:text-primary-300 lg:w-9/12 lg:text-7xl lg:leading-[1.15]"
+            >
+              On a mission to innovate, problem-solve, and craft robust digital
+              solutions.
+            </h1>
+          </div>
 
-          <div className="flex flex-col gap-x-10 lg:flex-row lg:items-start lg:pt-10">
+          <div className="flex flex-col gap-x-10 lg:flex-row lg:items-start">
             <div className="w-96">
-              <div className="text-bar mt-4 hidden h-[0.5px] bg-secondary-100 dark:bg-primary-500 lg:block" />
+              <div className="text-bar mt-4 hidden h-[0.5px] bg-secondary-200 dark:bg-primary-300 lg:block" />
             </div>
             <div className="heading flex-1">
-              <p className="hero-animation w-full font-light tracking-wider text-secondary-200 dark:text-primary-500 lg:text-heading">
+              <p className="hero-animation w-full font-light tracking-wider text-secondary-200 dark:text-primary-300 lg:text-heading">
                 As a passionate frontend developer, I specialize in translating
                 ideas into seamless, user-centric web experiences.
               </p>
@@ -102,8 +104,8 @@ const HeroSection = () => {
           onClick={() => scroll.scrollTo('#about')}
           className="scroll-animation absolute bottom-5 z-30 flex items-center gap-x-2"
         >
-          <IconMouse className="w-4 text-secondary-200 dark:text-secondary-300" />
-          <p className="text-start text-sm text-secondary-200 dark:text-secondary-300">
+          <IconMouse className="w-4 text-secondary-200 dark:text-primary-300" />
+          <p className="text-start text-sm text-secondary-200 dark:text-primary-300">
             Scroll <br />
             To Explore
           </p>

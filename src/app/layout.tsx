@@ -65,7 +65,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="min-h-screen bg-secondary-400 transition-colors duration-300 dark:bg-primary-100">
+      <body className="min-h-screen bg-secondary-100 transition-colors duration-300 dark:bg-primary-100">
         <ThemeProvider>
           <SmoothScrollProvider>
             <Preloader />
