@@ -78,11 +78,11 @@ const Navbar = () => {
         <div className="relative flex items-center gap-x-3 lg:hidden">
           <ThemeToggle />
 
-          <label className="swap swap-rotate rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 dark:border-primary-600 dark:bg-primary-600 lg:hover:-translate-y-1.5">
+          <label className="dark:border-primary-600 swap-rotate swap rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 dark:border-primary-200 dark:bg-primary-200 lg:hover:-translate-y-1.5">
             <input type="checkbox" onClick={() => setIsOpen(!isOpen)} />
 
             <svg
-              className="swap-off h-5 w-5 fill-current text-secondary-200 dark:text-secondary-400"
+              className="dark:text-secondary-400 swap-off h-5 w-5 fill-current text-secondary-200  dark:text-primary-300"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -90,7 +90,7 @@ const Navbar = () => {
             </svg>
 
             <svg
-              className="swap-on h-5 w-5 fill-current text-secondary-200 dark:text-secondary-400"
+              className="dark:text-secondary-400 swap-on h-5 w-5 fill-current text-secondary-200 dark:text-primary-300"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >

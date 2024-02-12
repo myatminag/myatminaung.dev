@@ -7,6 +7,7 @@ import { TechnicalSkills } from '@/utils/data';
 
 import IconWork from '../icons/IconWork';
 import IconSkill from '../icons/IconSkill';
+import IconEducation from '../icons/IconEducation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +20,7 @@ const AboutSection = () => {
         defaults: { duration: 0.8, ease: 'power2.out' },
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: '50% bottom',
+          start: '30% bottom',
         },
       });
 
@@ -57,10 +58,26 @@ const AboutSection = () => {
           <p className="about-me text-4xl font-medium tracking-wide text-secondary-200 dark:text-primary-300">
             Turning ideas into immersive digital experiences.
           </p>
-          <div className="about-me space-y-3 lg:block">
+          <div className="about-me hidden space-y-3 lg:block">
             <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-primary-300">
               Education
             </p>
+            <div className="relative flex max-w-2xl items-start gap-x-4 lg:gap-x-6">
+              <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-300 dark:bg-primary-200">
+                <IconEducation className="text-secondary-200 dark:text-primary-300" />
+              </div>
+              <div className="w-full">
+                <p className="text-secondary-200 dark:text-primary-300">
+                  University of Greenwich
+                </p>
+                <p className="mb-1 font-light text-secondary-200 dark:text-primary-300">
+                  B.Sc (Hons) in Computing
+                </p>
+                <time className="font-mono text-sm text-secondary-200 dark:text-primary-300">
+                  Jan 2024 - Present
+                </time>
+              </div>
+            </div>
           </div>
           <div className="about-me hidden space-y-3 lg:block">
             <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-primary-300">
@@ -158,32 +175,64 @@ const AboutSection = () => {
           </div>
           <div className="about-me space-y-3 lg:hidden">
             <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-primary-300">
+              Education
+            </p>
+            <div className="relative flex max-w-2xl items-start gap-x-4 lg:gap-x-6">
+              <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-300 dark:bg-primary-200">
+                <IconEducation className="text-secondary-200 dark:text-primary-300" />
+              </div>
+              <div className="w-full">
+                <p className="text-secondary-200 dark:text-primary-300">
+                  University of Greenwich
+                </p>
+                <p className="mb-1 font-light text-secondary-200 dark:text-primary-300">
+                  B.Sc (Hons) in Computing
+                </p>
+                <time className="font-mono text-sm text-secondary-200 dark:text-primary-300">
+                  Jan 2024 - Present
+                </time>
+              </div>
+            </div>
+          </div>
+          <div className="about-me space-y-3 lg:hidden">
+            <p className="text-heading font-medium tracking-wide text-secondary-200 dark:text-primary-300">
               Work Experience
             </p>
-            <div className="flex items-end justify-between">
-              <div>
-                <p className="text-secondary-200 dark:text-primary-300">ILBC</p>
-                <p className="font-light text-secondary-200 dark:text-primary-300">
-                  Frontend Developer
-                </p>
+            <div className="flex w-full items-center justify-start">
+              <div className="grid w-full grid-cols-1 gap-4">
+                <div className="relative flex max-w-2xl items-start gap-x-4 before:absolute before:bottom-0 before:left-6 before:top-[3rem] before:h-[calc(45px)] before:w-[2px] before:bg-secondary-300 dark:before:bg-primary-200 lg:gap-x-6">
+                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-300 dark:bg-primary-200">
+                    <IconWork className="text-secondary-200 dark:text-primary-300" />
+                  </div>
+                  <div className="w-full">
+                    <p className="text-secondary-200 dark:text-primary-300">
+                      ILBC
+                    </p>
+                    <p className="mb-1 font-light text-secondary-200 dark:text-primary-300">
+                      Frontend Developer
+                    </p>
+                    <time className="font-mono text-sm text-secondary-200 dark:text-primary-300">
+                      Oct 2023 - <span className="text-green-500">Present</span>
+                    </time>
+                  </div>
+                </div>
+                <div className="relative flex max-w-2xl items-start gap-x-4 lg:gap-x-6">
+                  <div className="grid min-h-[50px] min-w-[50px] place-content-center rounded-lg bg-secondary-300 dark:bg-primary-200">
+                    <IconWork className="text-secondary-200 dark:text-primary-300" />
+                  </div>
+                  <div className="w-full">
+                    <p className="text-secondary-200 dark:text-primary-300">
+                      Shopdoora
+                    </p>
+                    <p className="mb-1 font-light text-secondary-200 dark:text-primary-300">
+                      Frontend Developer
+                    </p>
+                    <time className="font-mono text-sm text-secondary-200 dark:text-primary-300">
+                      Oct 2022 - Oct 2023
+                    </time>
+                  </div>
+                </div>
               </div>
-              <time className="text-black-100 font-mono text-sm text-secondary-200 dark:text-primary-300">
-                Oct 2023 - <span className="text-green-500">Present</span>
-              </time>
-            </div>
-            <div className="h-[1px] w-full bg-secondary-200/40 dark:bg-primary-300" />
-            <div className="flex items-end justify-between">
-              <div>
-                <p className="text-secondary-200 dark:text-primary-300">
-                  Shopdoora
-                </p>
-                <p className="font-light text-secondary-200 dark:text-primary-300">
-                  Frontend Developer
-                </p>
-              </div>
-              <time className="text-black-100 font-mono text-sm text-secondary-200 dark:text-primary-300">
-                Oct 2022 - Oct 2023
-              </time>
             </div>
           </div>
         </div>
