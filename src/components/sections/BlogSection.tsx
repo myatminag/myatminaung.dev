@@ -1,9 +1,21 @@
+import Link from 'next/link';
 import gsap from 'gsap';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
+import { compareDesc, format, parseISO } from 'date-fns';
+import { allPosts, Post } from 'contentlayer/generated';
 
 const BlogSection = () => {
   const blogSectionRef = useRef(null);
+
+  const getData = () => {
+    const posts: Post[] = allPosts.sort((a, b) => {
+      return compareDesc(new Date(a.date), new Date(b.date));
+    });
+    return posts.map((post: Post) => post);
+  };
+
+  const blogs: Post[] = getData();
 
   useGSAP(
     () => {
@@ -53,33 +65,31 @@ const BlogSection = () => {
         </div>
       </>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-        {[...Array(3)].map((_, index) => (
-          <div
-            key={index}
+        {blogs.map((post) => (
+          <Link
+            key={post._id}
+            href={`/blogs/${post._raw.flattenedPath}`}
             className="blog space-y-3 rounded-xl bg-secondary-300 p-5 dark:bg-primary-200"
           >
             <p className="line-clamp-2 font-medium tracking-wide text-secondary-200 dark:text-primary-300">
-              Lorem ipsum dolor sit amet.
+              {post.title}
             </p>
             <time className="font-mono text-sm font-light text-secondary-200 dark:text-primary-300">
-              Sept 14, 2023
+              {format(parseISO(post.date), 'MMMM dd, yyyy')}
             </time>
-            <p className="line-clamp-5 font-light text-secondary-200 dark:text-primary-300">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-              vitae cupiditate incidunt vel natus accusantium inventore facere
-              nesciunt perspiciatis, ut possimus, aliquam est velit, ratione
-              quaerat unde aperiam tempora magnam.
+            <p className="line-clamp-4 font-light text-secondary-200 dark:text-primary-300">
+              {post.description}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
-      <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
+      {/* <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
         <div className="blog relative flex h-14 w-48 items-center justify-center rounded-full bg-secondary-200 text-secondary-100 dark:bg-primary-300 dark:text-primary-200">
           <p className="relative z-20 text-sm uppercase tracking-wide">
             View Blogs
           </p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
