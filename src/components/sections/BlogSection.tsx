@@ -69,17 +69,19 @@ const BlogSection = () => {
           <Link
             key={post._id}
             href={`/blogs/${post._raw.flattenedPath}`}
-            className="blog space-y-3 rounded-xl bg-secondary-300 p-5 dark:bg-primary-200"
+            className="blog flex  flex-col space-y-3 rounded-xl bg-secondary-300 p-5 dark:bg-primary-200"
           >
-            <p className="line-clamp-2 font-medium tracking-wide text-secondary-200 dark:text-primary-300">
+            <p className="line-clamp-2 h-full font-medium tracking-wide text-secondary-200 dark:text-primary-300">
               {post.title}
             </p>
-            <time className="font-mono text-sm font-light text-secondary-200 dark:text-primary-300">
-              {format(parseISO(post.date), 'MMMM dd, yyyy')}
-            </time>
-            <p className="line-clamp-4 font-light text-secondary-200 dark:text-primary-300">
-              {post.description}
-            </p>
+            <div className="mt-auto space-y-3">
+              <time className="font-mono text-sm font-light text-secondary-200 dark:text-primary-300">
+                {format(parseISO(post.date), 'MMMM dd, yyyy')}
+              </time>
+              <p className="line-clamp-4 font-light text-secondary-200 dark:text-primary-300">
+                {post.description}
+              </p>
+            </div>
           </Link>
         ))}
       </div>

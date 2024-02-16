@@ -56,7 +56,7 @@ const ContactSection = () => {
           </p>
         </Link>
       </div>
-      <p className="contact absolute bottom-5 left-[50%] translate-x-[-50%] text-xs tracking-wide text-secondary-200 dark:text-primary-300">
+      <p className="absolute bottom-5 left-[50%] translate-x-[-50%] text-xs tracking-wide text-secondary-200 dark:text-primary-300">
         Developed By Myat Min Aung
       </p>
     </section>

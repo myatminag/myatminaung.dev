@@ -1,0 +1,141 @@
+---
+title: 'Operators in JavaScript: Understanding Arithmetic Operators.'
+date: 2024-02-12
+description: 'In the realm of JavaScript programming, operators play a pivotal role in manipulating variables, performing calculations and making comparisons. These operators are building blocks of any JavaScript code, enabling developers to perform various tasks efficiently.'
+---
+
+### What are Operators?
+
+In the realm of JavaScript programming, operators play a pivotal role in manipulating variables, performing
+calculations and making comparisons. These operators are building blocks of any JavaScript code,
+enabling developers to perform various tasks efficiently. Before we are going to explore operators, It's
+essential to understand the concepts of operands and operators.
+
+### Operands
+
+They are the values to perform operations. They can be literals, variables or expressions. For instance, \
+in this expression ' x + y ', ' x ' and ' y ' are the operands and ' + ' is the operator.
+
+### Operators
+
+They are the actions or the instructions that modify, perform calculations or compare on values or
+variables (also known as operands). These actions can range from simple addition operations to complex logical operations.
+There are various types of operators such as arithmethic operators, assignment operators,
+comparison operators, logical operators, ternary operators and others. In this article, we are going to talk about
+arithmethic operators.
+
+### Addition
+
+The addition operator in JavaScript is not quite simple. We use " + " operator for both numeric operation and string
+concatenation.
+
+> Numeric Addition
+
+The most common use case for the addition operator is performing arithmetic addition on numeric values.
+
+```js
+const num1 = 10;
+const num2 = 20;
+
+const total = num1 + num2;
+
+console.log('total', total); // output: 30
+```
+
+> String Concatenation
+
+When one or both operands are the strings, instead of performing addition, the " + " operator concatenate the strings
+together.
+
+```js
+const str1 = 'Hello ';
+const str2 = 'World';
+
+const result = str1 + str2;
+
+console.log('result', result); // output: 'Hello World'
+```
+
+> Implicit Type Conversion
+
+As we already knew that JavaScipt is dynamically typed language, which means that the variables can hold values of any
+data type. Adding values of different data types may perform implicit type conversion to coerce the operands into compatible
+format.
+
+```js
+const num = 2;
+const str = '3';
+
+const result = num + str;
+
+console.log('result', result); // output: "23"
+```
+
+### Subtraction
+
+Substraction works as we would expect. We use " - " for this operation. If we subtract a number and a string, the result
+will be **NaN**.
+
+```js
+const num1 = 10;
+const num2 = 5;
+
+const result = num1 - num2;
+
+console.log('result', result); // output: 5;
+```
+
+### Multiplication
+
+Multiplication in JavaScript is performed using the " \* " operator. However, we cannot multiply a number and
+a string in JavaScript and the result of multiplying a numeric and non-numeric value is **NaN**.
+
+```js
+const num1 = 2;
+const num2 = 2;
+
+const result = num1 * num2;
+
+console.log('result', result); // output: 4;
+```
+
+### Division Operator
+
+The division operator " / " in JavaScript is used to divide one numeric value by another.
+
+```js
+const num1 = 10;
+const num2 = 2;
+
+const result = num1 / num2;
+
+console.log('result', result); // output: 5;
+```
+
+### Exponentiation
+
+Exponentiation is the process of raising the base number to the power of another. It can be read as " _x_ " to
+the power of " _y_ ". We use " \*\* " for this operator in JavaScipt.
+
+```js
+const num1 = 3;
+const num2 = 2;
+
+const result = num1 ** num2;
+
+console.log('result', result); // output: 9;
+```
+
+### Modulus
+
+Modulus is the operation which determines the remainder when one number is divided by another. The character we use
+for this operation is " % ".
+
+```js
+const num1 = 11;
+const num2 = 2;
+
+const result = num1 % num2;
+
+console.log('result', result); // output: 1;
+```
