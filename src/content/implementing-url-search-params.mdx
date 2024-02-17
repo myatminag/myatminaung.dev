@@ -1,0 +1,71 @@
+---
+title: 'Implementing URL Search Params in Next.js App Router'
+date: 2024-02-01
+description: 'Next.js provides a powerful routing system that allows developers to create dynamic and interactive web applications with ease.'
+---
+
+Next.js provides a powerful routing system that allows developers to create dynamic and interactive web
+applications with ease. The essential feature of web applications is the ability to handle search queries
+through URL parameters. In this article, we'll explore how to implement URL search params in next.js app router.
+
+### 1. Importing necessary modules
+
+```tsx
+'use client';
+
+import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { useDebouncedCallback } from 'use-debounce';
+```
+
+Firstly, we need to declare **'use client'** at the top the component. We import some necessary Next.js hooks
+from **'next/navigation'**. Then, **useDebouncedCallback** is imported [use-debounce](https://www.npmjs.com/package/use-debounce)
+module. This utility is commonly used in React applications to debounce callback functions.
+
+### 2. Initialize hooks
+
+```tsx
+const router = useRouter();
+const pathname = usePathname();
+const searchParams = useSearchParams();
+```
+
+- **useRouter( )** gives access Next.js router object to change routes within client components.
+- **usePathname( )** provides the current pathname of the URL.
+- **useSearchParams( )** accesses and interacts with parameters from the URL.
+
+### 3. Handling search action
+
+```tsx
+const handleSearchUsername = useDebouncedCallback((term: string) => {
+  const params = new URLSearchParams(searchParams);
+  if (term) {
+    params.set('q', term);
+  } else {
+    params.delete('q');
+  }
+  router.replace(`${pathname}?${params.toString()}`);
+}, 300);
+```
+
+In this example, **handleSearchUsername** function is integrated with **useDebouncedCallback** function that ensures
+a function is only called after a certain delay (300 milliseconds) without being invoked repeatly. Inside the
+callback function, it creates a new **URLSearchParams** object from existing parameters. If the search term
+(term) is provided, it sets the 'q' parameter to the search term; otherwise, it deletes the 'q' parameter. Then,
+it replaces the current URL with the modified search parameters using **router.replace()**, for updating
+the URL without a full page reload.
+
+### 4. Search input integration
+
+```tsx
+<input
+  type="text"
+  placeholder="Search username..."
+  defaultValue={searchParams.get('q')?.toString()}
+  onChange={(e) => handleSearchUsername(e.target.value)}
+/>
+```
+
+Later, The onChange handler triggers **handleSearchUsername** with the new search term, updating the URL accordingly.
+Here **defaultValue** is used to set the initial value of the input field based on the 'q' parameter in the URL.
+If the user had previously entered a search query and then refreshed the page, the input field will still display
+the value they entered due to the defaultValue attribute. This provides a smoother and more user-friendly experience, as users don't lose their entered data when refreshing the page.
