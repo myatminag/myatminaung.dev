@@ -6,6 +6,8 @@ import { useRef, MouseEvent, useState } from 'react';
 
 import ThemeToggle from './ThemeToggle';
 import { useSmoothScroll } from '@/app/scrollProvider';
+import IconCross from './icons/IconCross';
+import IconHamburger from './icons/IconHamburger';
 
 const NavMenu = [
   { id: 1, title: 'About', href: '#about' },
@@ -81,21 +83,9 @@ const Navbar = () => {
           <label className="dark:border-primary-600 swap swap-rotate rounded-full border border-secondary-300 bg-secondary-300 p-2 transition-all duration-500 dark:border-primary-200 dark:bg-primary-200 lg:hover:-translate-y-1.5">
             <input type="checkbox" onClick={() => setIsOpen(!isOpen)} />
 
-            <svg
-              className="dark:text-secondary-400 swap-off h-5 w-5 fill-current text-secondary-200  dark:text-primary-300"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-            </svg>
+            <IconHamburger className="dark:text-secondary-400 swap-off h-5 w-5 fill-current text-secondary-200  dark:text-primary-300" />
 
-            <svg
-              className="dark:text-secondary-400 swap-on h-5 w-5 fill-current text-secondary-200 dark:text-primary-300"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
-            </svg>
+            <IconCross className="dark:text-secondary-400 swap-on h-5 w-5 fill-current text-secondary-200 dark:text-primary-300" />
           </label>
 
           {isOpen && (
@@ -104,7 +94,7 @@ const Navbar = () => {
                 {NavMenu.map((menu) => (
                   <li
                     key={menu.id}
-                    onClick={(e) => handleToScrollSection(e, '#about')}
+                    onClick={(e) => handleToScrollSection(e, menu.href)}
                     className="menu-item cursor-pointer text-sm uppercase text-primary-100 dark:text-primary-300"
                   >
                     {menu.title}
