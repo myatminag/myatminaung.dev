@@ -1,0 +1,69 @@
+---
+title: 'Operators in JavaScript: Understanding Unary Operators. (Part-2)'
+date: 2024-02-18
+description: 'The last operator of our arithmetic operators is unary operator. An unary operator stands out as it opreates on a single opreand, either before or after it. This opreand can be variable, constant or expression. Unary operators are commonly used for tasks like incrementing or decrementing numeric values, negating expression, converting data'
+---
+
+### What is unary operator?
+
+The last operator of our arithmetic operators is unary operator. An unary operator stands out as it opreates on
+a single opreand, either before or after it. This opreand can be variable, constant or expression. Unary operators
+are commonly used for tasks like incrementing or decrementing numeric values, negating expression, converting data
+types and more.
+
+### Increment and Decrement
+
+The increment operator **++** increments its opreand by 1, while the decrement operator **--** decrements its
+operand by 1.
+
+```js
+// Increment
+let num1 = 1;
+num1++;
+
+console.log('num1', num1); // Output: 2
+
+// Decrement
+let num2 = 2;
+num2--;
+
+console.log('num2', num2); // Output: 1
+```
+
+### Prefix and Postfix
+
+If we have the increment operator **(++x)** before its operand, it returns the updated value. It means that prefix
+gets executed value before sending the variable though.
+
+```js
+let x = 3;
+console.log('x', ++x); // Output: 4
+```
+
+Similarly, the postfix decrement operator **(x--)** subtracts 1 from its operand but returns the original value of
+the operand before it was decremented.
+
+```js
+let x = 5;
+console.log('x', x--); // Output: 5
+console.log('x', x); // Output: 4
+```
+
+### Logical Negation
+
+The logical negation operator **(!)** reverses the truthiness of its operand. If the operand is **falsy**, it
+returns **true**; otherwise, it returns **false**.
+
+```js
+let isTrue = false;
+console.log('isTrue', !isTrue); // Output: true
+```
+
+### Typeof Operator
+
+The **typeof** operator returns a string indicating the type of the unevaluated operand.
+
+```js
+let value = 10;
+console.log('value', typeof value); // Output: number
+```
