@@ -5,7 +5,11 @@ import SplitType from 'split-type';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-const Preloader = () => {
+interface Props {
+  title: string;
+}
+
+const Preloader = ({ title }: Props) => {
   const textRef = useRef(null);
   const loadingRef = useRef(null);
 
@@ -41,7 +45,7 @@ const Preloader = () => {
           ref={textRef}
           className="heading text-center text-2xl font-medium tracking-wider text-secondary-300 dark:text-secondary-200 lg:text-7xl"
         >
-          Innovate With Passion.
+          {title}
         </h1>
       </div>
     </div>

@@ -85,13 +85,18 @@ const BlogSection = () => {
           </Link>
         ))}
       </div>
-      {/* <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
-        <div className="blog relative flex h-14 w-48 items-center justify-center rounded-full bg-secondary-200 text-secondary-100 dark:bg-primary-300 dark:text-primary-200">
-          <p className="relative z-20 text-sm uppercase tracking-wide">
-            View Blogs
-          </p>
+      {blogs.length > 6 && (
+        <div className="mt-10 flex flex-col items-center justify-center gap-y-5">
+          <Link
+            href="blogs"
+            className="blog relative flex h-14 w-48 items-center justify-center rounded-full bg-secondary-200 text-secondary-100 dark:bg-primary-300 dark:text-primary-200"
+          >
+            <p className="relative z-20 text-sm uppercase tracking-wide">
+              View Blogs
+            </p>
+          </Link>
         </div>
-      </div> */}
+      )}
     </section>
   );
 };
