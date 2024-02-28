@@ -8,7 +8,6 @@ import ThemeToggle from './ThemeToggle';
 import { useSmoothScroll } from '@/app/scrollProvider';
 import IconCross from './icons/IconCross';
 import IconHamburger from './icons/IconHamburger';
-import Link from 'next/link';
 
 const NavMenu = [
   { id: 1, title: 'About', href: '#about' },

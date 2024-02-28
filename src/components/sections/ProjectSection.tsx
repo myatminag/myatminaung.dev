@@ -61,7 +61,7 @@ const ProjectSection = () => {
           </p>
         </div>
       </>
-      <div className="grid w-full grid-cols-1 gap-y-6 lg:max-w-[1000px] lg:grid-cols-2 lg:gap-12">
+      <div className="grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-12">
         {ProjectList.map((project) => (
           <div key={project.id}>
             <div className="project relative mb-2 aspect-[16/9] overflow-hidden">

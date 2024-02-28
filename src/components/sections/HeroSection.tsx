@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { useSmoothScroll } from '@/app/scrollProvider';
 
 import IconMouse from '../icons/IconMouse';
+import BackgroundCircuit from '../BackgroundCircuit';
 
 const HeroSection = () => {
   const heroSectionRef = useRef(null);
@@ -46,12 +47,10 @@ const HeroSection = () => {
       gsap.fromTo(
         '.scroll-animation',
         {
-          bottom: '-100',
-          opacity: 0,
+          bottom: '-100%',
         },
         {
-          bottom: '15',
-          opacity: 1,
+          bottom: '2.5%',
           duration: 2,
           delay: 2.5,
           ease: 'power4.out',
@@ -67,6 +66,7 @@ const HeroSection = () => {
       ref={heroSectionRef}
       className="relative flex min-h-screen flex-col items-start justify-center lg:flex-row lg:items-center lg:justify-start"
     >
+      {/* <BackgroundCircuit className="absolute right-0 text-secondary-300 dark:text-primary-600" /> */}
       <div className="container">
         <div className="space-y-8">
           <div className="heading">

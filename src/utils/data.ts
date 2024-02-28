@@ -14,7 +14,7 @@ export const ProjectList = [
     id: 1,
     image: '/project-1.webp',
     title: 'New Vision Education Center',
-    projectURL: 'https://dev.new-vision-edu.com/',
+    projectURL: 'https://nvec-lms.vercel.app/',
     desc: 'The Learning Management System (LMS) project is a web-based platform designed to facilitate online learning and training.',
     stacks: [
       { id: 1, name: 'Next.js' },
