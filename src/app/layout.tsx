@@ -5,7 +5,6 @@ import { ThemeProvider } from './themeProvider';
 import { SmoothScrollProvider } from './scrollProvider';
 
 import Navbar from '@/components/Navbar';
-import Preloader from '@/components/Preloader';
 import FloatingBtn from '@/components/FloatingBtn';
 
 const inter = Roboto({
@@ -68,7 +67,6 @@ export default function RootLayout({
       <body className="min-h-screen bg-secondary-100 transition-colors duration-300 dark:bg-primary-100">
         <ThemeProvider>
           <SmoothScrollProvider>
-            <Preloader />
             <Navbar />
             {children}
             <FloatingBtn />

@@ -1,38 +1,38 @@
 'use client';
 
-import { useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 import SplitType from 'split-type';
 import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
 
-const Preloader = () => {
+interface Props {
+  title: ReactNode;
+}
+
+const Preloader = ({ title }: Props) => {
   const textRef = useRef(null);
   const loadingRef = useRef(null);
 
-  useGSAP(
-    () => {
-      if (textRef.current) {
-        SplitType.create(textRef.current, {
-          types: 'words,chars',
-        });
-      }
-
-      const tl = gsap.timeline({ defaults: { duration: 0.7 } });
-
-      tl.to('.char', {
-        y: 0,
-        stagger: 0.05,
-        delay: 0.2,
-        duration: 0.1,
-      }).to('.follow', {
-        y: '-100%',
-        delay: 0.5,
-        duration: 2,
-        ease: 'power4.inOut',
+  useEffect(() => {
+    if (textRef.current) {
+      SplitType.create(textRef.current, {
+        types: 'words,chars',
       });
-    },
-    { scope: loadingRef },
-  );
+    }
+
+    const tl = gsap.timeline({ defaults: { duration: 0.7 } });
+
+    tl.to('.char', {
+      y: 0,
+      stagger: 0.05,
+      delay: 0.2,
+      duration: 0.1,
+    }).to('.follow', {
+      y: '-100%',
+      delay: 0.5,
+      duration: 2,
+      ease: 'power4.inOut',
+    });
+  }, []);
 
   return (
     <div ref={loadingRef} aria-hidden={true}>
@@ -41,7 +41,7 @@ const Preloader = () => {
           ref={textRef}
           className="heading text-center text-2xl font-medium tracking-wider text-secondary-300 dark:text-secondary-200 lg:text-7xl"
         >
-          Innovate With Passion.
+          {title}
         </h1>
       </div>
     </div>
