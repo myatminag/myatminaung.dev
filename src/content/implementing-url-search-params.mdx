@@ -1,12 +1,13 @@
 ---
-title: 'Implementing URL Search Params in Next.js App Router'
+title: 'Implementing URL Search Params in Next.js App Router with React Query.'
 date: 2024-02-01
 description: 'Next.js provides a powerful routing system that allows developers to create dynamic and interactive web applications with ease.'
 ---
 
 Next.js provides a powerful routing system that allows developers to create dynamic and interactive web
 applications with ease. The essential feature of web applications is the ability to handle search queries
-through URL parameters. In this article, we'll explore how to implement URL search params in next.js app router.
+through URL parameters. In this article, we'll explore how to implement URL search params in next.js app router
+with react query.
 
 ### 1. Importing necessary modules
 
@@ -14,13 +15,17 @@ through URL parameters. In this article, we'll explore how to implement URL sear
 'use client';
 
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { useQuery } from '@tanstack/react-query';
 import { useDebouncedCallback } from 'use-debounce';
+import axios from 'axios';
 ```
 
-Firstly, we need to declare **'use client'** at the top the component. We import some necessary Next.js hooks
-from **'next/navigation'**. Then, **useDebouncedCallback** is imported from the
-[use-debounce](https://www.npmjs.com/package/use-debounce) module. This utility is commonly used in React
-applications to debounce callback functions.
+Firstly, we need to declare `'use client'` at the top the component. We import some necessary Next.js hooks
+from `'next/navigation'`. `useQuery` is imported from [react-query](https://tanstack.com/query/latest/docs/framework/react/overview)
+that is a powerful library for managing and caching asynchronous data in React applications.
+`useDebouncedCallback` is imported from the [use-debounce](https://www.npmjs.com/package/use-debounce)
+module. This utility is commonly used in React applications to debounce callback functions. Then **axios** is
+imported
 
 ### 2. Initialize hooks
 
@@ -30,9 +35,9 @@ const pathname = usePathname();
 const searchParams = useSearchParams();
 ```
 
-- **useRouter( )** gives access Next.js router object to change routes within client components.
-- **usePathname( )** provides the current pathname of the URL.
-- **useSearchParams( )** accesses and interacts with parameters from the URL.
+- `useRouter()` gives access Next.js router object to change routes within client components.
+- `usePathname()` provides the current pathname of the URL.
+- `useSearchParams()` accesses and interacts with parameters from the URL.
 
 ### 3. Handling search action
 
@@ -48,12 +53,13 @@ const handleSearchUsername = useDebouncedCallback((term: string) => {
 }, 300);
 ```
 
-In this example, **handleSearchUsername** function is integrated with **useDebouncedCallback** function that ensures
+In this example, `handleSearchUsername` function is integrated with `useDebouncedCallback` function that ensures
 a function is only called after a certain delay (300 milliseconds) without being invoked repeatly. Inside the
-callback function, it creates a new **URLSearchParams** object from existing parameters. If the search term
-(term) is provided, it sets the 'q' parameter to the search term; otherwise, it deletes the 'q' parameter. Then,
-it replaces the current URL with the modified search parameters using **router.replace()**, for updating
-the URL without a full page reload.
+callback function, it creates a new `URLSearchParams` object from existing parameters.
+
+If the search term (term) is provided, it sets the 'q' parameter to the search term; otherwise, it deletes the
+'q' parameter. Then, it replaces the current URL with the modified search parameters using `router.replace()`,
+for updating the URL without a full page reload.
 
 ### 4. Search input integration
 
@@ -66,7 +72,44 @@ the URL without a full page reload.
 />
 ```
 
-Later, The onChange handler triggers **handleSearchUsername** with the new search term, updating the URL accordingly.
-Here **defaultValue** is used to set the initial value of the input field based on the 'q' parameter in the URL.
+Later, The `onChange` handler triggers `handleSearchUsername` with the new search term, updating the URL accordingly.
+Here `defaultValue` is used to set the initial value of the input field based on the 'q' parameter in the URL.
+
 If the user had previously entered a search query and then refreshed the page, the input field will still display
-the value they entered due to the defaultValue attribute. This provides a smoother and more user-friendly experience, as users don't lose their entered data when refreshing the page.
+the value they entered due to the `defaultValue` attribute. This provides a smoother and more user-friendly experience, as users don't lose their entered data when refreshing the page.
+
+### 5. Integrating with react query
+
+```tsx
+const query = searchParams.get('q');
+
+const { data, isLoading, isError } = useQuery({
+  queryKey: ['users', query] as const,
+  queryFn: async () => {
+    return await axios
+      .get('/users', {
+        params: {
+          query,
+        },
+      })
+      .then((res) => res.data);
+  },
+});
+```
+
+Finally, we'll integrate our search functionality with React Query to fetch and cache search results efficiently.
+we retrieve the value of the `'q'` parameter from the URL using `searchParams.get('q')`.
+This parameter will be used as part of the query key in React Query to ensure that each unique search query
+results in a separate cache entry.
+
+We use `useQuery` hook from React Query to fetch the search results. The `queryKey` property is set to \
+`['users', query]` where query is the search term obtained from the URL. This array is used as a unique identifier
+for the query in the cache. Whenever the search query changes, React Query will automatically refetch the data
+and update the cache accordingly.
+
+The `queryFn` property is an asynchronous function that performs the actual data fetching. In this case, we're
+using axios to make a GET request to the '/users' endpoint with the search query as a parameter.
+
+By integrating our search functionality with React Query, we benefit from features such as automatic caching,
+stale-while-revalidate, and automatic refetching. This allows us to provide a smooth and responsive user
+experience while efficiently managing data fetching and caching in our Next.js application.
